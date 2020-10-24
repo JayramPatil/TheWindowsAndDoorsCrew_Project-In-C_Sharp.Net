@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sliding Project v0.3", "Sliding Project v0.3\Sliding Project v0.3.csproj", "{DAB05D80-1C81-4805-9917-C81B1FBBC003}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAB05D80-1C81-4805-9917-C81B1FBBC003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB05D80-1C81-4805-9917-C81B1FBBC003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB05D80-1C81-4805-9917-C81B1FBBC003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB05D80-1C81-4805-9917-C81B1FBBC003}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {510CD4BC-0CDE-43A7-89BE-5C5D36BD3D9C}
+	EndGlobalSection
+EndGlobal

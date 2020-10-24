@@ -1,0 +1,21 @@
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding Project v0.3.csprojAssemblyReference.cache
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.MDI_Home.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.Properties.Resources.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding Project v0.3.csproj.GenerateResource.cache
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding Project v0.3.csproj.CoreCompileInputs.cache
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\bin\Debug\Sliding Project v0.3.exe.config
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\bin\Debug\Sliding Project v0.3.exe
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\bin\Debug\Sliding Project v0.3.pdb
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding Project v0.3.exe
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding Project v0.3.pdb
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_AcceptOrder.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_FinalAmount.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_MarkAsCompleted.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_AcceptMoney.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_ViewOrders.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_AddStock.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_ViewStock.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_EditPrices.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_PaySalary.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_PayMaintenance.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_Blank.resources
