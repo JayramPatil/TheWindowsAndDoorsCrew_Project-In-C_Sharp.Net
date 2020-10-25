@@ -52,6 +52,7 @@
             this.btn_AddNewDistributor = new System.Windows.Forms.Button();
             this.btn_Distributor = new System.Windows.Forms.Button();
             this.panel_SubEmployee = new System.Windows.Forms.Panel();
+            this.btn_SalaryHike = new System.Windows.Forms.Button();
             this.btn_ViewEmployee = new System.Windows.Forms.Button();
             this.btn_RemoveEmployee = new System.Windows.Forms.Button();
             this.btn_UpdateEmployee = new System.Windows.Forms.Button();
@@ -92,7 +93,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_SalaryHike = new System.Windows.Forms.Button();
             this.panel_MenuStrip.SuspendLayout();
             this.panel_SubReport.SuspendLayout();
             this.panel_SubCustomer.SuspendLayout();
@@ -437,6 +437,21 @@
             this.panel_SubEmployee.Size = new System.Drawing.Size(239, 210);
             this.panel_SubEmployee.TabIndex = 13;
             // 
+            // btn_SalaryHike
+            // 
+            this.btn_SalaryHike.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_SalaryHike.FlatAppearance.BorderSize = 0;
+            this.btn_SalaryHike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalaryHike.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalaryHike.Location = new System.Drawing.Point(0, 160);
+            this.btn_SalaryHike.Name = "btn_SalaryHike";
+            this.btn_SalaryHike.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
+            this.btn_SalaryHike.Size = new System.Drawing.Size(239, 40);
+            this.btn_SalaryHike.TabIndex = 6;
+            this.btn_SalaryHike.Text = "Edit Salaries";
+            this.btn_SalaryHike.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SalaryHike.UseVisualStyleBackColor = true;
+            // 
             // btn_ViewEmployee
             // 
             this.btn_ViewEmployee.Dock = System.Windows.Forms.DockStyle.Top;
@@ -663,6 +678,7 @@
             this.btn_UpdateUserDetails.Text = "Update User Details";
             this.btn_UpdateUserDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_UpdateUserDetails.UseVisualStyleBackColor = true;
+            this.btn_UpdateUserDetails.Click += new System.EventHandler(this.btn_UpdateUserDetails_Click);
             // 
             // btn_AddNewUser
             // 
@@ -678,6 +694,7 @@
             this.btn_AddNewUser.Text = "Add New User";
             this.btn_AddNewUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_AddNewUser.UseVisualStyleBackColor = true;
+            this.btn_AddNewUser.Click += new System.EventHandler(this.btn_AddNewUser_Click);
             // 
             // btn_User
             // 
@@ -1037,21 +1054,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_SalaryHike
-            // 
-            this.btn_SalaryHike.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_SalaryHike.FlatAppearance.BorderSize = 0;
-            this.btn_SalaryHike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SalaryHike.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SalaryHike.Location = new System.Drawing.Point(0, 160);
-            this.btn_SalaryHike.Name = "btn_SalaryHike";
-            this.btn_SalaryHike.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btn_SalaryHike.Size = new System.Drawing.Size(239, 40);
-            this.btn_SalaryHike.TabIndex = 6;
-            this.btn_SalaryHike.Text = "Edit Salaries";
-            this.btn_SalaryHike.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SalaryHike.UseVisualStyleBackColor = true;
             // 
             // MDI_Home
             // 

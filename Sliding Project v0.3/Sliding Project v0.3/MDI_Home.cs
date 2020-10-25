@@ -255,5 +255,17 @@ namespace Sliding_Project_v0._3
             OpenForm(new frm_PayMaintenance());
             Hide_Opened_SubMenu();
         }
+
+        private void btn_AddNewUser_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frm_AddUser());
+            Hide_Opened_SubMenu();
+        }
+
+        private void btn_UpdateUserDetails_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frm_AddUser(1));
+            Hide_Opened_SubMenu();
+        }
     }
 }

@@ -16,5 +16,12 @@ namespace Sliding_Project_v0._3
         {
             InitializeComponent();
         }
+        public frm_AddUser(int i)
+        {
+            InitializeComponent();
+            lbl_Header.Text = "Update User Details";
+            btn_Add.Text = "Update";
+            btn_Search.Visible = true;
+        }
     }
 }
