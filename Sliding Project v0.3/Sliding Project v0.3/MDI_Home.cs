@@ -191,7 +191,7 @@ namespace Sliding_Project_v0._3
 
         private void btn_MarkAsCompleted_Click(object sender, EventArgs e)
         {
-            OpenForm(new frm_MarkAsCompleted());
+            OpenForm(new frm_ManageOrders());
             Hide_Opened_SubMenu();
         }
 

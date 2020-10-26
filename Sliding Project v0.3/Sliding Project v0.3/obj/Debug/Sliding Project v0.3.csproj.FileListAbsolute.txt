@@ -10,7 +10,6 @@ D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Proje
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding Project v0.3.pdb
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_AcceptOrder.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_FinalAmount.resources
-D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_MarkAsCompleted.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_AcceptMoney.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_ViewOrders.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_AddStock.resources
@@ -20,3 +19,4 @@ D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Proje
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_PayMaintenance.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_Blank.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_AddUser.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_ManageOrders.resources
