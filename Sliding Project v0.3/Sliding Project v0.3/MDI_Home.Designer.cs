@@ -65,9 +65,7 @@
             this.btn_AddProduct = new System.Windows.Forms.Button();
             this.btn_Product = new System.Windows.Forms.Button();
             this.panel_SubUser = new System.Windows.Forms.Panel();
-            this.btn_ViewUser = new System.Windows.Forms.Button();
-            this.btn_DeleteUser = new System.Windows.Forms.Button();
-            this.btn_UpdateUserDetails = new System.Windows.Forms.Button();
+            this.btn_ManageUser = new System.Windows.Forms.Button();
             this.btn_AddNewUser = new System.Windows.Forms.Button();
             this.btn_User = new System.Windows.Forms.Button();
             this.panel_SubPay = new System.Windows.Forms.Panel();
@@ -77,9 +75,8 @@
             this.btn_Pay = new System.Windows.Forms.Button();
             this.btn_EditPrices = new System.Windows.Forms.Button();
             this.panel_SubStock = new System.Windows.Forms.Panel();
-            this.btn_UpdateStock = new System.Windows.Forms.Button();
+            this.btn_ManageStock = new System.Windows.Forms.Button();
             this.btn_AddStock = new System.Windows.Forms.Button();
-            this.btn_ViewStock = new System.Windows.Forms.Button();
             this.btn_Stock = new System.Windows.Forms.Button();
             this.panel_subOrders = new System.Windows.Forms.Panel();
             this.btn_ManageOrders = new System.Windows.Forms.Button();
@@ -153,7 +150,7 @@
             this.btn_CopyRight.FlatAppearance.BorderSize = 0;
             this.btn_CopyRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CopyRight.ForeColor = System.Drawing.Color.White;
-            this.btn_CopyRight.Location = new System.Drawing.Point(0, 1993);
+            this.btn_CopyRight.Location = new System.Drawing.Point(0, 1872);
             this.btn_CopyRight.Name = "btn_CopyRight";
             this.btn_CopyRight.Size = new System.Drawing.Size(239, 45);
             this.btn_CopyRight.TabIndex = 22;
@@ -167,7 +164,7 @@
             this.panel_SubReport.Controls.Add(this.btn_CustomerReport);
             this.panel_SubReport.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_SubReport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_SubReport.Location = new System.Drawing.Point(0, 1892);
+            this.panel_SubReport.Location = new System.Drawing.Point(0, 1771);
             this.panel_SubReport.Name = "panel_SubReport";
             this.panel_SubReport.Size = new System.Drawing.Size(239, 101);
             this.panel_SubReport.TabIndex = 21;
@@ -209,7 +206,7 @@
             this.btn_Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Report.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Report.ForeColor = System.Drawing.Color.White;
-            this.btn_Report.Location = new System.Drawing.Point(0, 1847);
+            this.btn_Report.Location = new System.Drawing.Point(0, 1726);
             this.btn_Report.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -226,7 +223,7 @@
             this.btn_TotalEE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TotalEE.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TotalEE.ForeColor = System.Drawing.Color.White;
-            this.btn_TotalEE.Location = new System.Drawing.Point(0, 1802);
+            this.btn_TotalEE.Location = new System.Drawing.Point(0, 1681);
             this.btn_TotalEE.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_TotalEE.Name = "btn_TotalEE";
             this.btn_TotalEE.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -245,7 +242,7 @@
             this.panel_SubCustomer.Controls.Add(this.btn_AddNewCustomer);
             this.panel_SubCustomer.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_SubCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_SubCustomer.Location = new System.Drawing.Point(0, 1627);
+            this.panel_SubCustomer.Location = new System.Drawing.Point(0, 1506);
             this.panel_SubCustomer.Name = "panel_SubCustomer";
             this.panel_SubCustomer.Size = new System.Drawing.Size(239, 175);
             this.panel_SubCustomer.TabIndex = 17;
@@ -317,7 +314,7 @@
             this.btn_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Customer.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Customer.ForeColor = System.Drawing.Color.White;
-            this.btn_Customer.Location = new System.Drawing.Point(0, 1582);
+            this.btn_Customer.Location = new System.Drawing.Point(0, 1461);
             this.btn_Customer.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -336,7 +333,7 @@
             this.panel_SubDistributor.Controls.Add(this.btn_AddNewDistributor);
             this.panel_SubDistributor.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_SubDistributor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_SubDistributor.Location = new System.Drawing.Point(0, 1409);
+            this.panel_SubDistributor.Location = new System.Drawing.Point(0, 1288);
             this.panel_SubDistributor.Name = "panel_SubDistributor";
             this.panel_SubDistributor.Size = new System.Drawing.Size(239, 173);
             this.panel_SubDistributor.TabIndex = 15;
@@ -408,7 +405,7 @@
             this.btn_Distributor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Distributor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Distributor.ForeColor = System.Drawing.Color.White;
-            this.btn_Distributor.Location = new System.Drawing.Point(0, 1364);
+            this.btn_Distributor.Location = new System.Drawing.Point(0, 1243);
             this.btn_Distributor.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_Distributor.Name = "btn_Distributor";
             this.btn_Distributor.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -428,7 +425,7 @@
             this.panel_SubEmployee.Controls.Add(this.btn_AddNewEmployee);
             this.panel_SubEmployee.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_SubEmployee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_SubEmployee.Location = new System.Drawing.Point(0, 1154);
+            this.panel_SubEmployee.Location = new System.Drawing.Point(0, 1033);
             this.panel_SubEmployee.Name = "panel_SubEmployee";
             this.panel_SubEmployee.Size = new System.Drawing.Size(239, 210);
             this.panel_SubEmployee.TabIndex = 13;
@@ -515,7 +512,7 @@
             this.btn_Employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Employee.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Employee.ForeColor = System.Drawing.Color.White;
-            this.btn_Employee.Location = new System.Drawing.Point(0, 1109);
+            this.btn_Employee.Location = new System.Drawing.Point(0, 988);
             this.btn_Employee.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_Employee.Name = "btn_Employee";
             this.btn_Employee.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -534,7 +531,7 @@
             this.panel_SubProduct.Controls.Add(this.btn_AddProduct);
             this.panel_SubProduct.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_SubProduct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_SubProduct.Location = new System.Drawing.Point(0, 936);
+            this.panel_SubProduct.Location = new System.Drawing.Point(0, 815);
             this.panel_SubProduct.Name = "panel_SubProduct";
             this.panel_SubProduct.Size = new System.Drawing.Size(239, 173);
             this.panel_SubProduct.TabIndex = 11;
@@ -606,7 +603,7 @@
             this.btn_Product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Product.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Product.ForeColor = System.Drawing.Color.White;
-            this.btn_Product.Location = new System.Drawing.Point(0, 891);
+            this.btn_Product.Location = new System.Drawing.Point(0, 770);
             this.btn_Product.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_Product.Name = "btn_Product";
             this.btn_Product.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -619,62 +616,30 @@
             // panel_SubUser
             // 
             this.panel_SubUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(214)))), ((int)(((byte)(220)))));
-            this.panel_SubUser.Controls.Add(this.btn_ViewUser);
-            this.panel_SubUser.Controls.Add(this.btn_DeleteUser);
-            this.panel_SubUser.Controls.Add(this.btn_UpdateUserDetails);
+            this.panel_SubUser.Controls.Add(this.btn_ManageUser);
             this.panel_SubUser.Controls.Add(this.btn_AddNewUser);
             this.panel_SubUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_SubUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_SubUser.Location = new System.Drawing.Point(0, 719);
+            this.panel_SubUser.Location = new System.Drawing.Point(0, 680);
             this.panel_SubUser.Name = "panel_SubUser";
-            this.panel_SubUser.Size = new System.Drawing.Size(239, 172);
+            this.panel_SubUser.Size = new System.Drawing.Size(239, 90);
             this.panel_SubUser.TabIndex = 9;
             // 
-            // btn_ViewUser
+            // btn_ManageUser
             // 
-            this.btn_ViewUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_ViewUser.FlatAppearance.BorderSize = 0;
-            this.btn_ViewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ViewUser.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ViewUser.Location = new System.Drawing.Point(0, 120);
-            this.btn_ViewUser.Name = "btn_ViewUser";
-            this.btn_ViewUser.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btn_ViewUser.Size = new System.Drawing.Size(239, 40);
-            this.btn_ViewUser.TabIndex = 5;
-            this.btn_ViewUser.Text = "View Users";
-            this.btn_ViewUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ViewUser.UseVisualStyleBackColor = true;
-            // 
-            // btn_DeleteUser
-            // 
-            this.btn_DeleteUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_DeleteUser.FlatAppearance.BorderSize = 0;
-            this.btn_DeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DeleteUser.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DeleteUser.Location = new System.Drawing.Point(0, 80);
-            this.btn_DeleteUser.Name = "btn_DeleteUser";
-            this.btn_DeleteUser.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btn_DeleteUser.Size = new System.Drawing.Size(239, 40);
-            this.btn_DeleteUser.TabIndex = 4;
-            this.btn_DeleteUser.Text = "Delete User";
-            this.btn_DeleteUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DeleteUser.UseVisualStyleBackColor = true;
-            // 
-            // btn_UpdateUserDetails
-            // 
-            this.btn_UpdateUserDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_UpdateUserDetails.FlatAppearance.BorderSize = 0;
-            this.btn_UpdateUserDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_UpdateUserDetails.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UpdateUserDetails.Location = new System.Drawing.Point(0, 40);
-            this.btn_UpdateUserDetails.Name = "btn_UpdateUserDetails";
-            this.btn_UpdateUserDetails.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btn_UpdateUserDetails.Size = new System.Drawing.Size(239, 40);
-            this.btn_UpdateUserDetails.TabIndex = 3;
-            this.btn_UpdateUserDetails.Text = "Update User Details";
-            this.btn_UpdateUserDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_UpdateUserDetails.UseVisualStyleBackColor = true;
-            this.btn_UpdateUserDetails.Click += new System.EventHandler(this.btn_UpdateUserDetails_Click);
+            this.btn_ManageUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_ManageUser.FlatAppearance.BorderSize = 0;
+            this.btn_ManageUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ManageUser.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ManageUser.Location = new System.Drawing.Point(0, 40);
+            this.btn_ManageUser.Name = "btn_ManageUser";
+            this.btn_ManageUser.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
+            this.btn_ManageUser.Size = new System.Drawing.Size(239, 40);
+            this.btn_ManageUser.TabIndex = 5;
+            this.btn_ManageUser.Text = "Manage Users";
+            this.btn_ManageUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ManageUser.UseVisualStyleBackColor = true;
+            this.btn_ManageUser.Click += new System.EventHandler(this.btn_ManageUser_Click);
             // 
             // btn_AddNewUser
             // 
@@ -699,7 +664,7 @@
             this.btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_User.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_User.ForeColor = System.Drawing.Color.White;
-            this.btn_User.Location = new System.Drawing.Point(0, 674);
+            this.btn_User.Location = new System.Drawing.Point(0, 635);
             this.btn_User.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_User.Name = "btn_User";
             this.btn_User.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -717,7 +682,7 @@
             this.panel_SubPay.Controls.Add(this.btn_Salary);
             this.panel_SubPay.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_SubPay.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_SubPay.Location = new System.Drawing.Point(0, 544);
+            this.panel_SubPay.Location = new System.Drawing.Point(0, 505);
             this.panel_SubPay.Name = "panel_SubPay";
             this.panel_SubPay.Size = new System.Drawing.Size(239, 130);
             this.panel_SubPay.TabIndex = 7;
@@ -777,7 +742,7 @@
             this.btn_Pay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Pay.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Pay.ForeColor = System.Drawing.Color.White;
-            this.btn_Pay.Location = new System.Drawing.Point(0, 499);
+            this.btn_Pay.Location = new System.Drawing.Point(0, 460);
             this.btn_Pay.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_Pay.Name = "btn_Pay";
             this.btn_Pay.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -794,7 +759,7 @@
             this.btn_EditPrices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EditPrices.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_EditPrices.ForeColor = System.Drawing.Color.White;
-            this.btn_EditPrices.Location = new System.Drawing.Point(0, 454);
+            this.btn_EditPrices.Location = new System.Drawing.Point(0, 415);
             this.btn_EditPrices.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_EditPrices.Name = "btn_EditPrices";
             this.btn_EditPrices.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -807,31 +772,30 @@
             // panel_SubStock
             // 
             this.panel_SubStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(214)))), ((int)(((byte)(220)))));
-            this.panel_SubStock.Controls.Add(this.btn_UpdateStock);
+            this.panel_SubStock.Controls.Add(this.btn_ManageStock);
             this.panel_SubStock.Controls.Add(this.btn_AddStock);
-            this.panel_SubStock.Controls.Add(this.btn_ViewStock);
             this.panel_SubStock.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_SubStock.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_SubStock.Location = new System.Drawing.Point(0, 323);
             this.panel_SubStock.Name = "panel_SubStock";
-            this.panel_SubStock.Size = new System.Drawing.Size(239, 131);
+            this.panel_SubStock.Size = new System.Drawing.Size(239, 92);
             this.panel_SubStock.TabIndex = 4;
             // 
-            // btn_UpdateStock
+            // btn_ManageStock
             // 
-            this.btn_UpdateStock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_UpdateStock.FlatAppearance.BorderSize = 0;
-            this.btn_UpdateStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_UpdateStock.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UpdateStock.Location = new System.Drawing.Point(0, 80);
-            this.btn_UpdateStock.Name = "btn_UpdateStock";
-            this.btn_UpdateStock.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btn_UpdateStock.Size = new System.Drawing.Size(239, 40);
-            this.btn_UpdateStock.TabIndex = 4;
-            this.btn_UpdateStock.Text = "Update Stock";
-            this.btn_UpdateStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_UpdateStock.UseVisualStyleBackColor = true;
-            this.btn_UpdateStock.Click += new System.EventHandler(this.btn_UpdateStock_Click);
+            this.btn_ManageStock.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_ManageStock.FlatAppearance.BorderSize = 0;
+            this.btn_ManageStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ManageStock.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ManageStock.Location = new System.Drawing.Point(0, 40);
+            this.btn_ManageStock.Name = "btn_ManageStock";
+            this.btn_ManageStock.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
+            this.btn_ManageStock.Size = new System.Drawing.Size(239, 40);
+            this.btn_ManageStock.TabIndex = 3;
+            this.btn_ManageStock.Text = "Manage Stock";
+            this.btn_ManageStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ManageStock.UseVisualStyleBackColor = true;
+            this.btn_ManageStock.Click += new System.EventHandler(this.btn_AddStock_Click);
             // 
             // btn_AddStock
             // 
@@ -839,31 +803,15 @@
             this.btn_AddStock.FlatAppearance.BorderSize = 0;
             this.btn_AddStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddStock.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddStock.Location = new System.Drawing.Point(0, 40);
+            this.btn_AddStock.Location = new System.Drawing.Point(0, 0);
             this.btn_AddStock.Name = "btn_AddStock";
             this.btn_AddStock.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
             this.btn_AddStock.Size = new System.Drawing.Size(239, 40);
-            this.btn_AddStock.TabIndex = 3;
+            this.btn_AddStock.TabIndex = 2;
             this.btn_AddStock.Text = "Add Stock";
             this.btn_AddStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_AddStock.UseVisualStyleBackColor = true;
-            this.btn_AddStock.Click += new System.EventHandler(this.btn_AddStock_Click);
-            // 
-            // btn_ViewStock
-            // 
-            this.btn_ViewStock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_ViewStock.FlatAppearance.BorderSize = 0;
-            this.btn_ViewStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ViewStock.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ViewStock.Location = new System.Drawing.Point(0, 0);
-            this.btn_ViewStock.Name = "btn_ViewStock";
-            this.btn_ViewStock.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btn_ViewStock.Size = new System.Drawing.Size(239, 40);
-            this.btn_ViewStock.TabIndex = 2;
-            this.btn_ViewStock.Text = "View Stock";
-            this.btn_ViewStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ViewStock.UseVisualStyleBackColor = true;
-            this.btn_ViewStock.Click += new System.EventHandler(this.btn_ViewStock_Click);
+            this.btn_AddStock.Click += new System.EventHandler(this.btn_ViewStock_Click);
             // 
             // btn_Stock
             // 
@@ -1023,9 +971,8 @@
         private System.Windows.Forms.Panel panel_LoginInfo;
         private System.Windows.Forms.Button btn_EditPrices;
         private System.Windows.Forms.Panel panel_SubStock;
-        private System.Windows.Forms.Button btn_UpdateStock;
+        private System.Windows.Forms.Button btn_ManageStock;
         private System.Windows.Forms.Button btn_AddStock;
-        private System.Windows.Forms.Button btn_ViewStock;
         private System.Windows.Forms.Button btn_Stock;
         private System.Windows.Forms.Panel panel_subOrders;
         private System.Windows.Forms.Button btn_ManageOrders;
@@ -1061,9 +1008,7 @@
         private System.Windows.Forms.Button btn_AddProduct;
         private System.Windows.Forms.Button btn_Product;
         private System.Windows.Forms.Panel panel_SubUser;
-        private System.Windows.Forms.Button btn_ViewUser;
-        private System.Windows.Forms.Button btn_DeleteUser;
-        private System.Windows.Forms.Button btn_UpdateUserDetails;
+        private System.Windows.Forms.Button btn_ManageUser;
         private System.Windows.Forms.Button btn_AddNewUser;
         private System.Windows.Forms.Button btn_User;
         private System.Windows.Forms.Panel panel_SubPay;

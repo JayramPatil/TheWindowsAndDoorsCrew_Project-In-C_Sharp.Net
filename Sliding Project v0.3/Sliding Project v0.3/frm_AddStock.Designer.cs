@@ -58,7 +58,6 @@
             this.lbl_Height = new System.Windows.Forms.Label();
             this.lbl_SubCatagory = new System.Windows.Forms.Label();
             this.lbl_Colour = new System.Windows.Forms.Label();
-            this.btn_Add = new System.Windows.Forms.Button();
             this.cmb_Colour = new System.Windows.Forms.ComboBox();
             this.lbl_Quantity = new System.Windows.Forms.Label();
             this.lbl_Price = new System.Windows.Forms.Label();
@@ -67,6 +66,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tb_Quantity = new System.Windows.Forms.TextBox();
             this.tb_Price = new System.Windows.Forms.TextBox();
+            this.btn_Add = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
@@ -511,20 +511,6 @@
             this.lbl_Colour.Text = "Sub-Type";
             this.lbl_Colour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_Add
-            // 
-            this.btn_Add.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_Add.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_Add.FlatAppearance.BorderSize = 0;
-            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add.Location = new System.Drawing.Point(797, 111);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(131, 31);
-            this.btn_Add.TabIndex = 10;
-            this.btn_Add.Text = "Add";
-            this.btn_Add.UseVisualStyleBackColor = false;
-            // 
             // cmb_Colour
             // 
             this.cmb_Colour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -617,6 +603,20 @@
             this.tb_Price.Name = "tb_Price";
             this.tb_Price.Size = new System.Drawing.Size(165, 29);
             this.tb_Price.TabIndex = 30;
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_Add.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Add.FlatAppearance.BorderSize = 0;
+            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.Location = new System.Drawing.Point(797, 111);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(131, 31);
+            this.btn_Add.TabIndex = 10;
+            this.btn_Add.Text = "Add";
+            this.btn_Add.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel5
             // 

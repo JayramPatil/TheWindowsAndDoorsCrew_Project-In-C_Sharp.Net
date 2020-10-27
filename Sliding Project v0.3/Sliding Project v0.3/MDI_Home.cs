@@ -222,13 +222,13 @@ namespace Sliding_Project_v0._3
 
         private void btn_ViewStock_Click(object sender, EventArgs e)
         {
-            OpenForm(new frm_ViewStock());
+            OpenForm(new frm_AddStock());
             Hide_Opened_SubMenu();
         }
 
         private void btn_AddStock_Click(object sender, EventArgs e)
         {
-            OpenForm(new frm_AddStock());
+            OpenForm(new frm_ViewStock());
             Hide_Opened_SubMenu();
         }
 
@@ -265,6 +265,12 @@ namespace Sliding_Project_v0._3
         private void btn_UpdateUserDetails_Click(object sender, EventArgs e)
         {
             OpenForm(new frm_AddUser(1));
+            Hide_Opened_SubMenu();
+        }
+
+        private void btn_ManageUser_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frm_ManageUsers());
             Hide_Opened_SubMenu();
         }
     }

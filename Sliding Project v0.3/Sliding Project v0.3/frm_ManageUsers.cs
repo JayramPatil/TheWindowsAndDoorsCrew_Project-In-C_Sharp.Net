@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sliding_Project_v0._3
 {
-    public partial class frm_ViewStock : Form
+    public partial class frm_ManageUsers : Form
     {
-        public frm_ViewStock()
+        public frm_ManageUsers()
         {
             InitializeComponent();
         }
@@ -24,17 +24,17 @@ namespace Sliding_Project_v0._3
         }
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            OpenForm(new frm_AddStock());
+            OpenForm(new frm_AddUser());
         }
 
-        private void btn_Edit_Click(object sender, EventArgs e)
+        private void btn_Update_Click(object sender, EventArgs e)
         {
-            OpenForm(new frm_AddStock(1));
+            OpenForm(new frm_AddUser(1));
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Do You Want To Delete This Order ?", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            MessageBox.Show("Do You Want To Delete This User ?", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
     }
 }
