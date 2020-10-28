@@ -58,6 +58,12 @@
     <Compile Include="frm_AcceptMoney.Designer.cs">
       <DependentUpon>frm_AcceptMoney.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AddProduct.Designer.cs">
+      <DependentUpon>frm_AddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_AddStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,18 @@
     </Compile>
     <Compile Include="frm_FinalAmount.Designer.cs">
       <DependentUpon>frm_FinalAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ManageEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ManageEmployees.Designer.cs">
+      <DependentUpon>frm_ManageEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ManageProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ManageProducts.Designer.cs">
+      <DependentUpon>frm_ManageProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_ManageUsers.cs">
       <SubType>Form</SubType>
@@ -138,6 +156,9 @@
     <EmbeddedResource Include="frm_AcceptMoney.resx">
       <DependentUpon>frm_AcceptMoney.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_AddProduct.resx">
+      <DependentUpon>frm_AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_AddStock.resx">
       <DependentUpon>frm_AddStock.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_FinalAmount.resx">
       <DependentUpon>frm_FinalAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ManageEmployees.resx">
+      <DependentUpon>frm_ManageEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ManageProducts.resx">
+      <DependentUpon>frm_ManageProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ManageUsers.resx">
       <DependentUpon>frm_ManageUsers.cs</DependentUpon>

@@ -273,5 +273,28 @@ namespace Sliding_Project_v0._3
             OpenForm(new frm_ManageUsers());
             Hide_Opened_SubMenu();
         }
+
+        private void btn_AddProduct_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frm_AddProduct());
+            Hide_Opened_SubMenu();
+        }
+
+        private void btn_ManageProduct_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frm_ManageProducts());
+            Hide_Opened_SubMenu();
+        }
+
+        private void btn_ManageEmployee_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frm_ManageEmployees());
+            Hide_Opened_SubMenu();
+        }
+
+        private void btn_AddNewEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
