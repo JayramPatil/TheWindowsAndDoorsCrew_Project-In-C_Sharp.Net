@@ -90,7 +90,7 @@
             this.lbl_Header.Name = "lbl_Header";
             this.lbl_Header.Size = new System.Drawing.Size(1002, 70);
             this.lbl_Header.TabIndex = 1;
-            this.lbl_Header.Text = "Action Center";
+            this.lbl_Header.Text = "Manage Orders";
             this.lbl_Header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox1

@@ -294,7 +294,20 @@ namespace Sliding_Project_v0._3
 
         private void btn_AddNewEmployee_Click(object sender, EventArgs e)
         {
+            OpenForm(new frm_AddEmployee());
+            Hide_Opened_SubMenu();
+        }
 
+        private void btn_AddNewDistributor_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frm_AddDistributor());
+            Hide_Opened_SubMenu();
+        }
+
+        private void btn_ViewDistributor_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frm_ManageDistributors());
+            Hide_Opened_SubMenu();
         }
     }
 }

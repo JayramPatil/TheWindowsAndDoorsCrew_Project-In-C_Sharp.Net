@@ -41,14 +41,10 @@
             this.btn_TotalEE = new System.Windows.Forms.Button();
             this.panel_SubCustomer = new System.Windows.Forms.Panel();
             this.btn_ViewCustomer = new System.Windows.Forms.Button();
-            this.btn_RemoveCustomer = new System.Windows.Forms.Button();
-            this.btn_UpdateCustomer = new System.Windows.Forms.Button();
             this.btn_AddNewCustomer = new System.Windows.Forms.Button();
             this.btn_Customer = new System.Windows.Forms.Button();
             this.panel_SubDistributor = new System.Windows.Forms.Panel();
             this.btn_ViewDistributor = new System.Windows.Forms.Button();
-            this.btn_RemoveDistributor = new System.Windows.Forms.Button();
-            this.btn_UpdateDistributor = new System.Windows.Forms.Button();
             this.btn_AddNewDistributor = new System.Windows.Forms.Button();
             this.btn_Distributor = new System.Windows.Forms.Button();
             this.panel_SubEmployee = new System.Windows.Forms.Panel();
@@ -145,7 +141,7 @@
             this.btn_CopyRight.FlatAppearance.BorderSize = 0;
             this.btn_CopyRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CopyRight.ForeColor = System.Drawing.Color.White;
-            this.btn_CopyRight.Location = new System.Drawing.Point(0, 1674);
+            this.btn_CopyRight.Location = new System.Drawing.Point(0, 1486);
             this.btn_CopyRight.Name = "btn_CopyRight";
             this.btn_CopyRight.Size = new System.Drawing.Size(239, 45);
             this.btn_CopyRight.TabIndex = 22;
@@ -159,9 +155,9 @@
             this.panel_SubReport.Controls.Add(this.btn_CustomerReport);
             this.panel_SubReport.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_SubReport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_SubReport.Location = new System.Drawing.Point(0, 1573);
+            this.panel_SubReport.Location = new System.Drawing.Point(0, 1397);
             this.panel_SubReport.Name = "panel_SubReport";
-            this.panel_SubReport.Size = new System.Drawing.Size(239, 101);
+            this.panel_SubReport.Size = new System.Drawing.Size(239, 89);
             this.panel_SubReport.TabIndex = 21;
             // 
             // btn_DistributorReport
@@ -201,7 +197,7 @@
             this.btn_Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Report.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Report.ForeColor = System.Drawing.Color.White;
-            this.btn_Report.Location = new System.Drawing.Point(0, 1528);
+            this.btn_Report.Location = new System.Drawing.Point(0, 1352);
             this.btn_Report.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -218,7 +214,7 @@
             this.btn_TotalEE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TotalEE.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TotalEE.ForeColor = System.Drawing.Color.White;
-            this.btn_TotalEE.Location = new System.Drawing.Point(0, 1483);
+            this.btn_TotalEE.Location = new System.Drawing.Point(0, 1307);
             this.btn_TotalEE.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_TotalEE.Name = "btn_TotalEE";
             this.btn_TotalEE.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -232,14 +228,12 @@
             // 
             this.panel_SubCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(214)))), ((int)(((byte)(220)))));
             this.panel_SubCustomer.Controls.Add(this.btn_ViewCustomer);
-            this.panel_SubCustomer.Controls.Add(this.btn_RemoveCustomer);
-            this.panel_SubCustomer.Controls.Add(this.btn_UpdateCustomer);
             this.panel_SubCustomer.Controls.Add(this.btn_AddNewCustomer);
             this.panel_SubCustomer.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_SubCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_SubCustomer.Location = new System.Drawing.Point(0, 1308);
+            this.panel_SubCustomer.Location = new System.Drawing.Point(0, 1217);
             this.panel_SubCustomer.Name = "panel_SubCustomer";
-            this.panel_SubCustomer.Size = new System.Drawing.Size(239, 175);
+            this.panel_SubCustomer.Size = new System.Drawing.Size(239, 90);
             this.panel_SubCustomer.TabIndex = 17;
             // 
             // btn_ViewCustomer
@@ -248,44 +242,14 @@
             this.btn_ViewCustomer.FlatAppearance.BorderSize = 0;
             this.btn_ViewCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ViewCustomer.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ViewCustomer.Location = new System.Drawing.Point(0, 120);
+            this.btn_ViewCustomer.Location = new System.Drawing.Point(0, 40);
             this.btn_ViewCustomer.Name = "btn_ViewCustomer";
             this.btn_ViewCustomer.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
             this.btn_ViewCustomer.Size = new System.Drawing.Size(239, 40);
             this.btn_ViewCustomer.TabIndex = 5;
-            this.btn_ViewCustomer.Text = "View Customers";
+            this.btn_ViewCustomer.Text = "Manage Customers";
             this.btn_ViewCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ViewCustomer.UseVisualStyleBackColor = true;
-            // 
-            // btn_RemoveCustomer
-            // 
-            this.btn_RemoveCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_RemoveCustomer.FlatAppearance.BorderSize = 0;
-            this.btn_RemoveCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RemoveCustomer.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RemoveCustomer.Location = new System.Drawing.Point(0, 80);
-            this.btn_RemoveCustomer.Name = "btn_RemoveCustomer";
-            this.btn_RemoveCustomer.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btn_RemoveCustomer.Size = new System.Drawing.Size(239, 40);
-            this.btn_RemoveCustomer.TabIndex = 4;
-            this.btn_RemoveCustomer.Text = "Remove Customer";
-            this.btn_RemoveCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RemoveCustomer.UseVisualStyleBackColor = true;
-            // 
-            // btn_UpdateCustomer
-            // 
-            this.btn_UpdateCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_UpdateCustomer.FlatAppearance.BorderSize = 0;
-            this.btn_UpdateCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_UpdateCustomer.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UpdateCustomer.Location = new System.Drawing.Point(0, 40);
-            this.btn_UpdateCustomer.Name = "btn_UpdateCustomer";
-            this.btn_UpdateCustomer.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btn_UpdateCustomer.Size = new System.Drawing.Size(239, 40);
-            this.btn_UpdateCustomer.TabIndex = 3;
-            this.btn_UpdateCustomer.Text = "Update Customer Details";
-            this.btn_UpdateCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_UpdateCustomer.UseVisualStyleBackColor = true;
             // 
             // btn_AddNewCustomer
             // 
@@ -309,7 +273,7 @@
             this.btn_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Customer.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Customer.ForeColor = System.Drawing.Color.White;
-            this.btn_Customer.Location = new System.Drawing.Point(0, 1263);
+            this.btn_Customer.Location = new System.Drawing.Point(0, 1172);
             this.btn_Customer.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -323,14 +287,12 @@
             // 
             this.panel_SubDistributor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(214)))), ((int)(((byte)(220)))));
             this.panel_SubDistributor.Controls.Add(this.btn_ViewDistributor);
-            this.panel_SubDistributor.Controls.Add(this.btn_RemoveDistributor);
-            this.panel_SubDistributor.Controls.Add(this.btn_UpdateDistributor);
             this.panel_SubDistributor.Controls.Add(this.btn_AddNewDistributor);
             this.panel_SubDistributor.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_SubDistributor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_SubDistributor.Location = new System.Drawing.Point(0, 1090);
+            this.panel_SubDistributor.Location = new System.Drawing.Point(0, 1086);
             this.panel_SubDistributor.Name = "panel_SubDistributor";
-            this.panel_SubDistributor.Size = new System.Drawing.Size(239, 173);
+            this.panel_SubDistributor.Size = new System.Drawing.Size(239, 86);
             this.panel_SubDistributor.TabIndex = 15;
             // 
             // btn_ViewDistributor
@@ -339,44 +301,15 @@
             this.btn_ViewDistributor.FlatAppearance.BorderSize = 0;
             this.btn_ViewDistributor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ViewDistributor.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ViewDistributor.Location = new System.Drawing.Point(0, 120);
+            this.btn_ViewDistributor.Location = new System.Drawing.Point(0, 40);
             this.btn_ViewDistributor.Name = "btn_ViewDistributor";
             this.btn_ViewDistributor.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
             this.btn_ViewDistributor.Size = new System.Drawing.Size(239, 40);
             this.btn_ViewDistributor.TabIndex = 5;
-            this.btn_ViewDistributor.Text = "View Distributor";
+            this.btn_ViewDistributor.Text = "Manage Distributors";
             this.btn_ViewDistributor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ViewDistributor.UseVisualStyleBackColor = true;
-            // 
-            // btn_RemoveDistributor
-            // 
-            this.btn_RemoveDistributor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_RemoveDistributor.FlatAppearance.BorderSize = 0;
-            this.btn_RemoveDistributor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RemoveDistributor.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RemoveDistributor.Location = new System.Drawing.Point(0, 80);
-            this.btn_RemoveDistributor.Name = "btn_RemoveDistributor";
-            this.btn_RemoveDistributor.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btn_RemoveDistributor.Size = new System.Drawing.Size(239, 40);
-            this.btn_RemoveDistributor.TabIndex = 4;
-            this.btn_RemoveDistributor.Text = "Remove Distributor";
-            this.btn_RemoveDistributor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RemoveDistributor.UseVisualStyleBackColor = true;
-            // 
-            // btn_UpdateDistributor
-            // 
-            this.btn_UpdateDistributor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_UpdateDistributor.FlatAppearance.BorderSize = 0;
-            this.btn_UpdateDistributor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_UpdateDistributor.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UpdateDistributor.Location = new System.Drawing.Point(0, 40);
-            this.btn_UpdateDistributor.Name = "btn_UpdateDistributor";
-            this.btn_UpdateDistributor.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btn_UpdateDistributor.Size = new System.Drawing.Size(239, 40);
-            this.btn_UpdateDistributor.TabIndex = 3;
-            this.btn_UpdateDistributor.Text = "Update Distributor";
-            this.btn_UpdateDistributor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_UpdateDistributor.UseVisualStyleBackColor = true;
+            this.btn_ViewDistributor.Click += new System.EventHandler(this.btn_ViewDistributor_Click);
             // 
             // btn_AddNewDistributor
             // 
@@ -392,6 +325,7 @@
             this.btn_AddNewDistributor.Text = "Add New Distributor";
             this.btn_AddNewDistributor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_AddNewDistributor.UseVisualStyleBackColor = true;
+            this.btn_AddNewDistributor.Click += new System.EventHandler(this.btn_AddNewDistributor_Click);
             // 
             // btn_Distributor
             // 
@@ -400,7 +334,7 @@
             this.btn_Distributor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Distributor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Distributor.ForeColor = System.Drawing.Color.White;
-            this.btn_Distributor.Location = new System.Drawing.Point(0, 1045);
+            this.btn_Distributor.Location = new System.Drawing.Point(0, 1041);
             this.btn_Distributor.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_Distributor.Name = "btn_Distributor";
             this.btn_Distributor.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -419,7 +353,7 @@
             this.panel_SubEmployee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_SubEmployee.Location = new System.Drawing.Point(0, 954);
             this.panel_SubEmployee.Name = "panel_SubEmployee";
-            this.panel_SubEmployee.Size = new System.Drawing.Size(239, 91);
+            this.panel_SubEmployee.Size = new System.Drawing.Size(239, 87);
             this.panel_SubEmployee.TabIndex = 13;
             // 
             // btn_ManageEmployee
@@ -904,14 +838,10 @@
         private System.Windows.Forms.Button btn_TotalEE;
         private System.Windows.Forms.Panel panel_SubCustomer;
         private System.Windows.Forms.Button btn_ViewCustomer;
-        private System.Windows.Forms.Button btn_RemoveCustomer;
-        private System.Windows.Forms.Button btn_UpdateCustomer;
         private System.Windows.Forms.Button btn_AddNewCustomer;
         private System.Windows.Forms.Button btn_Customer;
         private System.Windows.Forms.Panel panel_SubDistributor;
         private System.Windows.Forms.Button btn_ViewDistributor;
-        private System.Windows.Forms.Button btn_RemoveDistributor;
-        private System.Windows.Forms.Button btn_UpdateDistributor;
         private System.Windows.Forms.Button btn_AddNewDistributor;
         private System.Windows.Forms.Button btn_Distributor;
         private System.Windows.Forms.Panel panel_SubEmployee;

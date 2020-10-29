@@ -10,32 +10,31 @@ using System.Windows.Forms;
 
 namespace Sliding_Project_v0._3
 {
-    public partial class frm_ManageEmployees : Form
+    public partial class frm_ManageDistributors : Form
     {
-        public frm_ManageEmployees()
+        public frm_ManageDistributors()
         {
             InitializeComponent();
         }
-
         public void OpenForm(Form frm)
         {
             frm.MdiParent = this.MdiParent;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
-        private void btn_AddEmployee_Click(object sender, EventArgs e)
+        private void btn_Update_Click(object sender, EventArgs e)
         {
-            OpenForm(new frm_AddEmployee());
+            OpenForm(new frm_AddDistributor(1));
         }
 
-        private void btn_UpdateEmployee_Click(object sender, EventArgs e)
+        private void btn_Add_Click(object sender, EventArgs e)
         {
-            OpenForm(new frm_AddEmployee(1));
+            OpenForm(new frm_AddDistributor());
         }
 
-        private void btn_RemoveEmployee_Click(object sender, EventArgs e)
+        private void btn_Delete_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Do You Want To Remove This Employee ?", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            MessageBox.Show("Do You Want To Delete This Distributor ?", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
     }
 }
