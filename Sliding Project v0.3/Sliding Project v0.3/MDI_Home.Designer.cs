@@ -265,6 +265,7 @@
             this.btn_AddNewCustomer.Text = "Add New Customer";
             this.btn_AddNewCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_AddNewCustomer.UseVisualStyleBackColor = true;
+            this.btn_AddNewCustomer.Click += new System.EventHandler(this.btn_AddNewCustomer_Click);
             // 
             // btn_Customer
             // 

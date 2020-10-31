@@ -309,5 +309,10 @@ namespace Sliding_Project_v0._3
             OpenForm(new frm_ManageDistributors());
             Hide_Opened_SubMenu();
         }
+
+        private void btn_AddNewCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

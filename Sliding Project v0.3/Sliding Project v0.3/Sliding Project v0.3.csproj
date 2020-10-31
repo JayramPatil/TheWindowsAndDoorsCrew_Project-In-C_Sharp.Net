@@ -58,6 +58,12 @@
     <Compile Include="frm_AcceptMoney.Designer.cs">
       <DependentUpon>frm_AcceptMoney.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AddCustomer.Designer.cs">
+      <DependentUpon>frm_AddCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_AddDistributor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_AcceptMoney.resx">
       <DependentUpon>frm_AcceptMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AddCustomer.resx">
+      <DependentUpon>frm_AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_AddDistributor.resx">
       <DependentUpon>frm_AddDistributor.cs</DependentUpon>
