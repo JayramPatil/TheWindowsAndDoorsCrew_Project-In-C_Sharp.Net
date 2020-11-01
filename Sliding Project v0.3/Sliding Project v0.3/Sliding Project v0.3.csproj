@@ -112,6 +112,12 @@
     <Compile Include="frm_FinalAmount.Designer.cs">
       <DependentUpon>frm_FinalAmount.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_ManageCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ManageCustomers.Designer.cs">
+      <DependentUpon>frm_ManageCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ManageDistributors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_FinalAmount.resx">
       <DependentUpon>frm_FinalAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ManageCustomers.resx">
+      <DependentUpon>frm_ManageCustomers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ManageDistributors.resx">
       <DependentUpon>frm_ManageDistributors.cs</DependentUpon>

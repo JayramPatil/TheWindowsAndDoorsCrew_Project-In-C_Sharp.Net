@@ -250,6 +250,7 @@
             this.btn_ViewCustomer.Text = "Manage Customers";
             this.btn_ViewCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ViewCustomer.UseVisualStyleBackColor = true;
+            this.btn_ViewCustomer.Click += new System.EventHandler(this.btn_ViewCustomer_Click);
             // 
             // btn_AddNewCustomer
             // 

@@ -28,3 +28,4 @@ D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Proje
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_AddDistributor.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_ManageDistributors.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_AddCustomer.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_ManageCustomers.resources

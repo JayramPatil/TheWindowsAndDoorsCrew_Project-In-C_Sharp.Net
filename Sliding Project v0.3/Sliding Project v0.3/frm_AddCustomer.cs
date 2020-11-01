@@ -16,5 +16,11 @@ namespace Sliding_Project_v0._3
         {
             InitializeComponent();
         }
+        public frm_AddCustomer(int i)
+        {
+            InitializeComponent();
+            lbl_Header.Text = "Update Customer Details";
+            btn_Add.Text = "Update";
+        }
     }
 }

@@ -167,6 +167,7 @@ namespace Sliding_Project_v0._3
             else
             {
                 Btn_Colour();
+                OpenForm(new frm_AcceptOrder());
                 Hide_Opened_SubMenu();
                 btn_TotalEE.BackColor = Color.DarkBlue;
             }
@@ -312,7 +313,14 @@ namespace Sliding_Project_v0._3
 
         private void btn_AddNewCustomer_Click(object sender, EventArgs e)
         {
+            OpenForm(new frm_AddCustomer());
+            Hide_Opened_SubMenu();
+        }
 
+        private void btn_ViewCustomer_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frm_ManageCustomers());
+            Hide_Opened_SubMenu();
         }
     }
 }
