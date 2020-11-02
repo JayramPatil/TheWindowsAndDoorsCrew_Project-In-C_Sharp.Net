@@ -94,12 +94,6 @@
     <Compile Include="frm_AddUser.Designer.cs">
       <DependentUpon>frm_AddUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Blank.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Blank.Designer.cs">
-      <DependentUpon>frm_Blank.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_EditPrices.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +154,12 @@
     <Compile Include="frm_PaySalary.Designer.cs">
       <DependentUpon>frm_PaySalary.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_TotalEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TotalEE.Designer.cs">
+      <DependentUpon>frm_TotalEE.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ViewOrders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,9 +204,6 @@
     <EmbeddedResource Include="frm_AddUser.resx">
       <DependentUpon>frm_AddUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Blank.resx">
-      <DependentUpon>frm_Blank.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_EditPrices.resx">
       <DependentUpon>frm_EditPrices.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_PaySalary.resx">
       <DependentUpon>frm_PaySalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TotalEE.resx">
+      <DependentUpon>frm_TotalEE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ViewOrders.resx">
       <DependentUpon>frm_ViewOrders.cs</DependentUpon>

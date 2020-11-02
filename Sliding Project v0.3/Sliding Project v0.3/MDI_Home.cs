@@ -167,7 +167,7 @@ namespace Sliding_Project_v0._3
             else
             {
                 Btn_Colour();
-                OpenForm(new frm_AcceptOrder());
+                OpenForm(new frm_TotalEE());
                 Hide_Opened_SubMenu();
                 btn_TotalEE.BackColor = Color.DarkBlue;
             }

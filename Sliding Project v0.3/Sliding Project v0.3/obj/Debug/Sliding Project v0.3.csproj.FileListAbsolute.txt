@@ -17,7 +17,6 @@ D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Proje
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_EditPrices.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_PaySalary.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_PayMaintenance.resources
-D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_Blank.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_AddUser.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_ManageOrders.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_ManageUsers.resources
@@ -29,3 +28,4 @@ D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Proje
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_ManageDistributors.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_AddCustomer.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_ManageCustomers.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_TotalEE.resources
