@@ -53,11 +53,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.cmb_Track = new System.Windows.Forms.ComboBox();
             this.tb_Price = new System.Windows.Forms.TextBox();
             this.tb_Quantity = new System.Windows.Forms.TextBox();
-            this.tb_Width = new System.Windows.Forms.TextBox();
             this.cmb_Catagory = new System.Windows.Forms.ComboBox();
-            this.tb_Height = new System.Windows.Forms.TextBox();
             this.cmb_GlassType = new System.Windows.Forms.ComboBox();
             this.cmb_MaterialType = new System.Windows.Forms.ComboBox();
             this.cmb_SubCatagory = new System.Windows.Forms.ComboBox();
@@ -72,6 +71,9 @@
             this.lbl_Price = new System.Windows.Forms.Label();
             this.btn_Add = new System.Windows.Forms.Button();
             this.cmb_Colour = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tb_Height = new System.Windows.Forms.TextBox();
+            this.tb_Width = new System.Windows.Forms.TextBox();
             this.rb_NewCustomer = new System.Windows.Forms.RadioButton();
             this.rb_OldCustomer = new System.Windows.Forms.RadioButton();
             this.panel_NewOldCustomer = new System.Windows.Forms.Panel();
@@ -87,6 +89,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.panel_NewOldCustomer.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
@@ -154,7 +157,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.23182F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.48788F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.38883F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
             this.tableLayoutPanel2.Controls.Add(this.tb_Address, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Address, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Name, 1, 0);
@@ -173,19 +176,19 @@
             this.tb_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Address.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Address.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Address.Location = new System.Drawing.Point(710, 6);
+            this.tb_Address.Location = new System.Drawing.Point(702, 6);
             this.tb_Address.Name = "tb_Address";
-            this.tb_Address.Size = new System.Drawing.Size(164, 29);
+            this.tb_Address.Size = new System.Drawing.Size(162, 29);
             this.tb_Address.TabIndex = 9;
             // 
             // lbl_Address
             // 
             this.lbl_Address.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Address.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Address.Location = new System.Drawing.Point(595, 5);
+            this.lbl_Address.Location = new System.Drawing.Point(588, 5);
             this.lbl_Address.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_Address.Name = "lbl_Address";
-            this.lbl_Address.Size = new System.Drawing.Size(109, 32);
+            this.lbl_Address.Size = new System.Drawing.Size(108, 32);
             this.lbl_Address.TabIndex = 8;
             this.lbl_Address.Text = "ADDRESS";
             this.lbl_Address.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -197,7 +200,7 @@
             this.lbl_Name.Location = new System.Drawing.Point(24, 5);
             this.lbl_Name.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(75, 32);
+            this.lbl_Name.Size = new System.Drawing.Size(74, 32);
             this.lbl_Name.TabIndex = 6;
             this.lbl_Name.Text = "NAME";
             this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -207,19 +210,19 @@
             this.tb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Name.Location = new System.Drawing.Point(105, 6);
+            this.tb_Name.Location = new System.Drawing.Point(104, 6);
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(156, 29);
+            this.tb_Name.Size = new System.Drawing.Size(154, 29);
             this.tb_Name.TabIndex = 7;
             // 
             // lbl_MobileNo
             // 
             this.lbl_MobileNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_MobileNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MobileNo.Location = new System.Drawing.Point(270, 5);
+            this.lbl_MobileNo.Location = new System.Drawing.Point(267, 5);
             this.lbl_MobileNo.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_MobileNo.Name = "lbl_MobileNo";
-            this.lbl_MobileNo.Size = new System.Drawing.Size(138, 32);
+            this.lbl_MobileNo.Size = new System.Drawing.Size(136, 32);
             this.lbl_MobileNo.TabIndex = 4;
             this.lbl_MobileNo.Text = "MOBILE NO";
             this.lbl_MobileNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -229,9 +232,9 @@
             this.tb_MobileNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_MobileNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_MobileNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_MobileNo.Location = new System.Drawing.Point(414, 6);
+            this.tb_MobileNo.Location = new System.Drawing.Point(409, 6);
             this.tb_MobileNo.Name = "tb_MobileNo";
-            this.tb_MobileNo.Size = new System.Drawing.Size(172, 29);
+            this.tb_MobileNo.Size = new System.Drawing.Size(170, 29);
             this.tb_MobileNo.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -376,7 +379,7 @@
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 133);
+            this.textBox1.Location = new System.Drawing.Point(3, 138);
             this.textBox1.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(188, 29);
@@ -420,11 +423,10 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.54902F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.54902F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.9663782F));
+            this.tableLayoutPanel3.Controls.Add(this.cmb_Track, 1, 3);
             this.tableLayoutPanel3.Controls.Add(this.tb_Price, 4, 3);
             this.tableLayoutPanel3.Controls.Add(this.tb_Quantity, 3, 3);
-            this.tableLayoutPanel3.Controls.Add(this.tb_Width, 2, 3);
             this.tableLayoutPanel3.Controls.Add(this.cmb_Catagory, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.tb_Height, 1, 3);
             this.tableLayoutPanel3.Controls.Add(this.cmb_GlassType, 5, 1);
             this.tableLayoutPanel3.Controls.Add(this.cmb_MaterialType, 3, 1);
             this.tableLayoutPanel3.Controls.Add(this.cmb_SubCatagory, 2, 1);
@@ -439,6 +441,7 @@
             this.tableLayoutPanel3.Controls.Add(this.lbl_Price, 4, 2);
             this.tableLayoutPanel3.Controls.Add(this.btn_Add, 5, 3);
             this.tableLayoutPanel3.Controls.Add(this.cmb_Colour, 4, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 2, 3);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 21);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
@@ -448,6 +451,18 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(971, 145);
             this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // cmb_Track
+            // 
+            this.cmb_Track.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Track.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_Track.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Track.FormattingEnabled = true;
+            this.cmb_Track.Location = new System.Drawing.Point(24, 111);
+            this.cmb_Track.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.cmb_Track.Name = "cmb_Track";
+            this.cmb_Track.Size = new System.Drawing.Size(165, 33);
+            this.cmb_Track.TabIndex = 35;
             // 
             // tb_Price
             // 
@@ -471,17 +486,6 @@
             this.tb_Quantity.Size = new System.Drawing.Size(165, 29);
             this.tb_Quantity.TabIndex = 29;
             // 
-            // tb_Width
-            // 
-            this.tb_Width.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_Width.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_Width.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Width.Location = new System.Drawing.Point(213, 112);
-            this.tb_Width.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.tb_Width.Name = "tb_Width";
-            this.tb_Width.Size = new System.Drawing.Size(165, 29);
-            this.tb_Width.TabIndex = 28;
-            // 
             // cmb_Catagory
             // 
             this.cmb_Catagory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -493,17 +497,6 @@
             this.cmb_Catagory.Name = "cmb_Catagory";
             this.cmb_Catagory.Size = new System.Drawing.Size(165, 33);
             this.cmb_Catagory.TabIndex = 11;
-            // 
-            // tb_Height
-            // 
-            this.tb_Height.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_Height.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_Height.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Height.Location = new System.Drawing.Point(24, 112);
-            this.tb_Height.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.tb_Height.Name = "tb_Height";
-            this.tb_Height.Size = new System.Drawing.Size(165, 29);
-            this.tb_Height.TabIndex = 27;
             // 
             // cmb_GlassType
             // 
@@ -560,7 +553,7 @@
             this.lbl_Height.Name = "lbl_Height";
             this.lbl_Height.Size = new System.Drawing.Size(105, 32);
             this.lbl_Height.TabIndex = 3;
-            this.lbl_Height.Text = "Height";
+            this.lbl_Height.Text = "Track";
             this.lbl_Height.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_SubCatagory
@@ -609,13 +602,13 @@
             // 
             // lbl_Width
             // 
-            this.lbl_Width.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Width.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Width.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Width.Location = new System.Drawing.Point(243, 74);
+            this.lbl_Width.Location = new System.Drawing.Point(204, 74);
             this.lbl_Width.Name = "lbl_Width";
-            this.lbl_Width.Size = new System.Drawing.Size(105, 32);
+            this.lbl_Width.Size = new System.Drawing.Size(183, 32);
             this.lbl_Width.TabIndex = 6;
-            this.lbl_Width.Text = "Width";
+            this.lbl_Width.Text = "Height And Width";
             this.lbl_Width.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Quantity
@@ -665,6 +658,43 @@
             this.cmb_Colour.Name = "cmb_Colour";
             this.cmb_Colour.Size = new System.Drawing.Size(165, 33);
             this.cmb_Colour.TabIndex = 17;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.tb_Height, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tb_Width, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(204, 111);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(183, 31);
+            this.tableLayoutPanel5.TabIndex = 31;
+            // 
+            // tb_Height
+            // 
+            this.tb_Height.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Height.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Height.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Height.Location = new System.Drawing.Point(12, 3);
+            this.tb_Height.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.tb_Height.Name = "tb_Height";
+            this.tb_Height.Size = new System.Drawing.Size(67, 29);
+            this.tb_Height.TabIndex = 27;
+            // 
+            // tb_Width
+            // 
+            this.tb_Width.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Width.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Width.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Width.Location = new System.Drawing.Point(103, 3);
+            this.tb_Width.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.tb_Width.Name = "tb_Width";
+            this.tb_Width.Size = new System.Drawing.Size(68, 29);
+            this.tb_Width.TabIndex = 28;
             // 
             // rb_NewCustomer
             // 
@@ -799,6 +829,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.panel_NewOldCustomer.ResumeLayout(false);
             this.panel_NewOldCustomer.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -859,6 +891,8 @@
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.ComboBox cmb_Track;
     }
 }
 

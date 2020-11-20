@@ -47,6 +47,8 @@
             this.lbl_Name = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.lbl_Year = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -103,7 +105,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(480, 526);
+            this.groupBox1.Size = new System.Drawing.Size(480, 481);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "To Be Paid";
@@ -121,7 +123,7 @@
             this.tableLayoutPanel2.Controls.Add(this.textBox1, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_Add, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Total, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 486);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 441);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -175,7 +177,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(471, 458);
+            this.dataGridView1.Size = new System.Drawing.Size(471, 413);
             this.dataGridView1.TabIndex = 30;
             // 
             // tableLayoutPanel1
@@ -190,11 +192,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox2, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 159);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 204);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(977, 532);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(977, 487);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupBox2
@@ -203,7 +205,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(489, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(485, 526);
+            this.groupBox2.Size = new System.Drawing.Size(485, 481);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recently Paid";
@@ -219,7 +221,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(473, 499);
+            this.dataGridView2.Size = new System.Drawing.Size(473, 454);
             this.dataGridView2.TabIndex = 31;
             // 
             // groupBox3
@@ -229,7 +231,7 @@
             this.groupBox3.Controls.Add(this.tableLayoutPanel3);
             this.groupBox3.Location = new System.Drawing.Point(13, 77);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(977, 76);
+            this.groupBox3.Size = new System.Drawing.Size(977, 121);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Mantenance";
@@ -238,24 +240,26 @@
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.ColumnCount = 7;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.124903F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.70289F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.46568F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.87461F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.16456F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.52742F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.139934F));
-            this.tableLayoutPanel3.Controls.Add(this.textBox2, 4, 0);
+            this.tableLayoutPanel3.ColumnCount = 6;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel3.Controls.Add(this.lbl_ID, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_Year, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_Name, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.comboBox1, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button2, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.comboBox2, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.textBox2, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.button2, 4, 1);
+            this.tableLayoutPanel3.Controls.Add(this.comboBox1, 1, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(9, 21);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(959, 45);
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.5F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(959, 94);
             this.tableLayoutPanel3.TabIndex = 35;
             // 
             // textBox2
@@ -263,16 +267,17 @@
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(539, 8);
+            this.textBox2.Location = new System.Drawing.Point(555, 50);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 29);
+            this.textBox2.Size = new System.Drawing.Size(179, 29);
             this.textBox2.TabIndex = 36;
             // 
             // lbl_ID
             // 
-            this.lbl_ID.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_ID.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ID.Location = new System.Drawing.Point(32, 6);
+            this.lbl_ID.Location = new System.Drawing.Point(94, 1);
             this.lbl_ID.Name = "lbl_ID";
             this.lbl_ID.Size = new System.Drawing.Size(144, 32);
             this.lbl_ID.TabIndex = 13;
@@ -281,12 +286,12 @@
             // 
             // lbl_Name
             // 
-            this.lbl_Name.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Name.Location = new System.Drawing.Point(425, 3);
+            this.lbl_Name.Location = new System.Drawing.Point(592, 1);
             this.lbl_Name.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(108, 38);
+            this.lbl_Name.Size = new System.Drawing.Size(108, 33);
             this.lbl_Name.TabIndex = 15;
             this.lbl_Name.Text = "Total";
             this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -302,25 +307,53 @@
             "Completed",
             "Not Completed",
             "Pending Amount"});
-            this.comboBox1.Location = new System.Drawing.Point(191, 6);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.comboBox1.Location = new System.Drawing.Point(77, 48);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(181, 33);
+            this.comboBox1.Size = new System.Drawing.Size(179, 33);
             this.comboBox1.TabIndex = 37;
             // 
             // button2
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(772, 8);
+            this.button2.Location = new System.Drawing.Point(770, 50);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 29);
             this.button2.TabIndex = 17;
             this.button2.Text = "Pay";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // lbl_Year
+            // 
+            this.lbl_Year.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Year.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Year.Location = new System.Drawing.Point(333, 1);
+            this.lbl_Year.Name = "lbl_Year";
+            this.lbl_Year.Size = new System.Drawing.Size(144, 32);
+            this.lbl_Year.TabIndex = 38;
+            this.lbl_Year.Text = "Year";
+            this.lbl_Year.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "All",
+            "Completed",
+            "Not Completed",
+            "Pending Amount"});
+            this.comboBox2.Location = new System.Drawing.Point(316, 48);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(179, 33);
+            this.comboBox2.TabIndex = 39;
             // 
             // frm_PayMaintenance
             // 
@@ -371,5 +404,7 @@
         private System.Windows.Forms.Label lbl_ID;
         private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lbl_Year;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

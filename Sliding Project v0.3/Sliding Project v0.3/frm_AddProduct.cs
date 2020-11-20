@@ -23,5 +23,10 @@ namespace Sliding_Project_v0._3
             btn_Add.Text = "Update";
             btn_Search.Visible = true;
         }
+
+        private void frm_AddProduct_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
