@@ -28,5 +28,10 @@ namespace Sliding_Project_v0._3
         {
 
         }
+
+        private void frm_AddProduct_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,13 +42,13 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.lbl_ID = new System.Windows.Forms.Label();
-            this.lbl_Name = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.lbl_Year = new System.Windows.Forms.Label();
+            this.lbl_Name = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -262,17 +262,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(959, 94);
             this.tableLayoutPanel3.TabIndex = 35;
             // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(555, 50);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 29);
-            this.textBox2.TabIndex = 36;
-            // 
             // lbl_ID
             // 
             this.lbl_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -283,6 +272,17 @@
             this.lbl_ID.TabIndex = 13;
             this.lbl_ID.Text = "Month";
             this.lbl_ID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_Year
+            // 
+            this.lbl_Year.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Year.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Year.Location = new System.Drawing.Point(333, 1);
+            this.lbl_Year.Name = "lbl_Year";
+            this.lbl_Year.Size = new System.Drawing.Size(144, 32);
+            this.lbl_Year.TabIndex = 38;
+            this.lbl_Year.Text = "Year";
+            this.lbl_Year.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Name
             // 
@@ -295,48 +295,6 @@
             this.lbl_Name.TabIndex = 15;
             this.lbl_Name.Text = "Total";
             this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "All",
-            "Completed",
-            "Not Completed",
-            "Pending Amount"});
-            this.comboBox1.Location = new System.Drawing.Point(77, 48);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 33);
-            this.comboBox1.TabIndex = 37;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(770, 50);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 29);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Pay";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // lbl_Year
-            // 
-            this.lbl_Year.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_Year.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Year.Location = new System.Drawing.Point(333, 1);
-            this.lbl_Year.Name = "lbl_Year";
-            this.lbl_Year.Size = new System.Drawing.Size(144, 32);
-            this.lbl_Year.TabIndex = 38;
-            this.lbl_Year.Text = "Year";
-            this.lbl_Year.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBox2
             // 
@@ -354,6 +312,48 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(179, 33);
             this.comboBox2.TabIndex = 39;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(555, 50);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(179, 29);
+            this.textBox2.TabIndex = 36;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(770, 50);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 29);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Pay";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "All",
+            "Completed",
+            "Not Completed",
+            "Pending Amount"});
+            this.comboBox1.Location = new System.Drawing.Point(77, 48);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(179, 33);
+            this.comboBox1.TabIndex = 37;
             // 
             // frm_PayMaintenance
             // 

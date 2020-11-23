@@ -41,14 +41,17 @@
             this.lbl_ID = new System.Windows.Forms.Label();
             this.btn_Search = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Upload = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btn_Upload = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -59,9 +62,6 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -254,6 +254,18 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(971, 218);
             this.tableLayoutPanel4.TabIndex = 26;
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(69, 40);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(12, 8, 12, 3);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(261, 175);
+            this.checkedListBox1.TabIndex = 34;
+            // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -265,6 +277,30 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Select Required Material";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBox2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Location = new System.Drawing.Point(354, 40);
+            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(12, 8, 12, 3);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(261, 175);
+            this.checkedListBox2.TabIndex = 35;
+            // 
+            // checkedListBox3
+            // 
+            this.checkedListBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBox3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox3.FormattingEnabled = true;
+            this.checkedListBox3.Location = new System.Drawing.Point(639, 40);
+            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(12, 8, 12, 3);
+            this.checkedListBox3.Name = "checkedListBox3";
+            this.checkedListBox3.Size = new System.Drawing.Size(261, 175);
+            this.checkedListBox3.TabIndex = 36;
             // 
             // groupBox2
             // 
@@ -330,22 +366,6 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(459, 121);
             this.tableLayoutPanel6.TabIndex = 38;
             // 
-            // btn_Upload
-            // 
-            this.btn_Upload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Upload.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_Upload.FlatAppearance.BorderSize = 0;
-            this.btn_Upload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Upload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Upload.Location = new System.Drawing.Point(239, 6);
-            this.btn_Upload.Margin = new System.Windows.Forms.Padding(10, 6, 10, 0);
-            this.btn_Upload.Name = "btn_Upload";
-            this.btn_Upload.Size = new System.Drawing.Size(210, 29);
-            this.btn_Upload.TabIndex = 29;
-            this.btn_Upload.Text = "UPLOAD";
-            this.btn_Upload.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -371,6 +391,22 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "Image";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_Upload
+            // 
+            this.btn_Upload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Upload.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Upload.FlatAppearance.BorderSize = 0;
+            this.btn_Upload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Upload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Upload.Location = new System.Drawing.Point(239, 6);
+            this.btn_Upload.Margin = new System.Windows.Forms.Padding(10, 6, 10, 0);
+            this.btn_Upload.Name = "btn_Upload";
+            this.btn_Upload.Size = new System.Drawing.Size(210, 29);
+            this.btn_Upload.TabIndex = 29;
+            this.btn_Upload.Text = "UPLOAD";
+            this.btn_Upload.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel5
             // 
@@ -506,42 +542,6 @@
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(69, 40);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(12, 8, 12, 3);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(261, 175);
-            this.checkedListBox1.TabIndex = 34;
-            // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkedListBox2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(354, 40);
-            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(12, 8, 12, 3);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(261, 175);
-            this.checkedListBox2.TabIndex = 35;
-            // 
-            // checkedListBox3
-            // 
-            this.checkedListBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkedListBox3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Location = new System.Drawing.Point(639, 40);
-            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(12, 8, 12, 3);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(261, 175);
-            this.checkedListBox3.TabIndex = 36;
-            // 
             // frm_AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -556,6 +556,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frm_AddProduct";
             this.Text = "Add Product";
+            this.Load += new System.EventHandler(this.frm_AddProduct_Load_1);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
