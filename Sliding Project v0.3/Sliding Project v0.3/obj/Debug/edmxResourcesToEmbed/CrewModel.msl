@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CrewDBModelStoreContainer" CdmEntityContainer="CrewEntities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="CrewDBModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer_Transaction">
+      <EntityTypeMapping TypeName="CrewDBModel.Customer_Transaction">
+        <MappingFragment StoreEntitySet="Customer_Transaction">
+          <ScalarProperty Name="Transaction_ID" ColumnName="Transaction_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="CrewDBModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Order_Date" ColumnName="Order_Date" />
+          <ScalarProperty Name="Installation_Charge" ColumnName="Installation_Charge" />
+          <ScalarProperty Name="GST" ColumnName="GST" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Paid_Amount" ColumnName="Paid_Amount" />
+          <ScalarProperty Name="Remaining_Amount" ColumnName="Remaining_Amount" />
+          <ScalarProperty Name="Delivery_Date" ColumnName="Delivery_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CrewDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Security_Key" ColumnName="Security_Key" />
+          <ScalarProperty Name="Treat_As" ColumnName="Treat_As" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ordered_Items">
+      <EntityTypeMapping TypeName="CrewDBModel.Ordered_Items">
+        <MappingFragment StoreEntitySet="Ordered_Items">
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Catagory" ColumnName="Catagory" />
+          <ScalarProperty Name="Sub_Catagory" ColumnName="Sub_Catagory" />
+          <ScalarProperty Name="Material_Type" ColumnName="Material_Type" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="Glass_Type" ColumnName="Glass_Type" />
+          <ScalarProperty Name="Track" ColumnName="Track" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

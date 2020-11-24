@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CrewDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Customer_ID" />
+    </Key>
+    <Property Name="Customer_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Mobile_No" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer_Transaction">
+    <Key>
+      <PropertyRef Name="Transaction_ID" />
+    </Key>
+    <Property Name="Transaction_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Order_ID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Paid" Type="money" Nullable="false" />
+    <Property Name="User_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Ordered_Items">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+      <PropertyRef Name="Catagory" />
+      <PropertyRef Name="Sub_Catagory" />
+      <PropertyRef Name="Material_Type" />
+      <PropertyRef Name="Colour" />
+      <PropertyRef Name="Glass_Type" />
+      <PropertyRef Name="Track" />
+      <PropertyRef Name="Height" />
+      <PropertyRef Name="Width" />
+      <PropertyRef Name="Quantity" />
+    </Key>
+    <Property Name="Order_ID" Type="int" Nullable="false" />
+    <Property Name="Catagory" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Sub_Catagory" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Material_Type" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Colour" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Glass_Type" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Track" Type="int" Nullable="false" />
+    <Property Name="Height" Type="float" Nullable="false" />
+    <Property Name="Width" Type="float" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+    </Key>
+    <Property Name="Order_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_ID" Type="int" Nullable="false" />
+    <Property Name="User_ID" Type="int" Nullable="false" />
+    <Property Name="Order_Date" Type="date" Nullable="false" />
+    <Property Name="Installation_Charge" Type="money" Nullable="false" />
+    <Property Name="GST" Type="float" Nullable="false" />
+    <Property Name="Discount" Type="float" Nullable="false" />
+    <Property Name="Total" Type="money" Nullable="false" />
+    <Property Name="Paid_Amount" Type="money" Nullable="false" />
+    <Property Name="Remaining_Amount" Type="money" Nullable="false" />
+    <Property Name="Delivery_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Created_Date" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Security_Key" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Treat_As" Type="varchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Customer___Order__44FF419A">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="Customer_Transaction" Type="Self.Customer_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="Order_ID" />
+      </Principal>
+      <Dependent Role="Customer_Transaction">
+        <PropertyRef Name="Order_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer___User___440B1D61">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Customer_Transaction" Type="Self.Customer_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="Customer_Transaction">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ordered_I__Order__3E52440B">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="Ordered_Items" Type="Self.Ordered_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="Order_ID" />
+      </Principal>
+      <Dependent Role="Ordered_Items">
+        <PropertyRef Name="Order_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__Customer__3F466844">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Customer_ID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__User_ID__403A8C7D">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CrewDBModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer_Transaction" EntityType="Self.Customer_Transaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ordered_Items" EntityType="Self.Ordered_Items" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Ordered_Items].[Order_ID] AS [Order_ID], 
+    [Ordered_Items].[Catagory] AS [Catagory], 
+    [Ordered_Items].[Sub_Catagory] AS [Sub_Catagory], 
+    [Ordered_Items].[Material_Type] AS [Material_Type], 
+    [Ordered_Items].[Colour] AS [Colour], 
+    [Ordered_Items].[Glass_Type] AS [Glass_Type], 
+    [Ordered_Items].[Track] AS [Track], 
+    [Ordered_Items].[Height] AS [Height], 
+    [Ordered_Items].[Width] AS [Width], 
+    [Ordered_Items].[Quantity] AS [Quantity]
+    FROM [dbo].[Ordered_Items] AS [Ordered_Items]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Customer___Order__44FF419A" Association="Self.FK__Customer___Order__44FF419A">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="Customer_Transaction" EntitySet="Customer_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer___User___440B1D61" Association="Self.FK__Customer___User___440B1D61">
+      <End Role="User" EntitySet="User" />
+      <End Role="Customer_Transaction" EntitySet="Customer_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ordered_I__Order__3E52440B" Association="Self.FK__Ordered_I__Order__3E52440B">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="Ordered_Items" EntitySet="Ordered_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__Customer__3F466844" Association="Self.FK__Orders__Customer__3F466844">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__User_ID__403A8C7D" Association="Self.FK__Orders__User_ID__403A8C7D">
+      <End Role="User" EntitySet="User" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

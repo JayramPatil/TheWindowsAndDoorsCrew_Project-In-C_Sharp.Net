@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e1c974b98f7545899f4843d6f24dc850" Name="Diagram1">
+        <EntityTypeShape EntityType="CrewDBModel.Customer" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CrewDBModel.Customer_Transaction" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CrewDBModel.Order" Width="1.5" PointX="6" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CrewDBModel.User" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CrewDBModel.Ordered_Items" Width="1.5" PointX="8.25" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="CrewDBModel.FK__Orders__Customer__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="CrewDBModel.FK__Customer___Order__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="CrewDBModel.FK__Customer___User___300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="CrewDBModel.FK__Ordered_I__Order__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="CrewDBModel.FK__Orders__User_ID__2C3393D0" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
