@@ -33,14 +33,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_ID = new System.Windows.Forms.TextBox();
             this.lbl_ID = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_Date = new System.Windows.Forms.TextBox();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.btn_Search = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmb_TreatAs = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -52,16 +52,16 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tb_Password = new System.Windows.Forms.TextBox();
+            this.tb_Username = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tb_SequrityKey = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tb_ConfirmPassword = new System.Windows.Forms.TextBox();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -130,9 +130,9 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.14803F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.16131F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.770854F));
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tb_ID, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_ID, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox2, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tb_Date, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_Name, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.btn_Search, 3, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 21);
@@ -142,16 +142,17 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(971, 45);
             this.tableLayoutPanel3.TabIndex = 36;
             // 
-            // textBox1
+            // tb_ID
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(171, 8);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 29);
-            this.textBox1.TabIndex = 37;
+            this.tb_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_ID.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_ID.Location = new System.Drawing.Point(171, 8);
+            this.tb_ID.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
+            this.tb_ID.Name = "tb_ID";
+            this.tb_ID.Size = new System.Drawing.Size(213, 29);
+            this.tb_ID.TabIndex = 37;
+            this.tb_ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbl_ID
             // 
@@ -164,16 +165,17 @@
             this.lbl_ID.Text = "ID";
             this.lbl_ID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // tb_Date
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(660, 8);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 29);
-            this.textBox2.TabIndex = 36;
+            this.tb_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Date.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Date.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Date.Location = new System.Drawing.Point(660, 8);
+            this.tb_Date.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
+            this.tb_Date.Name = "tb_Date";
+            this.tb_Date.Size = new System.Drawing.Size(213, 29);
+            this.tb_Date.TabIndex = 36;
+            this.tb_Date.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbl_Name
             // 
@@ -225,7 +227,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.comboBox2, 2, 3);
+            this.tableLayoutPanel2.Controls.Add(this.cmb_TreatAs, 2, 3);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 2);
@@ -237,14 +239,14 @@
             this.tableLayoutPanel2.Controls.Add(this.panel11, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel9, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox4, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox3, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tb_Password, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tb_Username, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label5, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.textBox7, 2, 4);
+            this.tableLayoutPanel2.Controls.Add(this.tb_SequrityKey, 2, 4);
             this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.label4, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBox6, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.tb_ConfirmPassword, 2, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 21);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
@@ -256,22 +258,22 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(971, 449);
             this.tableLayoutPanel2.TabIndex = 37;
             // 
-            // comboBox2
+            // cmb_TreatAs
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmb_TreatAs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_TreatAs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_TreatAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_TreatAs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_TreatAs.FormattingEnabled = true;
+            this.cmb_TreatAs.Items.AddRange(new object[] {
             "Admin",
             "Manager",
             "Employee"});
-            this.comboBox2.Location = new System.Drawing.Point(535, 295);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(191, 33);
-            this.comboBox2.TabIndex = 43;
+            this.cmb_TreatAs.Location = new System.Drawing.Point(535, 295);
+            this.cmb_TreatAs.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
+            this.cmb_TreatAs.Name = "cmb_TreatAs";
+            this.cmb_TreatAs.Size = new System.Drawing.Size(191, 33);
+            this.cmb_TreatAs.TabIndex = 43;
             // 
             // panel2
             // 
@@ -385,27 +387,29 @@
             this.label2.Text = "Password";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // tb_Password
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(535, 119);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(191, 29);
-            this.textBox4.TabIndex = 40;
+            this.tb_Password.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Password.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Password.Location = new System.Drawing.Point(535, 119);
+            this.tb_Password.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
+            this.tb_Password.Name = "tb_Password";
+            this.tb_Password.Size = new System.Drawing.Size(191, 29);
+            this.tb_Password.TabIndex = 40;
+            this.tb_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // tb_Username
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(535, 30);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 29);
-            this.textBox3.TabIndex = 41;
+            this.tb_Username.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Username.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Username.Location = new System.Drawing.Point(535, 30);
+            this.tb_Username.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
+            this.tb_Username.Name = "tb_Username";
+            this.tb_Username.Size = new System.Drawing.Size(191, 29);
+            this.tb_Username.TabIndex = 41;
+            this.tb_Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -419,16 +423,17 @@
             this.label5.Text = "Security Key";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox7
+            // tb_SequrityKey
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(535, 388);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(191, 29);
-            this.textBox7.TabIndex = 42;
+            this.tb_SequrityKey.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_SequrityKey.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_SequrityKey.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_SequrityKey.Location = new System.Drawing.Point(535, 388);
+            this.tb_SequrityKey.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
+            this.tb_SequrityKey.Name = "tb_SequrityKey";
+            this.tb_SequrityKey.Size = new System.Drawing.Size(191, 29);
+            this.tb_SequrityKey.TabIndex = 42;
+            this.tb_SequrityKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -466,16 +471,17 @@
             this.label4.Text = "Confirm Password";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox6
+            // tb_ConfirmPassword
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(535, 208);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(191, 29);
-            this.textBox6.TabIndex = 40;
+            this.tb_ConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_ConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_ConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_ConfirmPassword.Location = new System.Drawing.Point(535, 208);
+            this.tb_ConfirmPassword.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
+            this.tb_ConfirmPassword.Name = "tb_ConfirmPassword";
+            this.tb_ConfirmPassword.Size = new System.Drawing.Size(191, 29);
+            this.tb_ConfirmPassword.TabIndex = 40;
+            this.tb_ConfirmPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_Add
             // 
@@ -490,20 +496,21 @@
             this.btn_Add.TabIndex = 34;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // button2
+            // btn_Refresh
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(216, 650);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 35);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Refresh";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Refresh.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Refresh.FlatAppearance.BorderSize = 0;
+            this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.Location = new System.Drawing.Point(216, 650);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(144, 35);
+            this.btn_Refresh.TabIndex = 33;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.UseVisualStyleBackColor = false;
             // 
             // frm_AddUser
             // 
@@ -512,12 +519,13 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1002, 703);
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "frm_AddUser";
             this.Text = "Add User";
+            this.Load += new System.EventHandler(this.frm_AddUser_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -536,23 +544,23 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_ID;
+        private System.Windows.Forms.TextBox tb_Date;
         private System.Windows.Forms.Label lbl_ID;
         private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tb_ConfirmPassword;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tb_SequrityKey;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tb_Password;
+        private System.Windows.Forms.TextBox tb_Username;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -563,7 +571,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmb_TreatAs;
         private System.Windows.Forms.Button btn_Search;
     }
 }

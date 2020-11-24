@@ -22,5 +22,15 @@ namespace Sliding_Project_v0._3
             lbl_Header.Text = "Update Customer Details";
             btn_Add.Text = "Update";
         }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            using(CrewEntities DB = new CrewEntities())
+            {
+
+                DB.Customers.Add(new Customer { Name = tb_Name.Text, Mobile_No = tb_MobileNo.Text, Address = tb_Address.Text });
+                DB.SaveChanges();
+            }
+        }
     }
 }

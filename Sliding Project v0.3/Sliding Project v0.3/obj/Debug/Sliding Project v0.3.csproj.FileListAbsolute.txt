@@ -29,3 +29,8 @@ D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Proje
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_AddCustomer.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_ManageCustomers.resources
 D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding_Project_v0._3.frm_TotalEE.resources
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\bin\Debug\EntityFramework.dll
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\bin\Debug\EntityFramework.SqlServer.dll
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\bin\Debug\EntityFramework.xml
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\bin\Debug\EntityFramework.SqlServer.xml
+D:\Study Material\Visual Studio\.Net Projects\Sliding Project v0.3\Sliding Project v0.3\obj\Debug\Sliding Project v0.3.csproj.CopyComplete
