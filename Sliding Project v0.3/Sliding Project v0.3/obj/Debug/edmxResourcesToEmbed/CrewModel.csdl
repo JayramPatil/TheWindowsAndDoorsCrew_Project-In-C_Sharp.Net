@@ -47,7 +47,7 @@
       <PropertyRef Name="User_ID" />
     </Key>
     <Property Name="User_ID" Type="Int32" Nullable="false" />
-    <Property Name="Created_Date" Type="String" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" />
     <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Security_Key" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />

@@ -71,7 +71,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
             <PropertyRef Name="User_ID" />
           </Key>
           <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Created_Date" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Created_Date" Type="date" Nullable="false" />
           <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Security_Key" Type="nvarchar" MaxLength="20" Nullable="false" />
@@ -228,7 +228,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
             <PropertyRef Name="User_ID" />
           </Key>
           <Property Name="User_ID" Type="Int32" Nullable="false" />
-          <Property Name="Created_Date" Type="String" Nullable="false" />
+          <Property Name="Created_Date" Type="DateTime" Nullable="false" />
           <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Security_Key" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />

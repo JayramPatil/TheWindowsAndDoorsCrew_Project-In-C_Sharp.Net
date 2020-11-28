@@ -33,7 +33,8 @@ namespace Sliding_Project_v0._3
         {
             using(CrewEntities DB = new CrewEntities())
             {
-                DB.Users.Add(new User { Created_Date = tb_Date.Text, Username = tb_Username.Text, Password = tb_Password.Text, Treat_As = cmb_TreatAs.Text, Security_Key = tb_SequrityKey.Text });
+                DateTime dt = Convert.ToDateTime(tb_Date.Text);
+                DB.Users.Add(new User { Created_Date = dt, Username = tb_Username.Text, Password = tb_Password.Text, Treat_As = cmb_TreatAs.Text, Security_Key = tb_SequrityKey.Text });
                 DB.SaveChanges();
             }
         }

@@ -22,7 +22,7 @@ namespace Sliding_Project_v0._3
         }
     
         public int User_ID { get; set; }
-        public string Created_Date { get; set; }
+        public System.DateTime Created_Date { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Security_Key { get; set; }
