@@ -15,6 +15,37 @@
         <AssociationConnector Association="CrewDBModel.FK__Customer___User___300424B4" ManuallyRouted="false" />
         <AssociationConnector Association="CrewDBModel.FK__Ordered_I__Order__31EC6D26" ManuallyRouted="false" />
         <AssociationConnector Association="CrewDBModel.FK__Orders__User_ID__2C3393D0" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CrewDBModel.Catagory" Width="1.5" PointX="10.75" PointY="12.75" />
+        <EntityTypeShape EntityType="CrewDBModel.Distributor" Width="1.5" PointX="10.75" PointY="9.875" />
+        <EntityTypeShape EntityType="CrewDBModel.Employee_Details" Width="1.5" PointX="10.75" PointY="1" />
+        <EntityTypeShape EntityType="CrewDBModel.Employee_Salary" Width="1.5" PointX="13" PointY="1.5" />
+        <EntityTypeShape EntityType="CrewDBModel.Employee_Transaction" Width="1.5" PointX="15.25" PointY="1.625" />
+        <EntityTypeShape EntityType="CrewDBModel.Maintainance" Width="1.5" PointX="12.75" PointY="12.75" />
+        <EntityTypeShape EntityType="CrewDBModel.Material_Group" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="CrewDBModel.Material_Info" Width="1.5" PointX="3" PointY="16.75" />
+        <EntityTypeShape EntityType="CrewDBModel.Product" Width="1.5" PointX="10.75" PointY="6" />
+        <EntityTypeShape EntityType="CrewDBModel.Stock" Width="1.5" PointX="5.75" PointY="14.75" />
+        <EntityTypeShape EntityType="CrewDBModel.Stock_Order" Width="1.5" PointX="5.75" PointY="9.5" />
+        <EntityTypeShape EntityType="CrewDBModel.sysdiagram" Width="1.5" PointX="7.75" PointY="14.75" />
+        <EntityTypeShape EntityType="CrewDBModel.Distributor_Material" Width="1.5" PointX="13" PointY="10" />
+        <EntityTypeShape EntityType="CrewDBModel.Distributor_Transaction" Width="1.5" PointX="8" PointY="8.125" />
+        <EntityTypeShape EntityType="CrewDBModel.Material_Colour" Width="1.5" PointX="3" PointY="12.125" />
+        <EntityTypeShape EntityType="CrewDBModel.Material_Size" Width="1.5" PointX="3" PointY="14.375" />
+        <EntityTypeShape EntityType="CrewDBModel.Material_Track" Width="1.5" PointX="3" PointY="7.375" />
+        <EntityTypeShape EntityType="CrewDBModel.Material_Type" Width="1.5" PointX="3" PointY="9.75" />
+        <EntityTypeShape EntityType="CrewDBModel.Product_Material" Width="1.5" PointX="13" PointY="6.375" />
+        <EntityTypeShape EntityType="CrewDBModel.Stock_Ordered_Items" Width="1.5" PointX="8" PointY="10.875" />
+        <AssociationConnector Association="CrewDBModel.FK__Distribut__Distr__4CA06362" />
+        <AssociationConnector Association="CrewDBModel.FK__Employee___Emplo__787EE5A0" />
+        <AssociationConnector Association="CrewDBModel.FK__Employee___Emplo__7B5B524B" />
+        <AssociationConnector Association="CrewDBModel.FK__Material___Group__6383C8BA" />
+        <AssociationConnector Association="CrewDBModel.FK__Material___Group__656C112C" />
+        <AssociationConnector Association="CrewDBModel.FK__Material___Group__6754599E" />
+        <AssociationConnector Association="CrewDBModel.FK__Material___Group__693CA210" />
+        <AssociationConnector Association="CrewDBModel.FK__Material___Group__6B24EA82" />
+        <AssociationConnector Association="CrewDBModel.FK__Product_M__Produ__48CFD27E" />
+        <AssociationConnector Association="CrewDBModel.FK__Distributo__Paid__73BA3083" />
+        <AssociationConnector Association="CrewDBModel.FK__Stock_Ord__Order__7D439ABD" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

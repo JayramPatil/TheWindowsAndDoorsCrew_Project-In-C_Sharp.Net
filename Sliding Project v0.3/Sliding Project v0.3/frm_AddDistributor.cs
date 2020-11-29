@@ -23,5 +23,13 @@ namespace Sliding_Project_v0._3
             btn_Search.Visible = true;
             btn_Add.Text = "Update";
         }
+
+        private void frm_AddDistributor_Load(object sender, EventArgs e)
+        {
+            using(CrewEntities DB = new CrewEntities())
+            {
+                //clb_Other.Items.Add
+            }
+        }
     }
 }

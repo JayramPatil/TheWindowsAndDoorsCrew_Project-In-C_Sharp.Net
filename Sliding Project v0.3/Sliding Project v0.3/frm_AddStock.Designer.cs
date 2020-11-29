@@ -272,6 +272,7 @@
             this.btn_New.TabIndex = 13;
             this.btn_New.Text = "New";
             this.btn_New.UseVisualStyleBackColor = false;
+            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
             // 
             // label1
             // 

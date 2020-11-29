@@ -46,19 +46,20 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.clb_Window = new System.Windows.Forms.CheckedListBox();
+            this.clb_Other = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -305,16 +306,17 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.Controls.Add(this.button2, 2, 3);
             this.tableLayoutPanel3.Controls.Add(this.label5, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label3, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.comboBox2, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.comboBox3, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.comboBox1, 3, 1);
-            this.tableLayoutPanel3.Controls.Add(this.checkedListBox1, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.checkedListBox3, 3, 2);
+            this.tableLayoutPanel3.Controls.Add(this.clb_Window, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.clb_Other, 3, 2);
             this.tableLayoutPanel3.Controls.Add(this.checkedListBox2, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.button2, 3, 3);
+            this.tableLayoutPanel3.Controls.Add(this.button3, 1, 3);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 21);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
@@ -324,6 +326,21 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(971, 381);
             this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(603, 347);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(225, 31);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "Select All";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -409,31 +426,29 @@
             this.comboBox1.Size = new System.Drawing.Size(207, 33);
             this.comboBox1.TabIndex = 31;
             // 
-            // checkedListBox1
+            // clb_Window
             // 
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(150, 86);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(207, 255);
-            this.checkedListBox1.TabIndex = 33;
+            this.clb_Window.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clb_Window.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clb_Window.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clb_Window.FormattingEnabled = true;
+            this.clb_Window.Location = new System.Drawing.Point(150, 86);
+            this.clb_Window.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.clb_Window.Name = "clb_Window";
+            this.clb_Window.Size = new System.Drawing.Size(207, 255);
+            this.clb_Window.TabIndex = 33;
             // 
-            // checkedListBox3
+            // clb_Other
             // 
-            this.checkedListBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkedListBox3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Items.AddRange(new object[] {
-            "hii"});
-            this.checkedListBox3.Location = new System.Drawing.Point(612, 86);
-            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(207, 255);
-            this.checkedListBox3.TabIndex = 35;
+            this.clb_Other.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clb_Other.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clb_Other.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clb_Other.FormattingEnabled = true;
+            this.clb_Other.Location = new System.Drawing.Point(612, 86);
+            this.clb_Other.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.clb_Other.Name = "clb_Other";
+            this.clb_Other.Size = new System.Drawing.Size(207, 255);
+            this.clb_Other.TabIndex = 35;
             // 
             // checkedListBox2
             // 
@@ -441,6 +456,10 @@
             this.checkedListBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkedListBox2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "Single Door",
+            "Double Door",
+            "Bathroom Door"});
             this.checkedListBox2.Location = new System.Drawing.Point(381, 86);
             this.checkedListBox2.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
             this.checkedListBox2.Name = "checkedListBox2";
@@ -495,20 +514,20 @@
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // button3
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(372, 347);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 31);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "Select All";
-            this.button2.UseVisualStyleBackColor = false;
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(141, 347);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(225, 31);
+            this.button3.TabIndex = 36;
+            this.button3.Text = "Add New Material";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // frm_AddDistributor
             // 
@@ -523,6 +542,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frm_AddDistributor";
             this.Text = "Add Distributor";
+            this.Load += new System.EventHandler(this.frm_AddDistributor_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -566,9 +586,10 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.CheckedListBox checkedListBox3;
+        private System.Windows.Forms.CheckedListBox clb_Window;
+        private System.Windows.Forms.CheckedListBox clb_Other;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

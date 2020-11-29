@@ -47,7 +47,7 @@
       <PropertyRef Name="User_ID" />
     </Key>
     <Property Name="User_ID" Type="Int32" Nullable="false" />
-    <Property Name="Created_Date" Type="DateTime" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Security_Key" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
@@ -166,5 +166,461 @@
       <End Role="User" EntitySet="Users" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
+    <EntitySet Name="Catagories" EntityType="CrewDBModel.Catagory" />
+    <EntitySet Name="Distributors" EntityType="CrewDBModel.Distributor" />
+    <EntitySet Name="Employee_Details" EntityType="CrewDBModel.Employee_Details" />
+    <EntitySet Name="Employee_Salary" EntityType="CrewDBModel.Employee_Salary" />
+    <EntitySet Name="Employee_Transaction" EntityType="CrewDBModel.Employee_Transaction" />
+    <EntitySet Name="Maintainances" EntityType="CrewDBModel.Maintainance" />
+    <EntitySet Name="Material_Group" EntityType="CrewDBModel.Material_Group" />
+    <EntitySet Name="Material_Info" EntityType="CrewDBModel.Material_Info" />
+    <EntitySet Name="Products" EntityType="CrewDBModel.Product" />
+    <EntitySet Name="Stocks" EntityType="CrewDBModel.Stock" />
+    <EntitySet Name="Stock_Order" EntityType="CrewDBModel.Stock_Order" />
+    <EntitySet Name="sysdiagrams" EntityType="CrewDBModel.sysdiagram" />
+    <EntitySet Name="Distributor_Material" EntityType="CrewDBModel.Distributor_Material" />
+    <EntitySet Name="Distributor_Transaction" EntityType="CrewDBModel.Distributor_Transaction" />
+    <EntitySet Name="Material_Colour" EntityType="CrewDBModel.Material_Colour" />
+    <EntitySet Name="Material_Size" EntityType="CrewDBModel.Material_Size" />
+    <EntitySet Name="Material_Track" EntityType="CrewDBModel.Material_Track" />
+    <EntitySet Name="Material_Type" EntityType="CrewDBModel.Material_Type" />
+    <EntitySet Name="Product_Material" EntityType="CrewDBModel.Product_Material" />
+    <EntitySet Name="Stock_Ordered_Items" EntityType="CrewDBModel.Stock_Ordered_Items" />
+    <AssociationSet Name="FK__Distribut__Distr__4CA06362" Association="CrewDBModel.FK__Distribut__Distr__4CA06362">
+      <End Role="Distributor" EntitySet="Distributors" />
+      <End Role="Distributor_Material" EntitySet="Distributor_Material" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emplo__787EE5A0" Association="CrewDBModel.FK__Employee___Emplo__787EE5A0">
+      <End Role="Employee_Details" EntitySet="Employee_Details" />
+      <End Role="Employee_Salary" EntitySet="Employee_Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emplo__7B5B524B" Association="CrewDBModel.FK__Employee___Emplo__7B5B524B">
+      <End Role="Employee_Salary" EntitySet="Employee_Salary" />
+      <End Role="Employee_Transaction" EntitySet="Employee_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Material___Group__6383C8BA" Association="CrewDBModel.FK__Material___Group__6383C8BA">
+      <End Role="Material_Group" EntitySet="Material_Group" />
+      <End Role="Material_Info" EntitySet="Material_Info" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Material___Group__656C112C" Association="CrewDBModel.FK__Material___Group__656C112C">
+      <End Role="Material_Group" EntitySet="Material_Group" />
+      <End Role="Material_Type" EntitySet="Material_Type" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Material___Group__6754599E" Association="CrewDBModel.FK__Material___Group__6754599E">
+      <End Role="Material_Group" EntitySet="Material_Group" />
+      <End Role="Material_Colour" EntitySet="Material_Colour" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Material___Group__693CA210" Association="CrewDBModel.FK__Material___Group__693CA210">
+      <End Role="Material_Group" EntitySet="Material_Group" />
+      <End Role="Material_Size" EntitySet="Material_Size" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Material___Group__6B24EA82" Association="CrewDBModel.FK__Material___Group__6B24EA82">
+      <End Role="Material_Group" EntitySet="Material_Group" />
+      <End Role="Material_Track" EntitySet="Material_Track" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Product_M__Produ__48CFD27E" Association="CrewDBModel.FK__Product_M__Produ__48CFD27E">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Product_Material" EntitySet="Product_Material" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Distributo__Paid__73BA3083" Association="CrewDBModel.FK__Distributo__Paid__73BA3083">
+      <End Role="Stock_Order" EntitySet="Stock_Order" />
+      <End Role="Distributor_Transaction" EntitySet="Distributor_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Stock_Ord__Order__7D439ABD" Association="CrewDBModel.FK__Stock_Ord__Order__7D439ABD">
+      <End Role="Stock_Order" EntitySet="Stock_Order" />
+      <End Role="Stock_Ordered_Items" EntitySet="Stock_Ordered_Items" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(CrewDBModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(CrewDBModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
+  <EntityType Name="Catagory">
+    <Key>
+      <PropertyRef Name="Catagory_ID" />
+    </Key>
+    <Property Name="Catagory_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Distributor">
+    <Key>
+      <PropertyRef Name="Distributor_ID" />
+    </Key>
+    <Property Name="Distributor_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile_No" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Distributor_Material" Relationship="CrewDBModel.FK__Distribut__Distr__4CA06362" FromRole="Distributor" ToRole="Distributor_Material" />
+  </EntityType>
+  <EntityType Name="Employee_Details">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="28" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile_No" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Adhaar_No" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="Account_No" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Qualification" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Experience" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Joining_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Employee_Salary" Relationship="CrewDBModel.FK__Employee___Emplo__787EE5A0" FromRole="Employee_Details" ToRole="Employee_Salary" />
+  </EntityType>
+  <EntityType Name="Employee_Salary">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="Int32" Nullable="false" />
+    <Property Name="Post" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Salary" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Pending_Salary" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Last_Paid" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Employee_Details" Relationship="CrewDBModel.FK__Employee___Emplo__787EE5A0" FromRole="Employee_Salary" ToRole="Employee_Details" />
+    <NavigationProperty Name="Employee_Transaction" Relationship="CrewDBModel.FK__Employee___Emplo__7B5B524B" FromRole="Employee_Salary" ToRole="Employee_Transaction" />
+  </EntityType>
+  <EntityType Name="Employee_Transaction">
+    <Key>
+      <PropertyRef Name="Transaction_ID" />
+    </Key>
+    <Property Name="Transaction_ID" Type="Int32" Nullable="false" />
+    <Property Name="Employee_ID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Paid" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Employee_Salary" Relationship="CrewDBModel.FK__Employee___Emplo__7B5B524B" FromRole="Employee_Transaction" ToRole="Employee_Salary" />
+  </EntityType>
+  <EntityType Name="Maintainance">
+    <Key>
+      <PropertyRef Name="Maintainance_ID" />
+    </Key>
+    <Property Name="Maintainance_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Month" Type="Int32" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Payment_Status" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Material_Group">
+    <Key>
+      <PropertyRef Name="Group_ID" />
+    </Key>
+    <Property Name="Group_ID" Type="Int32" Nullable="false" />
+    <Property Name="Group_Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Material_Info" Relationship="CrewDBModel.FK__Material___Group__6383C8BA" FromRole="Material_Group" ToRole="Material_Info" />
+    <NavigationProperty Name="Material_Type" Relationship="CrewDBModel.FK__Material___Group__656C112C" FromRole="Material_Group" ToRole="Material_Type" />
+    <NavigationProperty Name="Material_Colour" Relationship="CrewDBModel.FK__Material___Group__6754599E" FromRole="Material_Group" ToRole="Material_Colour" />
+    <NavigationProperty Name="Material_Size" Relationship="CrewDBModel.FK__Material___Group__693CA210" FromRole="Material_Group" ToRole="Material_Size" />
+    <NavigationProperty Name="Material_Track" Relationship="CrewDBModel.FK__Material___Group__6B24EA82" FromRole="Material_Group" ToRole="Material_Track" />
+  </EntityType>
+  <EntityType Name="Material_Info">
+    <Key>
+      <PropertyRef Name="Material_ID" />
+    </Key>
+    <Property Name="Material_ID" Type="Int32" Nullable="false" />
+    <Property Name="Material_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Group_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Material_Group" Relationship="CrewDBModel.FK__Material___Group__6383C8BA" FromRole="Material_Info" ToRole="Material_Group" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Product_ID" />
+    </Key>
+    <Property Name="Product_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Product_Name" Type="String" Nullable="false" MaxLength="28" FixedLength="false" Unicode="false" />
+    <Property Name="Catagory" Type="String" Nullable="false" MaxLength="28" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Time_To_Build" Type="Double" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Product_Material" Relationship="CrewDBModel.FK__Product_M__Produ__48CFD27E" FromRole="Product" ToRole="Product_Material" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="Material_ID" />
+    </Key>
+    <Property Name="Material_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Material_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Colour" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Size" Type="Int32" />
+    <Property Name="Track" Type="Int32" />
+    <Property Name="Available_Stock" Type="Int32" Nullable="false" />
+    <Property Name="Purchase_Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Stock_Order">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+    </Key>
+    <Property Name="Order_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Distributor_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Total" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Paid_Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Remaining_Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Distributor_Transaction" Relationship="CrewDBModel.FK__Distributo__Paid__73BA3083" FromRole="Stock_Order" ToRole="Distributor_Transaction" />
+    <NavigationProperty Name="Stock_Ordered_Items" Relationship="CrewDBModel.FK__Stock_Ord__Order__7D439ABD" FromRole="Stock_Order" ToRole="Stock_Ordered_Items" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Distributor_Material">
+    <Key>
+      <PropertyRef Name="Distributor_ID" />
+      <PropertyRef Name="Material_Name" />
+    </Key>
+    <Property Name="Distributor_ID" Type="Int32" Nullable="false" />
+    <Property Name="Material_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Distributor" Relationship="CrewDBModel.FK__Distribut__Distr__4CA06362" FromRole="Distributor_Material" ToRole="Distributor" />
+  </EntityType>
+  <EntityType Name="Distributor_Transaction">
+    <Key>
+      <PropertyRef Name="Transaction_ID" />
+      <PropertyRef Name="Order_ID" />
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="Paid" />
+    </Key>
+    <Property Name="Transaction_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Order_ID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Paid" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Stock_Order" Relationship="CrewDBModel.FK__Distributo__Paid__73BA3083" FromRole="Distributor_Transaction" ToRole="Stock_Order" />
+  </EntityType>
+  <EntityType Name="Material_Colour">
+    <Key>
+      <PropertyRef Name="Colour" />
+      <PropertyRef Name="Group_ID" />
+    </Key>
+    <Property Name="Colour" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Group_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Material_Group" Relationship="CrewDBModel.FK__Material___Group__6754599E" FromRole="Material_Colour" ToRole="Material_Group" />
+  </EntityType>
+  <EntityType Name="Material_Size">
+    <Key>
+      <PropertyRef Name="Size" />
+      <PropertyRef Name="Group_ID" />
+    </Key>
+    <Property Name="Size" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Group_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Material_Group" Relationship="CrewDBModel.FK__Material___Group__693CA210" FromRole="Material_Size" ToRole="Material_Group" />
+  </EntityType>
+  <EntityType Name="Material_Track">
+    <Key>
+      <PropertyRef Name="Track" />
+      <PropertyRef Name="Group_ID" />
+    </Key>
+    <Property Name="Track" Type="Int32" Nullable="false" />
+    <Property Name="Group_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Material_Group" Relationship="CrewDBModel.FK__Material___Group__6B24EA82" FromRole="Material_Track" ToRole="Material_Group" />
+  </EntityType>
+  <EntityType Name="Material_Type">
+    <Key>
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Group_ID" />
+    </Key>
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Group_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Material_Group" Relationship="CrewDBModel.FK__Material___Group__656C112C" FromRole="Material_Type" ToRole="Material_Group" />
+  </EntityType>
+  <EntityType Name="Product_Material">
+    <Key>
+      <PropertyRef Name="Product_ID" />
+      <PropertyRef Name="Material" />
+    </Key>
+    <Property Name="Product_ID" Type="Int32" Nullable="false" />
+    <Property Name="Material" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Product" Relationship="CrewDBModel.FK__Product_M__Produ__48CFD27E" FromRole="Product_Material" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Stock_Ordered_Items">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+      <PropertyRef Name="Material_Name" />
+      <PropertyRef Name="Quantity" />
+      <PropertyRef Name="Purchase_Price" />
+    </Key>
+    <Property Name="Order_ID" Type="Int32" Nullable="false" />
+    <Property Name="Material_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Colour" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Track" Type="Int32" />
+    <Property Name="Size" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Purchase_Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Stock_Order" Relationship="CrewDBModel.FK__Stock_Ord__Order__7D439ABD" FromRole="Stock_Ordered_Items" ToRole="Stock_Order" />
+  </EntityType>
+  <Association Name="FK__Distribut__Distr__4CA06362">
+    <End Type="CrewDBModel.Distributor" Role="Distributor" Multiplicity="1" />
+    <End Type="CrewDBModel.Distributor_Material" Role="Distributor_Material" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Distributor">
+        <PropertyRef Name="Distributor_ID" />
+      </Principal>
+      <Dependent Role="Distributor_Material">
+        <PropertyRef Name="Distributor_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emplo__787EE5A0">
+    <End Type="CrewDBModel.Employee_Details" Role="Employee_Details" Multiplicity="1" />
+    <End Type="CrewDBModel.Employee_Salary" Role="Employee_Salary" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Employee_Details">
+        <PropertyRef Name="Employee_ID" />
+      </Principal>
+      <Dependent Role="Employee_Salary">
+        <PropertyRef Name="Employee_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emplo__7B5B524B">
+    <End Type="CrewDBModel.Employee_Salary" Role="Employee_Salary" Multiplicity="1" />
+    <End Type="CrewDBModel.Employee_Transaction" Role="Employee_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee_Salary">
+        <PropertyRef Name="Employee_ID" />
+      </Principal>
+      <Dependent Role="Employee_Transaction">
+        <PropertyRef Name="Employee_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Material___Group__6383C8BA">
+    <End Type="CrewDBModel.Material_Group" Role="Material_Group" Multiplicity="1" />
+    <End Type="CrewDBModel.Material_Info" Role="Material_Info" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material_Group">
+        <PropertyRef Name="Group_ID" />
+      </Principal>
+      <Dependent Role="Material_Info">
+        <PropertyRef Name="Group_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Material___Group__656C112C">
+    <End Type="CrewDBModel.Material_Group" Role="Material_Group" Multiplicity="1" />
+    <End Type="CrewDBModel.Material_Type" Role="Material_Type" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material_Group">
+        <PropertyRef Name="Group_ID" />
+      </Principal>
+      <Dependent Role="Material_Type">
+        <PropertyRef Name="Group_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Material___Group__6754599E">
+    <End Type="CrewDBModel.Material_Group" Role="Material_Group" Multiplicity="1" />
+    <End Type="CrewDBModel.Material_Colour" Role="Material_Colour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material_Group">
+        <PropertyRef Name="Group_ID" />
+      </Principal>
+      <Dependent Role="Material_Colour">
+        <PropertyRef Name="Group_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Material___Group__693CA210">
+    <End Type="CrewDBModel.Material_Group" Role="Material_Group" Multiplicity="1" />
+    <End Type="CrewDBModel.Material_Size" Role="Material_Size" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material_Group">
+        <PropertyRef Name="Group_ID" />
+      </Principal>
+      <Dependent Role="Material_Size">
+        <PropertyRef Name="Group_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Material___Group__6B24EA82">
+    <End Type="CrewDBModel.Material_Group" Role="Material_Group" Multiplicity="1" />
+    <End Type="CrewDBModel.Material_Track" Role="Material_Track" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material_Group">
+        <PropertyRef Name="Group_ID" />
+      </Principal>
+      <Dependent Role="Material_Track">
+        <PropertyRef Name="Group_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Product_M__Produ__48CFD27E">
+    <End Type="CrewDBModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="CrewDBModel.Product_Material" Role="Product_Material" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Product_ID" />
+      </Principal>
+      <Dependent Role="Product_Material">
+        <PropertyRef Name="Product_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Distributo__Paid__73BA3083">
+    <End Type="CrewDBModel.Stock_Order" Role="Stock_Order" Multiplicity="1" />
+    <End Type="CrewDBModel.Distributor_Transaction" Role="Distributor_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock_Order">
+        <PropertyRef Name="Order_ID" />
+      </Principal>
+      <Dependent Role="Distributor_Transaction">
+        <PropertyRef Name="Order_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Stock_Ord__Order__7D439ABD">
+    <End Type="CrewDBModel.Stock_Order" Role="Stock_Order" Multiplicity="1" />
+    <End Type="CrewDBModel.Stock_Ordered_Items" Role="Stock_Ordered_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock_Order">
+        <PropertyRef Name="Order_ID" />
+      </Principal>
+      <Dependent Role="Stock_Ordered_Items">
+        <PropertyRef Name="Order_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
 </Schema>
