@@ -36,5 +36,15 @@ namespace Sliding_Project_v0._3
         {
             OpenForm(new frm_AddCustomer());
         }
+
+        private void frm_ManageCustomers_Load(object sender, EventArgs e)
+        {
+            using(CrewEntities DB = new CrewEntities())
+            {
+                //dgv_ManageCustomer.AutoGenerateColumns = false;
+                dgv_ManageCustomer.DataSource = (from c in DB.Customers select c).ToList();
+
+            }          
+        }
     }
 }

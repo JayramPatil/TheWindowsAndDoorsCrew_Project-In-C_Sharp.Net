@@ -37,9 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tb_Address = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.tb_ID = new System.Windows.Forms.TextBox();
             this.tb_MobileNo = new System.Windows.Forms.TextBox();
             this.lbl_ID = new System.Windows.Forms.Label();
-            this.tb_ID = new System.Windows.Forms.TextBox();
             this.tb_Name = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -134,6 +134,7 @@
             this.btn_Refresh.TabIndex = 11;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // label3
             // 
@@ -186,6 +187,16 @@
             this.label2.Text = "Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tb_ID
+            // 
+            this.tb_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_ID.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_ID.Location = new System.Drawing.Point(262, 11);
+            this.tb_ID.Name = "tb_ID";
+            this.tb_ID.Size = new System.Drawing.Size(210, 29);
+            this.tb_ID.TabIndex = 35;
+            // 
             // tb_MobileNo
             // 
             this.tb_MobileNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -207,16 +218,6 @@
             this.lbl_ID.TabIndex = 33;
             this.lbl_ID.Text = "ID";
             this.lbl_ID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tb_ID
-            // 
-            this.tb_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_ID.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_ID.Location = new System.Drawing.Point(262, 11);
-            this.tb_ID.Name = "tb_ID";
-            this.tb_ID.Size = new System.Drawing.Size(210, 29);
-            this.tb_ID.TabIndex = 35;
             // 
             // tb_Name
             // 

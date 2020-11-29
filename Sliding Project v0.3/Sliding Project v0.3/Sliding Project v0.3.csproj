@@ -58,6 +58,7 @@
     <Compile Include="Catagory.cs">
       <DependentUpon>CrewModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CommonFunctions.cs" />
     <Compile Include="CrewModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

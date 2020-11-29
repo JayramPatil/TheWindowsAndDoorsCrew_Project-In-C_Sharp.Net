@@ -26,9 +26,30 @@ namespace Sliding_Project_v0._3
 
         private void frm_AddDistributor_Load(object sender, EventArgs e)
         {
-            using(CrewEntities DB = new CrewEntities())
+            using (CrewEntities DB = new CrewEntities())
             {
-                //clb_Other.Items.Add
+                var Material = (from m in DB.Material_Info where m.Group_ID == 1 || m.Group_ID == 2 select m.Material_Name).ToList();
+
+                foreach (var M in Material)
+                {
+                    clb_Window.Items.Add(M);
+                }
+
+                Material = (from m in DB.Material_Info where m.Group_ID == 3 || m.Group_ID == 4 select m.Material_Name).ToList();
+
+                foreach (var M in Material)
+                {
+                    clb_Other.Items.Add(M);
+                }
+
+                int? id = DB.Distributors.Max(i => (int?)i.Distributor_ID);
+
+                if (id != null)
+                    tb_ID.Text = (id + 1).ToString();
+                else
+                    tb_ID.Text = "100";
+
+                tb_Date.Text = DateTime.Now.ToString("dd-MM-yyyy");
             }
         }
     }
