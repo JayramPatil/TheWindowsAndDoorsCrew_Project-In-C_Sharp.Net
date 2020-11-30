@@ -12,6 +12,7 @@ namespace Sliding_Project_v0._3
 {
     public partial class frm_ManageCustomers : Form
     {
+        int RowValue = 0;
         public frm_ManageCustomers()
         {
             InitializeComponent();
@@ -24,7 +25,8 @@ namespace Sliding_Project_v0._3
         }
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            OpenForm(new frm_AddCustomer(1));
+            //dgv_ManageCustomer.Rows[e.RowIndex]
+            OpenForm(new frm_AddCustomer(RowValue));
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -41,10 +43,13 @@ namespace Sliding_Project_v0._3
         {
             using(CrewEntities DB = new CrewEntities())
             {
-                //dgv_ManageCustomer.AutoGenerateColumns = false;
                 dgv_ManageCustomer.DataSource = (from c in DB.Customers select c).ToList();
-
             }          
+        }
+
+        private void dgv_ManageCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            RowValue = Convert.ToInt32(dgv_ManageCustomer.Rows[e.RowIndex].Cells[0].Value);
         }
     }
 }

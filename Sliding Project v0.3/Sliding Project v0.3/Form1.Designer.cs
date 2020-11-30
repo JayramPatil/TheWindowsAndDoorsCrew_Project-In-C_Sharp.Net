@@ -157,7 +157,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.23182F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.48788F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.38883F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
             this.tableLayoutPanel2.Controls.Add(this.tb_Address, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Address, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Name, 1, 0);
@@ -176,19 +176,19 @@
             this.tb_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Address.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Address.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Address.Location = new System.Drawing.Point(680, 6);
+            this.tb_Address.Location = new System.Drawing.Point(672, 6);
             this.tb_Address.Name = "tb_Address";
-            this.tb_Address.Size = new System.Drawing.Size(157, 29);
+            this.tb_Address.Size = new System.Drawing.Size(155, 29);
             this.tb_Address.TabIndex = 9;
             // 
             // lbl_Address
             // 
             this.lbl_Address.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Address.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Address.Location = new System.Drawing.Point(570, 5);
+            this.lbl_Address.Location = new System.Drawing.Point(563, 5);
             this.lbl_Address.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_Address.Name = "lbl_Address";
-            this.lbl_Address.Size = new System.Drawing.Size(104, 32);
+            this.lbl_Address.Size = new System.Drawing.Size(103, 32);
             this.lbl_Address.TabIndex = 8;
             this.lbl_Address.Text = "ADDRESS";
             this.lbl_Address.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -200,7 +200,7 @@
             this.lbl_Name.Location = new System.Drawing.Point(23, 5);
             this.lbl_Name.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(72, 32);
+            this.lbl_Name.Size = new System.Drawing.Size(71, 32);
             this.lbl_Name.TabIndex = 6;
             this.lbl_Name.Text = "NAME";
             this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -210,19 +210,19 @@
             this.tb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Name.Location = new System.Drawing.Point(101, 6);
+            this.tb_Name.Location = new System.Drawing.Point(100, 6);
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(149, 29);
+            this.tb_Name.Size = new System.Drawing.Size(147, 29);
             this.tb_Name.TabIndex = 7;
             // 
             // lbl_MobileNo
             // 
             this.lbl_MobileNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_MobileNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MobileNo.Location = new System.Drawing.Point(259, 5);
+            this.lbl_MobileNo.Location = new System.Drawing.Point(256, 5);
             this.lbl_MobileNo.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_MobileNo.Name = "lbl_MobileNo";
-            this.lbl_MobileNo.Size = new System.Drawing.Size(132, 32);
+            this.lbl_MobileNo.Size = new System.Drawing.Size(130, 32);
             this.lbl_MobileNo.TabIndex = 4;
             this.lbl_MobileNo.Text = "MOBILE NO";
             this.lbl_MobileNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -232,9 +232,9 @@
             this.tb_MobileNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_MobileNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_MobileNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_MobileNo.Location = new System.Drawing.Point(397, 6);
+            this.tb_MobileNo.Location = new System.Drawing.Point(392, 6);
             this.tb_MobileNo.Name = "tb_MobileNo";
-            this.tb_MobileNo.Size = new System.Drawing.Size(164, 29);
+            this.tb_MobileNo.Size = new System.Drawing.Size(162, 29);
             this.tb_MobileNo.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -320,6 +320,7 @@
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Visible = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // groupBox2
             // 

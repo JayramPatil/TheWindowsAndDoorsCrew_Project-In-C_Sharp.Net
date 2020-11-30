@@ -15,6 +15,7 @@ namespace Sliding_Project_v0._3
         public frm_AcceptOrder()
         {
             InitializeComponent();
+            ID();
         }
         public frm_AcceptOrder(int i)
         {
@@ -24,6 +25,18 @@ namespace Sliding_Project_v0._3
             groupBox1.Enabled = false;
             btn_Refresh.Text = "Reset";
             btn_UpdatePaymentDetails.Visible = true;
+        }
+        public void ID()
+        {
+            using (CrewEntities DB = new CrewEntities())
+            {
+                int? id = DB.Customers.Max(i => (int?)i.Customer_ID);
+
+                if (id != null)
+                    tb_ID.Text = (id + 1).ToString();
+                else
+                    tb_ID.Text = "100";
+            }
         }
         private void frm_AcceptOrder_Load(object sender, EventArgs e)
         {
@@ -79,6 +92,7 @@ namespace Sliding_Project_v0._3
                 tb_Name.Enabled = false;
                 tb_Address.Enabled = false;
                 tb_MobileNo.Enabled = false;
+                tb_ID.Text = "";
                 
             }
             else
@@ -88,8 +102,33 @@ namespace Sliding_Project_v0._3
                 tb_Name.Enabled = true;
                 tb_Address.Enabled = true;
                 tb_MobileNo.Enabled = true;
+                //tb_Date.Text = "";
+                tb_Name.Text = "";
+                tb_Address.Text = "";
+                tb_MobileNo.Text = "";
+                ID();
             }
         }
 
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            using(CrewEntities DB = new CrewEntities())
+            {
+                var Cust = DB.Customers.Find(Convert.ToInt32(tb_ID.Text));
+
+                if (Cust != null)
+                {
+                    tb_Name.Text = Cust.Name;
+                    tb_MobileNo.Text = Cust.Mobile_No;
+                    tb_Address.Text = Cust.Address;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Customer ID");
+                }
+                    
+
+            }
+        }
     }
 }

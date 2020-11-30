@@ -12,9 +12,14 @@ namespace Sliding_Project_v0._3
 {
     public partial class frm_ManageUsers : Form
     {
+        int RowIndex = 0;
         public frm_ManageUsers()
         {
             InitializeComponent();
+            using (CrewEntities DB = new CrewEntities())
+            {
+                dgv_ManageUsers.DataSource = (from u in DB.Users select u).ToList();
+            }
         }
         public void OpenForm(Form frm)
         {
@@ -29,12 +34,17 @@ namespace Sliding_Project_v0._3
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            OpenForm(new frm_AddUser(1));
+            OpenForm(new frm_AddUser(RowIndex));
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Do You Want To Delete This User ?", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            RowIndex = Convert.ToInt32(dgv_ManageUsers.Rows[e.RowIndex].Cells[0].Value);
         }
     }
 }

@@ -203,6 +203,7 @@
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Visible = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // groupBox2
             // 
@@ -511,6 +512,7 @@
             this.btn_Refresh.TabIndex = 33;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // frm_AddUser
             // 
