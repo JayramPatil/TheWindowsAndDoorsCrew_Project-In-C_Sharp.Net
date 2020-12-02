@@ -42,33 +42,33 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_Name = new System.Windows.Forms.TextBox();
+            this.tb_MobileNo = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.rb_SelectOther = new System.Windows.Forms.RadioButton();
+            this.rb_AllOther = new System.Windows.Forms.RadioButton();
+            this.rb_NoneOther = new System.Windows.Forms.RadioButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.rb_SelectDoor = new System.Windows.Forms.RadioButton();
+            this.rb_AllDoor = new System.Windows.Forms.RadioButton();
+            this.rb_NoneDoor = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.clb_Window = new System.Windows.Forms.CheckedListBox();
             this.clb_Other = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.clb_Door = new System.Windows.Forms.CheckedListBox();
+            this.btn_SelectAll = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rb_SelectWindow = new System.Windows.Forms.RadioButton();
+            this.rb_AllWindow = new System.Windows.Forms.RadioButton();
+            this.rb_NoneWindow = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.rb_NewCustomer = new System.Windows.Forms.RadioButton();
-            this.rb_OldCustomer = new System.Windows.Forms.RadioButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -76,10 +76,10 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -214,6 +214,7 @@
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Visible = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // groupBox2
             // 
@@ -241,8 +242,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.59864F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox2, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tb_Name, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tb_MobileNo, 5, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 21);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -274,25 +275,25 @@
             this.label2.Text = "Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // tb_Name
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(222, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 29);
-            this.textBox1.TabIndex = 15;
+            this.tb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Name.Location = new System.Drawing.Point(222, 9);
+            this.tb_Name.Name = "tb_Name";
+            this.tb_Name.Size = new System.Drawing.Size(247, 29);
+            this.tb_Name.TabIndex = 15;
             // 
-            // textBox2
+            // tb_MobileNo
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(693, 9);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 29);
-            this.textBox2.TabIndex = 16;
+            this.tb_MobileNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_MobileNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_MobileNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_MobileNo.Location = new System.Drawing.Point(693, 9);
+            this.tb_MobileNo.Name = "tb_MobileNo";
+            this.tb_MobileNo.Size = new System.Drawing.Size(247, 29);
+            this.tb_MobileNo.TabIndex = 16;
             // 
             // groupBox3
             // 
@@ -325,8 +326,8 @@
             this.tableLayoutPanel3.Controls.Add(this.label3, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.clb_Window, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.clb_Other, 3, 2);
-            this.tableLayoutPanel3.Controls.Add(this.checkedListBox2, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(this.button2, 3, 3);
+            this.tableLayoutPanel3.Controls.Add(this.clb_Door, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.btn_SelectAll, 3, 3);
             this.tableLayoutPanel3.Controls.Add(this.button3, 1, 3);
             this.tableLayoutPanel3.Controls.Add(this.panel2, 1, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 21);
@@ -338,6 +339,120 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(971, 381);
             this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel5.Controls.Add(this.rb_SelectOther);
+            this.panel5.Controls.Add(this.rb_AllOther);
+            this.panel5.Controls.Add(this.rb_NoneOther);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(612, 46);
+            this.panel5.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(207, 34);
+            this.panel5.TabIndex = 38;
+            // 
+            // rb_SelectOther
+            // 
+            this.rb_SelectOther.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.rb_SelectOther.FlatAppearance.BorderSize = 0;
+            this.rb_SelectOther.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_SelectOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_SelectOther.Location = new System.Drawing.Point(62, 3);
+            this.rb_SelectOther.Name = "rb_SelectOther";
+            this.rb_SelectOther.Size = new System.Drawing.Size(82, 30);
+            this.rb_SelectOther.TabIndex = 17;
+            this.rb_SelectOther.Text = "Select";
+            this.rb_SelectOther.UseVisualStyleBackColor = true;
+            this.rb_SelectOther.Click += new System.EventHandler(this.rb_SelectOther_Click);
+            // 
+            // rb_AllOther
+            // 
+            this.rb_AllOther.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.rb_AllOther.FlatAppearance.BorderSize = 0;
+            this.rb_AllOther.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_AllOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_AllOther.Location = new System.Drawing.Point(3, 3);
+            this.rb_AllOther.Name = "rb_AllOther";
+            this.rb_AllOther.Size = new System.Drawing.Size(82, 30);
+            this.rb_AllOther.TabIndex = 16;
+            this.rb_AllOther.Text = "All";
+            this.rb_AllOther.UseVisualStyleBackColor = true;
+            this.rb_AllOther.Click += new System.EventHandler(this.rb_AllOther_Click);
+            // 
+            // rb_NoneOther
+            // 
+            this.rb_NoneOther.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.rb_NoneOther.Checked = true;
+            this.rb_NoneOther.FlatAppearance.BorderSize = 0;
+            this.rb_NoneOther.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_NoneOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_NoneOther.Location = new System.Drawing.Point(152, 1);
+            this.rb_NoneOther.Name = "rb_NoneOther";
+            this.rb_NoneOther.Size = new System.Drawing.Size(82, 34);
+            this.rb_NoneOther.TabIndex = 15;
+            this.rb_NoneOther.TabStop = true;
+            this.rb_NoneOther.Text = "None";
+            this.rb_NoneOther.UseVisualStyleBackColor = true;
+            this.rb_NoneOther.Click += new System.EventHandler(this.rb_NoneOther_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel4.Controls.Add(this.rb_SelectDoor);
+            this.panel4.Controls.Add(this.rb_AllDoor);
+            this.panel4.Controls.Add(this.rb_NoneDoor);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(381, 46);
+            this.panel4.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(207, 34);
+            this.panel4.TabIndex = 38;
+            // 
+            // rb_SelectDoor
+            // 
+            this.rb_SelectDoor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.rb_SelectDoor.FlatAppearance.BorderSize = 0;
+            this.rb_SelectDoor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_SelectDoor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_SelectDoor.Location = new System.Drawing.Point(62, 3);
+            this.rb_SelectDoor.Name = "rb_SelectDoor";
+            this.rb_SelectDoor.Size = new System.Drawing.Size(82, 30);
+            this.rb_SelectDoor.TabIndex = 17;
+            this.rb_SelectDoor.Text = "Select";
+            this.rb_SelectDoor.UseVisualStyleBackColor = true;
+            this.rb_SelectDoor.Click += new System.EventHandler(this.rb_SelectDoor_Click);
+            // 
+            // rb_AllDoor
+            // 
+            this.rb_AllDoor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.rb_AllDoor.FlatAppearance.BorderSize = 0;
+            this.rb_AllDoor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_AllDoor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_AllDoor.Location = new System.Drawing.Point(3, 3);
+            this.rb_AllDoor.Name = "rb_AllDoor";
+            this.rb_AllDoor.Size = new System.Drawing.Size(82, 30);
+            this.rb_AllDoor.TabIndex = 16;
+            this.rb_AllDoor.Text = "All";
+            this.rb_AllDoor.UseVisualStyleBackColor = true;
+            this.rb_AllDoor.Click += new System.EventHandler(this.rb_AllDoor_Click);
+            // 
+            // rb_NoneDoor
+            // 
+            this.rb_NoneDoor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.rb_NoneDoor.Checked = true;
+            this.rb_NoneDoor.FlatAppearance.BorderSize = 0;
+            this.rb_NoneDoor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_NoneDoor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_NoneDoor.Location = new System.Drawing.Point(152, 1);
+            this.rb_NoneDoor.Name = "rb_NoneDoor";
+            this.rb_NoneDoor.Size = new System.Drawing.Size(82, 34);
+            this.rb_NoneDoor.TabIndex = 15;
+            this.rb_NoneDoor.TabStop = true;
+            this.rb_NoneDoor.Text = "None";
+            this.rb_NoneDoor.UseVisualStyleBackColor = true;
+            this.rb_NoneDoor.Click += new System.EventHandler(this.rb_NoneDoor_Click);
             // 
             // label5
             // 
@@ -380,6 +495,7 @@
             this.clb_Window.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clb_Window.CheckOnClick = true;
             this.clb_Window.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clb_Window.Enabled = false;
             this.clb_Window.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clb_Window.FormattingEnabled = true;
             this.clb_Window.Location = new System.Drawing.Point(150, 86);
@@ -393,6 +509,7 @@
             this.clb_Other.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clb_Other.CheckOnClick = true;
             this.clb_Other.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clb_Other.Enabled = false;
             this.clb_Other.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clb_Other.FormattingEnabled = true;
             this.clb_Other.Location = new System.Drawing.Point(612, 86);
@@ -401,37 +518,39 @@
             this.clb_Other.Size = new System.Drawing.Size(207, 255);
             this.clb_Other.TabIndex = 35;
             // 
-            // checkedListBox2
+            // clb_Door
             // 
-            this.checkedListBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox2.CheckOnClick = true;
-            this.checkedListBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkedListBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
+            this.clb_Door.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clb_Door.CheckOnClick = true;
+            this.clb_Door.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clb_Door.Enabled = false;
+            this.clb_Door.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clb_Door.FormattingEnabled = true;
+            this.clb_Door.Items.AddRange(new object[] {
             "Single Door",
             "Double Door",
             "Bathroom Door"});
-            this.checkedListBox2.Location = new System.Drawing.Point(381, 86);
-            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(207, 255);
-            this.checkedListBox2.TabIndex = 34;
+            this.clb_Door.Location = new System.Drawing.Point(381, 86);
+            this.clb_Door.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.clb_Door.Name = "clb_Door";
+            this.clb_Door.Size = new System.Drawing.Size(207, 255);
+            this.clb_Door.TabIndex = 34;
             // 
-            // button2
+            // btn_SelectAll
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btn_SelectAll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(603, 347);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 31);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "Select All";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_SelectAll.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_SelectAll.FlatAppearance.BorderSize = 0;
+            this.btn_SelectAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SelectAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SelectAll.Location = new System.Drawing.Point(603, 347);
+            this.btn_SelectAll.Name = "btn_SelectAll";
+            this.btn_SelectAll.Size = new System.Drawing.Size(225, 31);
+            this.btn_SelectAll.TabIndex = 35;
+            this.btn_SelectAll.Text = "Select All";
+            this.btn_SelectAll.UseVisualStyleBackColor = false;
+            this.btn_SelectAll.Click += new System.EventHandler(this.btn_SelectAll_Click);
             // 
             // button3
             // 
@@ -447,6 +566,63 @@
             this.button3.TabIndex = 36;
             this.button3.Text = "Add New Material";
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.Controls.Add(this.rb_SelectWindow);
+            this.panel2.Controls.Add(this.rb_AllWindow);
+            this.panel2.Controls.Add(this.rb_NoneWindow);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(150, 46);
+            this.panel2.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(207, 34);
+            this.panel2.TabIndex = 37;
+            // 
+            // rb_SelectWindow
+            // 
+            this.rb_SelectWindow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.rb_SelectWindow.FlatAppearance.BorderSize = 0;
+            this.rb_SelectWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_SelectWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_SelectWindow.Location = new System.Drawing.Point(62, 3);
+            this.rb_SelectWindow.Name = "rb_SelectWindow";
+            this.rb_SelectWindow.Size = new System.Drawing.Size(82, 30);
+            this.rb_SelectWindow.TabIndex = 17;
+            this.rb_SelectWindow.Text = "Select";
+            this.rb_SelectWindow.UseVisualStyleBackColor = true;
+            this.rb_SelectWindow.Click += new System.EventHandler(this.rb_SelectWindow_Click);
+            // 
+            // rb_AllWindow
+            // 
+            this.rb_AllWindow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.rb_AllWindow.FlatAppearance.BorderSize = 0;
+            this.rb_AllWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_AllWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_AllWindow.Location = new System.Drawing.Point(3, 3);
+            this.rb_AllWindow.Name = "rb_AllWindow";
+            this.rb_AllWindow.Size = new System.Drawing.Size(82, 30);
+            this.rb_AllWindow.TabIndex = 16;
+            this.rb_AllWindow.Text = "All";
+            this.rb_AllWindow.UseVisualStyleBackColor = true;
+            this.rb_AllWindow.Click += new System.EventHandler(this.rb_AllWindow_Click);
+            // 
+            // rb_NoneWindow
+            // 
+            this.rb_NoneWindow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.rb_NoneWindow.Checked = true;
+            this.rb_NoneWindow.FlatAppearance.BorderSize = 0;
+            this.rb_NoneWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_NoneWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_NoneWindow.Location = new System.Drawing.Point(152, 1);
+            this.rb_NoneWindow.Name = "rb_NoneWindow";
+            this.rb_NoneWindow.Size = new System.Drawing.Size(82, 34);
+            this.rb_NoneWindow.TabIndex = 15;
+            this.rb_NoneWindow.TabStop = true;
+            this.rb_NoneWindow.Text = "None";
+            this.rb_NoneWindow.UseVisualStyleBackColor = true;
+            this.rb_NoneWindow.Click += new System.EventHandler(this.rb_NoneWindow_Click);
             // 
             // tableLayoutPanel5
             // 
@@ -481,6 +657,7 @@
             this.btn_Refresh.TabIndex = 11;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // btn_Add
             // 
@@ -495,171 +672,7 @@
             this.btn_Add.TabIndex = 12;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = false;
-            // 
-            // rb_NewCustomer
-            // 
-            this.rb_NewCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.rb_NewCustomer.FlatAppearance.BorderSize = 0;
-            this.rb_NewCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rb_NewCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_NewCustomer.Location = new System.Drawing.Point(152, 1);
-            this.rb_NewCustomer.Name = "rb_NewCustomer";
-            this.rb_NewCustomer.Size = new System.Drawing.Size(82, 34);
-            this.rb_NewCustomer.TabIndex = 15;
-            this.rb_NewCustomer.TabStop = true;
-            this.rb_NewCustomer.Text = "None";
-            this.rb_NewCustomer.UseVisualStyleBackColor = true;
-            // 
-            // rb_OldCustomer
-            // 
-            this.rb_OldCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.rb_OldCustomer.Checked = true;
-            this.rb_OldCustomer.FlatAppearance.BorderSize = 0;
-            this.rb_OldCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rb_OldCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_OldCustomer.Location = new System.Drawing.Point(3, 3);
-            this.rb_OldCustomer.Name = "rb_OldCustomer";
-            this.rb_OldCustomer.Size = new System.Drawing.Size(82, 30);
-            this.rb_OldCustomer.TabIndex = 16;
-            this.rb_OldCustomer.TabStop = true;
-            this.rb_OldCustomer.Text = "All";
-            this.rb_OldCustomer.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Controls.Add(this.rb_OldCustomer);
-            this.panel2.Controls.Add(this.rb_NewCustomer);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(150, 46);
-            this.panel2.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(207, 34);
-            this.panel2.TabIndex = 37;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.radioButton1.FlatAppearance.BorderSize = 0;
-            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(62, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 30);
-            this.radioButton1.TabIndex = 17;
-            this.radioButton1.Text = "Select";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel4.Controls.Add(this.radioButton2);
-            this.panel4.Controls.Add(this.radioButton3);
-            this.panel4.Controls.Add(this.radioButton4);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(381, 46);
-            this.panel4.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(207, 34);
-            this.panel4.TabIndex = 38;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.radioButton2.FlatAppearance.BorderSize = 0;
-            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(62, 3);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(82, 30);
-            this.radioButton2.TabIndex = 17;
-            this.radioButton2.Text = "Select";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.radioButton3.Checked = true;
-            this.radioButton3.FlatAppearance.BorderSize = 0;
-            this.radioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(3, 3);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(82, 30);
-            this.radioButton3.TabIndex = 16;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "All";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.radioButton4.FlatAppearance.BorderSize = 0;
-            this.radioButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(152, 1);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(82, 34);
-            this.radioButton4.TabIndex = 15;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "None";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel5.Controls.Add(this.radioButton5);
-            this.panel5.Controls.Add(this.radioButton6);
-            this.panel5.Controls.Add(this.radioButton7);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(612, 46);
-            this.panel5.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(207, 34);
-            this.panel5.TabIndex = 38;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.radioButton5.FlatAppearance.BorderSize = 0;
-            this.radioButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(62, 3);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(82, 30);
-            this.radioButton5.TabIndex = 17;
-            this.radioButton5.Text = "Select";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.radioButton6.Checked = true;
-            this.radioButton6.FlatAppearance.BorderSize = 0;
-            this.radioButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(3, 3);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(82, 30);
-            this.radioButton6.TabIndex = 16;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "All";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.radioButton7.FlatAppearance.BorderSize = 0;
-            this.radioButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton7.Location = new System.Drawing.Point(152, 1);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(82, 34);
-            this.radioButton7.TabIndex = 15;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "None";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // frm_AddDistributor
             // 
@@ -684,10 +697,10 @@
             this.tableLayoutPanel2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -708,8 +721,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_Name;
+        private System.Windows.Forms.TextBox tb_MobileNo;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label3;
@@ -720,20 +733,20 @@
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.CheckedListBox clb_Window;
         private System.Windows.Forms.CheckedListBox clb_Other;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckedListBox clb_Door;
+        private System.Windows.Forms.Button btn_SelectAll;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton rb_OldCustomer;
-        private System.Windows.Forms.RadioButton rb_NewCustomer;
+        private System.Windows.Forms.RadioButton rb_SelectWindow;
+        private System.Windows.Forms.RadioButton rb_AllWindow;
+        private System.Windows.Forms.RadioButton rb_NoneWindow;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton rb_SelectOther;
+        private System.Windows.Forms.RadioButton rb_AllOther;
+        private System.Windows.Forms.RadioButton rb_NoneOther;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rb_SelectDoor;
+        private System.Windows.Forms.RadioButton rb_AllDoor;
+        private System.Windows.Forms.RadioButton rb_NoneDoor;
     }
 }

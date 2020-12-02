@@ -40,11 +40,11 @@
             this.btn_Search = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_New = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmb_Catagory = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btn_New = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -53,12 +53,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.cmb_SubCatagory = new System.Windows.Forms.ComboBox();
-            this.lbl_SubCatagory = new System.Windows.Forms.Label();
             this.lbl_Colour = new System.Windows.Forms.Label();
             this.cmb_Colour = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.tb_Quantity = new System.Windows.Forms.TextBox();
             this.lbl_Price = new System.Windows.Forms.Label();
@@ -68,6 +64,10 @@
             this.lbl_Height = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.lbl_SubCatagory = new System.Windows.Forms.Label();
+            this.cmb_SubCatagory = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
@@ -240,18 +240,18 @@
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 7;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.498617F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.30833F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.07776F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.230582F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.30833F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.07776F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.498617F));
-            this.tableLayoutPanel2.Controls.Add(this.btn_New, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cmb_Catagory, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 5, 0);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.498595F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.30816F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.07754F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.229999F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.30816F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.07754F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.499994F));
+            this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cmb_Catagory, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_New, 6, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 13);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -259,39 +259,36 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(971, 40);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // btn_New
-            // 
-            this.btn_New.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_New.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_New.FlatAppearance.BorderSize = 0;
-            this.btn_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_New.Location = new System.Drawing.Point(457, 7);
-            this.btn_New.Name = "btn_New";
-            this.btn_New.Size = new System.Drawing.Size(54, 25);
-            this.btn_New.TabIndex = 13;
-            this.btn_New.Text = "New";
-            this.btn_New.UseVisualStyleBackColor = false;
-            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(517, 4);
+            this.label1.Location = new System.Drawing.Point(27, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Distributor";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(223, 3);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(219, 33);
+            this.comboBox1.TabIndex = 14;
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 4);
+            this.label2.Location = new System.Drawing.Point(468, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(181, 32);
             this.label2.TabIndex = 0;
@@ -304,23 +301,26 @@
             this.cmb_Catagory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_Catagory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Catagory.FormattingEnabled = true;
-            this.cmb_Catagory.Location = new System.Drawing.Point(223, 3);
+            this.cmb_Catagory.Location = new System.Drawing.Point(664, 3);
             this.cmb_Catagory.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
             this.cmb_Catagory.Name = "cmb_Catagory";
             this.cmb_Catagory.Size = new System.Drawing.Size(219, 33);
             this.cmb_Catagory.TabIndex = 13;
             // 
-            // comboBox1
+            // btn_New
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(713, 3);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(219, 33);
-            this.comboBox1.TabIndex = 14;
+            this.btn_New.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_New.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_New.FlatAppearance.BorderSize = 0;
+            this.btn_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_New.Location = new System.Drawing.Point(898, 7);
+            this.btn_New.Name = "btn_New";
+            this.btn_New.Size = new System.Drawing.Size(70, 25);
+            this.btn_New.TabIndex = 13;
+            this.btn_New.Text = "New";
+            this.btn_New.UseVisualStyleBackColor = false;
+            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
             // 
             // groupBox3
             // 
@@ -433,12 +433,8 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.54902F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.54902F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.9663782F));
-            this.tableLayoutPanel4.Controls.Add(this.cmb_SubCatagory, 2, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lbl_SubCatagory, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.lbl_Colour, 4, 0);
             this.tableLayoutPanel4.Controls.Add(this.cmb_Colour, 4, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label4, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox2, 3, 1);
             this.tableLayoutPanel4.Controls.Add(this.btn_Add, 5, 3);
             this.tableLayoutPanel4.Controls.Add(this.tb_Quantity, 4, 3);
             this.tableLayoutPanel4.Controls.Add(this.lbl_Price, 4, 2);
@@ -448,6 +444,10 @@
             this.tableLayoutPanel4.Controls.Add(this.lbl_Height, 2, 2);
             this.tableLayoutPanel4.Controls.Add(this.comboBox2, 1, 3);
             this.tableLayoutPanel4.Controls.Add(this.label6, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_SubCatagory, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.cmb_SubCatagory, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label4, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.textBox2, 3, 1);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(6, 21);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
@@ -457,33 +457,6 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(971, 145);
             this.tableLayoutPanel4.TabIndex = 2;
-            // 
-            // cmb_SubCatagory
-            // 
-            this.cmb_SubCatagory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_SubCatagory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmb_SubCatagory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_SubCatagory.FormattingEnabled = true;
-            this.cmb_SubCatagory.Items.AddRange(new object[] {
-            "Jindal",
-            "Non Jindal"});
-            this.cmb_SubCatagory.Location = new System.Drawing.Point(213, 39);
-            this.cmb_SubCatagory.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.cmb_SubCatagory.Name = "cmb_SubCatagory";
-            this.cmb_SubCatagory.Size = new System.Drawing.Size(165, 33);
-            this.cmb_SubCatagory.TabIndex = 15;
-            // 
-            // lbl_SubCatagory
-            // 
-            this.lbl_SubCatagory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_SubCatagory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_SubCatagory.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SubCatagory.Location = new System.Drawing.Point(204, 2);
-            this.lbl_SubCatagory.Name = "lbl_SubCatagory";
-            this.lbl_SubCatagory.Size = new System.Drawing.Size(183, 32);
-            this.lbl_SubCatagory.TabIndex = 4;
-            this.lbl_SubCatagory.Text = "Material Type";
-            this.lbl_SubCatagory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Colour
             // 
@@ -508,29 +481,6 @@
             this.cmb_Colour.Name = "cmb_Colour";
             this.cmb_Colour.Size = new System.Drawing.Size(165, 33);
             this.cmb_Colour.TabIndex = 17;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(393, 2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(183, 32);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Available Stock";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(402, 39);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 29);
-            this.textBox2.TabIndex = 32;
             // 
             // btn_Add
             // 
@@ -638,6 +588,56 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Track";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_SubCatagory
+            // 
+            this.lbl_SubCatagory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_SubCatagory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_SubCatagory.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SubCatagory.Location = new System.Drawing.Point(204, 2);
+            this.lbl_SubCatagory.Name = "lbl_SubCatagory";
+            this.lbl_SubCatagory.Size = new System.Drawing.Size(183, 32);
+            this.lbl_SubCatagory.TabIndex = 4;
+            this.lbl_SubCatagory.Text = "Material Type";
+            this.lbl_SubCatagory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmb_SubCatagory
+            // 
+            this.cmb_SubCatagory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_SubCatagory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_SubCatagory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_SubCatagory.FormattingEnabled = true;
+            this.cmb_SubCatagory.Items.AddRange(new object[] {
+            "Jindal",
+            "Non Jindal"});
+            this.cmb_SubCatagory.Location = new System.Drawing.Point(213, 39);
+            this.cmb_SubCatagory.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.cmb_SubCatagory.Name = "cmb_SubCatagory";
+            this.cmb_SubCatagory.Size = new System.Drawing.Size(165, 33);
+            this.cmb_SubCatagory.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(393, 2);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(183, 32);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Available Stock";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(402, 39);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(165, 29);
+            this.textBox2.TabIndex = 32;
             // 
             // tableLayoutPanel5
             // 

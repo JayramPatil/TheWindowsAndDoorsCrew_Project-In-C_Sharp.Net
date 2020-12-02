@@ -36,16 +36,16 @@
             <PropertyRef Name="Distributor_ID" />
           </Key>
           <Property Name="Distributor_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Added_Date" Type="date" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Mobile_No" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Distributor_Material' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Distributor_Material">
           <Key>
             <PropertyRef Name="Distributor_ID" />
             <PropertyRef Name="Material_Name" />
           </Key>
+          <Property Name="DM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Distributor_ID" Type="int" Nullable="false" />
           <Property Name="Material_Name" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
@@ -55,11 +55,15 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Distributor_Transact
           <Key>
             <PropertyRef Name="Transaction_ID" />
             <PropertyRef Name="Order_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Distributor_ID" />
             <PropertyRef Name="Date" />
             <PropertyRef Name="Paid" />
           </Key>
           <Property Name="Transaction_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Order_ID" Type="int" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Distributor_ID" Type="int" Nullable="false" />
           <Property Name="Date" Type="date" Nullable="false" />
           <Property Name="Paid" Type="money" Nullable="false" />
         </EntityType>
@@ -314,7 +318,19 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Distribut__Distr__4CA06362">
+        <Association Name="FK__Distribut__Distr__1CBC4616">
+          <End Role="Distributor" Type="Self.Distributor" Multiplicity="1" />
+          <End Role="Distributor_Transaction" Type="Self.Distributor_Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Distributor">
+              <PropertyRef Name="Distributor_ID" />
+            </Principal>
+            <Dependent Role="Distributor_Transaction">
+              <PropertyRef Name="Distributor_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Distribut__Distr__208CD6FA">
           <End Role="Distributor" Type="Self.Distributor" Multiplicity="1" />
           <End Role="Distributor_Material" Type="Self.Distributor_Material" Multiplicity="*" />
           <ReferentialConstraint>
@@ -326,7 +342,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Distributo__Paid__73BA3083">
+        <Association Name="FK__Distribut__Order__17F790F9">
           <End Role="Stock_Order" Type="Self.Stock_Order" Multiplicity="1" />
           <End Role="Distributor_Transaction" Type="Self.Distributor_Transaction" Multiplicity="*" />
           <ReferentialConstraint>
@@ -335,6 +351,18 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
             </Principal>
             <Dependent Role="Distributor_Transaction">
               <PropertyRef Name="Order_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Distribut__User___19DFD96B">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Distributor_Transaction" Type="Self.Distributor_Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Distributor_Transaction">
+              <PropertyRef Name="User_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -518,6 +546,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customer_Transaction" EntityType="Self.Customer_Transaction" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Distributor" EntityType="Self.Distributor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Distributor_Material" EntityType="Self.Distributor_Material" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employee_Details" EntityType="Self.Employee_Details" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employee_Salary" EntityType="Self.Employee_Salary" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employee_Transaction" EntityType="Self.Employee_Transaction" Schema="dbo" store:Type="Tables" />
@@ -530,16 +559,12 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
           <EntitySet Name="Stock_Order" EntityType="Self.Stock_Order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Distributor_Material" EntityType="Self.Distributor_Material" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Distributor_Material].[Distributor_ID] AS [Distributor_ID], 
-    [Distributor_Material].[Material_Name] AS [Material_Name]
-    FROM [dbo].[Distributor_Material] AS [Distributor_Material]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="Distributor_Transaction" EntityType="Self.Distributor_Transaction" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Distributor_Transaction].[Transaction_ID] AS [Transaction_ID], 
     [Distributor_Transaction].[Order_ID] AS [Order_ID], 
+    [Distributor_Transaction].[User_ID] AS [User_ID], 
+    [Distributor_Transaction].[Distributor_ID] AS [Distributor_ID], 
     [Distributor_Transaction].[Date] AS [Date], 
     [Distributor_Transaction].[Paid] AS [Paid]
     FROM [dbo].[Distributor_Transaction] AS [Distributor_Transaction]</DefiningQuery>
@@ -608,12 +633,20 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
             <End Role="User" EntitySet="User" />
             <End Role="Customer_Transaction" EntitySet="Customer_Transaction" />
           </AssociationSet>
-          <AssociationSet Name="FK__Distribut__Distr__4CA06362" Association="Self.FK__Distribut__Distr__4CA06362">
+          <AssociationSet Name="FK__Distribut__Distr__1CBC4616" Association="Self.FK__Distribut__Distr__1CBC4616">
+            <End Role="Distributor" EntitySet="Distributor" />
+            <End Role="Distributor_Transaction" EntitySet="Distributor_Transaction" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Distribut__Distr__208CD6FA" Association="Self.FK__Distribut__Distr__208CD6FA">
             <End Role="Distributor" EntitySet="Distributor" />
             <End Role="Distributor_Material" EntitySet="Distributor_Material" />
           </AssociationSet>
-          <AssociationSet Name="FK__Distributo__Paid__73BA3083" Association="Self.FK__Distributo__Paid__73BA3083">
+          <AssociationSet Name="FK__Distribut__Order__17F790F9" Association="Self.FK__Distribut__Order__17F790F9">
             <End Role="Stock_Order" EntitySet="Stock_Order" />
+            <End Role="Distributor_Transaction" EntitySet="Distributor_Transaction" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Distribut__User___19DFD96B" Association="Self.FK__Distribut__User___19DFD96B">
+            <End Role="User" EntitySet="User" />
             <End Role="Distributor_Transaction" EntitySet="Distributor_Transaction" />
           </AssociationSet>
           <AssociationSet Name="FK__Employee___Emplo__787EE5A0" Association="Self.FK__Employee___Emplo__787EE5A0">
@@ -723,6 +756,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
           <Property Name="Treat_As" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Customer_Transaction" Relationship="Self.FK__Customer___User___300424B4" FromRole="User" ToRole="Customer_Transaction" />
           <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__User_ID__2C3393D0" FromRole="User" ToRole="Orders" />
+          <NavigationProperty Name="Distributor_Transaction" Relationship="CrewDBModel.FK__Distribut__User___19DFD96B" FromRole="User" ToRole="Distributor_Transaction" />
         </EntityType>
         <EntityType Name="Ordered_Items">
           <Key>
@@ -929,6 +963,14 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <AssociationSet Name="FK__Distribut__Distr__1CBC4616" Association="CrewDBModel.FK__Distribut__Distr__1CBC4616">
+            <End Role="Distributor" EntitySet="Distributors" />
+            <End Role="Distributor_Transaction" EntitySet="Distributor_Transaction" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Distribut__User___19DFD96B" Association="CrewDBModel.FK__Distribut__User___19DFD96B">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Distributor_Transaction" EntitySet="Distributor_Transaction" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Catagory">
           <Key>
@@ -945,6 +987,8 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
           <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Mobile_No" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Distributor_Material" Relationship="CrewDBModel.FK__Distribut__Distr__4CA06362" FromRole="Distributor" ToRole="Distributor_Material" />
+          <Property Name="Added_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Distributor_Transaction" Relationship="CrewDBModel.FK__Distribut__Distr__1CBC4616" FromRole="Distributor" ToRole="Distributor_Transaction" />
         </EntityType>
         <EntityType Name="Employee_Details">
           <Key>
@@ -1073,6 +1117,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
           <Property Name="Distributor_ID" Type="Int32" Nullable="false" />
           <Property Name="Material_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Distributor" Relationship="CrewDBModel.FK__Distribut__Distr__4CA06362" FromRole="Distributor_Material" ToRole="Distributor" />
+          <Property Name="DM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="Distributor_Transaction">
           <Key>
@@ -1080,12 +1125,18 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
             <PropertyRef Name="Order_ID" />
             <PropertyRef Name="Date" />
             <PropertyRef Name="Paid" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Distributor_ID" />
           </Key>
           <Property Name="Transaction_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Order_ID" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Paid" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <NavigationProperty Name="Stock_Order" Relationship="CrewDBModel.FK__Distributo__Paid__73BA3083" FromRole="Distributor_Transaction" ToRole="Stock_Order" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Distributor_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Distributor" Relationship="CrewDBModel.FK__Distribut__Distr__1CBC4616" FromRole="Distributor_Transaction" ToRole="Distributor" />
+          <NavigationProperty Name="User" Relationship="CrewDBModel.FK__Distribut__User___19DFD96B" FromRole="Distributor_Transaction" ToRole="User" />
         </EntityType>
         <EntityType Name="Material_Colour">
           <Key>
@@ -1292,6 +1343,30 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <Association Name="FK__Distribut__Distr__1CBC4616">
+          <End Type="CrewDBModel.Distributor" Role="Distributor" Multiplicity="1" />
+          <End Type="CrewDBModel.Distributor_Transaction" Role="Distributor_Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Distributor">
+              <PropertyRef Name="Distributor_ID" />
+            </Principal>
+            <Dependent Role="Distributor_Transaction">
+              <PropertyRef Name="Distributor_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Distribut__User___19DFD96B">
+          <End Type="CrewDBModel.User" Role="User" Multiplicity="1" />
+          <End Type="CrewDBModel.Distributor_Transaction" Role="Distributor_Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Distributor_Transaction">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1375,6 +1450,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
           <EntitySetMapping Name="Distributors">
             <EntityTypeMapping TypeName="CrewDBModel.Distributor">
               <MappingFragment StoreEntitySet="Distributor">
+                <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
                 <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Distributor_ID" ColumnName="Distributor_ID" />
@@ -1500,6 +1576,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
           <EntitySetMapping Name="Distributor_Material">
             <EntityTypeMapping TypeName="CrewDBModel.Distributor_Material">
               <MappingFragment StoreEntitySet="Distributor_Material">
+                <ScalarProperty Name="DM_ID" ColumnName="DM_ID" />
                 <ScalarProperty Name="Material_Name" ColumnName="Material_Name" />
                 <ScalarProperty Name="Distributor_ID" ColumnName="Distributor_ID" />
               </MappingFragment>
@@ -1508,6 +1585,8 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
           <EntitySetMapping Name="Distributor_Transaction">
             <EntityTypeMapping TypeName="CrewDBModel.Distributor_Transaction">
               <MappingFragment StoreEntitySet="Distributor_Transaction">
+                <ScalarProperty Name="Distributor_ID" ColumnName="Distributor_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
                 <ScalarProperty Name="Paid" ColumnName="Paid" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />

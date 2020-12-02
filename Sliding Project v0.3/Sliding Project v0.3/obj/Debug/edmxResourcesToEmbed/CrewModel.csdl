@@ -54,6 +54,7 @@
     <Property Name="Treat_As" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Customer_Transaction" Relationship="Self.FK__Customer___User___300424B4" FromRole="User" ToRole="Customer_Transaction" />
     <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__User_ID__2C3393D0" FromRole="User" ToRole="Orders" />
+    <NavigationProperty Name="Distributor_Transaction" Relationship="CrewDBModel.FK__Distribut__User___19DFD96B" FromRole="User" ToRole="Distributor_Transaction" />
   </EntityType>
   <EntityType Name="Ordered_Items">
     <Key>
@@ -260,6 +261,14 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <AssociationSet Name="FK__Distribut__Distr__1CBC4616" Association="CrewDBModel.FK__Distribut__Distr__1CBC4616">
+      <End Role="Distributor" EntitySet="Distributors" />
+      <End Role="Distributor_Transaction" EntitySet="Distributor_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Distribut__User___19DFD96B" Association="CrewDBModel.FK__Distribut__User___19DFD96B">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Distributor_Transaction" EntitySet="Distributor_Transaction" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Catagory">
     <Key>
@@ -276,6 +285,8 @@
     <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Mobile_No" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Distributor_Material" Relationship="CrewDBModel.FK__Distribut__Distr__4CA06362" FromRole="Distributor" ToRole="Distributor_Material" />
+    <Property Name="Added_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Distributor_Transaction" Relationship="CrewDBModel.FK__Distribut__Distr__1CBC4616" FromRole="Distributor" ToRole="Distributor_Transaction" />
   </EntityType>
   <EntityType Name="Employee_Details">
     <Key>
@@ -404,6 +415,7 @@
     <Property Name="Distributor_ID" Type="Int32" Nullable="false" />
     <Property Name="Material_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Distributor" Relationship="CrewDBModel.FK__Distribut__Distr__4CA06362" FromRole="Distributor_Material" ToRole="Distributor" />
+    <Property Name="DM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="Distributor_Transaction">
     <Key>
@@ -411,12 +423,18 @@
       <PropertyRef Name="Order_ID" />
       <PropertyRef Name="Date" />
       <PropertyRef Name="Paid" />
+      <PropertyRef Name="User_ID" />
+      <PropertyRef Name="Distributor_ID" />
     </Key>
     <Property Name="Transaction_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Order_ID" Type="Int32" Nullable="false" />
     <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="Paid" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <NavigationProperty Name="Stock_Order" Relationship="CrewDBModel.FK__Distributo__Paid__73BA3083" FromRole="Distributor_Transaction" ToRole="Stock_Order" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <Property Name="Distributor_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Distributor" Relationship="CrewDBModel.FK__Distribut__Distr__1CBC4616" FromRole="Distributor_Transaction" ToRole="Distributor" />
+    <NavigationProperty Name="User" Relationship="CrewDBModel.FK__Distribut__User___19DFD96B" FromRole="Distributor_Transaction" ToRole="User" />
   </EntityType>
   <EntityType Name="Material_Colour">
     <Key>
@@ -623,4 +641,28 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
+  <Association Name="FK__Distribut__Distr__1CBC4616">
+    <End Type="CrewDBModel.Distributor" Role="Distributor" Multiplicity="1" />
+    <End Type="CrewDBModel.Distributor_Transaction" Role="Distributor_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Distributor">
+        <PropertyRef Name="Distributor_ID" />
+      </Principal>
+      <Dependent Role="Distributor_Transaction">
+        <PropertyRef Name="Distributor_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Distribut__User___19DFD96B">
+    <End Type="CrewDBModel.User" Role="User" Multiplicity="1" />
+    <End Type="CrewDBModel.Distributor_Transaction" Role="Distributor_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="Distributor_Transaction">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

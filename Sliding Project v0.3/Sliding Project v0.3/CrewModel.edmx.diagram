@@ -46,6 +46,8 @@
         <AssociationConnector Association="CrewDBModel.FK__Product_M__Produ__48CFD27E" />
         <AssociationConnector Association="CrewDBModel.FK__Distributo__Paid__73BA3083" />
         <AssociationConnector Association="CrewDBModel.FK__Stock_Ord__Order__7D439ABD" />
+        <AssociationConnector Association="CrewDBModel.FK__Distribut__Distr__1CBC4616" />
+        <AssociationConnector Association="CrewDBModel.FK__Distribut__User___19DFD96B" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

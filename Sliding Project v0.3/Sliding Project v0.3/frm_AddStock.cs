@@ -15,6 +15,8 @@ namespace Sliding_Project_v0._3
         public frm_AddStock()
         {
             InitializeComponent();
+            ID();
+            tb_Date.Text = DateTime.Now.ToString("dd-MM-yyyy");
         }
         public frm_AddStock(int i)
         {
@@ -24,7 +26,18 @@ namespace Sliding_Project_v0._3
             //groupBox1.Enabled = false;
             btn_Save.Text = "Update";
         }
+        public void ID()
+        {
+            using (CrewEntities DB = new CrewEntities())
+            {
+                int? id = DB.Stock_Order.Max(i => (int?)i.Order_ID);
 
+                if (id != null)
+                    tb_ID.Text = (id + 1).ToString();
+                else
+                    tb_ID.Text = "1000";
+            }
+        }
         private void btn_New_Click(object sender, EventArgs e)
         {
             Form formBackground = new Form();

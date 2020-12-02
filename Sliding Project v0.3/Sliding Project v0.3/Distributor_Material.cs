@@ -16,6 +16,7 @@ namespace Sliding_Project_v0._3
     {
         public int Distributor_ID { get; set; }
         public string Material_Name { get; set; }
+        public int DM_ID { get; set; }
     
         public virtual Distributor Distributor { get; set; }
     }

@@ -121,14 +121,12 @@ namespace Sliding_Project_v0._3
                             MessageBox.Show("Invalid User ID");
                         }
                     }
-
                 }
             }
             else
             {
                 MessageBox.Show("Please, First Fill All The Feilds !!!");
             }
-            
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)

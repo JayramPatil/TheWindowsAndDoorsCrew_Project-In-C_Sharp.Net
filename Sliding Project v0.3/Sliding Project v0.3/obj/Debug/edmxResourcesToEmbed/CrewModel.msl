@@ -78,6 +78,7 @@
     <EntitySetMapping Name="Distributors">
       <EntityTypeMapping TypeName="CrewDBModel.Distributor">
         <MappingFragment StoreEntitySet="Distributor">
+          <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
           <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Distributor_ID" ColumnName="Distributor_ID" />
@@ -203,6 +204,7 @@
     <EntitySetMapping Name="Distributor_Material">
       <EntityTypeMapping TypeName="CrewDBModel.Distributor_Material">
         <MappingFragment StoreEntitySet="Distributor_Material">
+          <ScalarProperty Name="DM_ID" ColumnName="DM_ID" />
           <ScalarProperty Name="Material_Name" ColumnName="Material_Name" />
           <ScalarProperty Name="Distributor_ID" ColumnName="Distributor_ID" />
         </MappingFragment>
@@ -211,6 +213,8 @@
     <EntitySetMapping Name="Distributor_Transaction">
       <EntityTypeMapping TypeName="CrewDBModel.Distributor_Transaction">
         <MappingFragment StoreEntitySet="Distributor_Transaction">
+          <ScalarProperty Name="Distributor_ID" ColumnName="Distributor_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
           <ScalarProperty Name="Paid" ColumnName="Paid" />
           <ScalarProperty Name="Date" ColumnName="Date" />
           <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />

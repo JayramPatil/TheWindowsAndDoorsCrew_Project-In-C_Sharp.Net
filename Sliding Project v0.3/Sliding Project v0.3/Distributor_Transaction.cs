@@ -18,7 +18,11 @@ namespace Sliding_Project_v0._3
         public int Order_ID { get; set; }
         public System.DateTime Date { get; set; }
         public decimal Paid { get; set; }
+        public int User_ID { get; set; }
+        public int Distributor_ID { get; set; }
     
         public virtual Stock_Order Stock_Order { get; set; }
+        public virtual Distributor Distributor { get; set; }
+        public virtual User User { get; set; }
     }
 }
