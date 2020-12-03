@@ -103,8 +103,7 @@ namespace Sliding_Project_v0._3
                     }
                     else
                     {
-                        int i = Convert.ToInt32(tb_ID.Text);
-                        var User = DB.Users.Find(i);
+                        var User = DB.Users.Find(Convert.ToInt32(tb_ID.Text));
 
                         if (User != null)
                         {
@@ -143,7 +142,7 @@ namespace Sliding_Project_v0._3
 
                 if (User != null)
                 {
-                    tb_Date.Text = User.Created_Date.ToString();
+                    tb_Date.Text = User.Created_Date.ToString("dd/MM/yyyy");
                     tb_Username.Text = User.Username;
                     tb_Password.Text = User.Password;
                     tb_ConfirmPassword.Text = User.Password;

@@ -31,7 +31,7 @@ namespace Sliding_Project_v0._3
 
                 if(Cust != null)
                 {
-                    tb_ID.Text = Cons.ToString();
+                    tb_ID.Text = Cust.Customer_ID.ToString();
                     tb_Address.Text = Cust.Address;
                     tb_Name.Text = Cust.Name;
                     tb_MobileNo.Text = Cust.Mobile_No;
@@ -114,7 +114,7 @@ namespace Sliding_Project_v0._3
 
                 if (Cust != null)
                 {
-                    tb_ID.Text = Cons.ToString();
+                    tb_ID.Text = Cust.Customer_ID.ToString();
                     tb_Address.Text = Cust.Address;
                     tb_Name.Text = Cust.Name;
                     tb_MobileNo.Text = Cust.Mobile_No;
