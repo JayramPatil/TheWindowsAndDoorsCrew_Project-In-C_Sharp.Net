@@ -42,33 +42,33 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_Name = new System.Windows.Forms.TextBox();
+            this.tb_MobileNo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_DOB = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.rb_Female = new System.Windows.Forms.RadioButton();
+            this.rb_Male = new System.Windows.Forms.RadioButton();
+            this.cmb_Qualification = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.cmb_Post = new System.Windows.Forms.ComboBox();
+            this.tb_Salary = new System.Windows.Forms.TextBox();
+            this.cmb_Experience = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tb_AccountNo = new System.Windows.Forms.TextBox();
+            this.tb_AdhaarNo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.rtb_Address = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -239,11 +239,11 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.59864F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox2, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tb_Name, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tb_MobileNo, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 4, 1);
             this.tableLayoutPanel2.Controls.Add(this.label4, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePicker1, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dtp_DOB, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 5, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 21);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -277,25 +277,25 @@
             this.label2.Text = "Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // tb_Name
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(222, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 29);
-            this.textBox1.TabIndex = 15;
+            this.tb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Name.Location = new System.Drawing.Point(222, 8);
+            this.tb_Name.Name = "tb_Name";
+            this.tb_Name.Size = new System.Drawing.Size(247, 29);
+            this.tb_Name.TabIndex = 15;
             // 
-            // textBox2
+            // tb_MobileNo
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(693, 8);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 29);
-            this.textBox2.TabIndex = 16;
+            this.tb_MobileNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_MobileNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_MobileNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_MobileNo.Location = new System.Drawing.Point(693, 8);
+            this.tb_MobileNo.Name = "tb_MobileNo";
+            this.tb_MobileNo.Size = new System.Drawing.Size(247, 29);
+            this.tb_MobileNo.TabIndex = 16;
             // 
             // label3
             // 
@@ -321,62 +321,69 @@
             this.label4.Text = "Date Of Birth";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dateTimePicker1
+            // dtp_DOB
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(222, 51);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(247, 36);
-            this.dateTimePicker1.TabIndex = 19;
-            this.dateTimePicker1.Value = new System.DateTime(2020, 10, 28, 0, 0, 0, 0);
+            this.dtp_DOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_DOB.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_DOB.Location = new System.Drawing.Point(222, 51);
+            this.dtp_DOB.Name = "dtp_DOB";
+            this.dtp_DOB.Size = new System.Drawing.Size(247, 36);
+            this.dtp_DOB.TabIndex = 19;
+            this.dtp_DOB.Value = new System.DateTime(2020, 10, 28, 0, 0, 0, 0);
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Controls.Add(this.rb_Female);
+            this.panel2.Controls.Add(this.rb_Male);
             this.panel2.Location = new System.Drawing.Point(693, 55);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(247, 29);
             this.panel2.TabIndex = 20;
             // 
-            // radioButton2
+            // rb_Female
             // 
-            this.radioButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(134, 5);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(83, 21);
-            this.radioButton2.TabIndex = 21;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "FEMALE";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rb_Female.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rb_Female.AutoSize = true;
+            this.rb_Female.Location = new System.Drawing.Point(134, 5);
+            this.rb_Female.Name = "rb_Female";
+            this.rb_Female.Size = new System.Drawing.Size(83, 21);
+            this.rb_Female.TabIndex = 21;
+            this.rb_Female.TabStop = true;
+            this.rb_Female.Text = "FEMALE";
+            this.rb_Female.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rb_Male
             // 
-            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(29, 5);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(66, 21);
-            this.radioButton1.TabIndex = 20;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "MALE";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rb_Male.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rb_Male.AutoSize = true;
+            this.rb_Male.Location = new System.Drawing.Point(29, 5);
+            this.rb_Male.Name = "rb_Male";
+            this.rb_Male.Size = new System.Drawing.Size(66, 21);
+            this.rb_Male.TabIndex = 20;
+            this.rb_Male.TabStop = true;
+            this.rb_Male.Text = "MALE";
+            this.rb_Male.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cmb_Qualification
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(231, 85);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(229, 33);
-            this.comboBox1.TabIndex = 14;
+            this.cmb_Qualification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Qualification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_Qualification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Qualification.FormattingEnabled = true;
+            this.cmb_Qualification.Items.AddRange(new object[] {
+            "10th",
+            "12th",
+            "Bachlor\'s Degree",
+            "Master\'s Degree",
+            "Above",
+            "Other"});
+            this.cmb_Qualification.Location = new System.Drawing.Point(231, 85);
+            this.cmb_Qualification.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.cmb_Qualification.Name = "cmb_Qualification";
+            this.cmb_Qualification.Size = new System.Drawing.Size(229, 33);
+            this.cmb_Qualification.TabIndex = 14;
             // 
             // groupBox3
             // 
@@ -404,20 +411,20 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.08127F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.08165F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.59864F));
-            this.tableLayoutPanel3.Controls.Add(this.comboBox3, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(this.textBox6, 5, 2);
-            this.tableLayoutPanel3.Controls.Add(this.comboBox2, 5, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cmb_Post, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.tb_Salary, 5, 2);
+            this.tableLayoutPanel3.Controls.Add(this.cmb_Experience, 5, 1);
             this.tableLayoutPanel3.Controls.Add(this.label5, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.label6, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox3, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.comboBox1, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.textBox4, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tb_AccountNo, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tb_AdhaarNo, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.label7, 4, 1);
             this.tableLayoutPanel3.Controls.Add(this.label8, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label9, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.label10, 4, 2);
             this.tableLayoutPanel3.Controls.Add(this.label11, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.richTextBox1, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.rtb_Address, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.cmb_Qualification, 2, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 21);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
@@ -427,6 +434,56 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(971, 344);
             this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // cmb_Post
+            // 
+            this.cmb_Post.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Post.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_Post.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Post.FormattingEnabled = true;
+            this.cmb_Post.Items.AddRange(new object[] {
+            "Cutter",
+            "Installer",
+            "Assembler",
+            "Cleaner",
+            "Polisher",
+            "Other"});
+            this.cmb_Post.Location = new System.Drawing.Point(231, 153);
+            this.cmb_Post.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.cmb_Post.Name = "cmb_Post";
+            this.cmb_Post.Size = new System.Drawing.Size(229, 33);
+            this.cmb_Post.TabIndex = 29;
+            // 
+            // tb_Salary
+            // 
+            this.tb_Salary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Salary.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Salary.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Salary.Location = new System.Drawing.Point(702, 155);
+            this.tb_Salary.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.tb_Salary.Name = "tb_Salary";
+            this.tb_Salary.Size = new System.Drawing.Size(229, 29);
+            this.tb_Salary.TabIndex = 29;
+            // 
+            // cmb_Experience
+            // 
+            this.cmb_Experience.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Experience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_Experience.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Experience.FormattingEnabled = true;
+            this.cmb_Experience.Items.AddRange(new object[] {
+            "Fresher",
+            "1+",
+            "2+",
+            "3+",
+            "4+",
+            "5+",
+            "Above"});
+            this.cmb_Experience.Location = new System.Drawing.Point(702, 85);
+            this.cmb_Experience.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.cmb_Experience.Name = "cmb_Experience";
+            this.cmb_Experience.Size = new System.Drawing.Size(229, 33);
+            this.cmb_Experience.TabIndex = 28;
             // 
             // label5
             // 
@@ -452,27 +509,27 @@
             this.label6.Text = "Account No";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // tb_AccountNo
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(231, 19);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(229, 29);
-            this.textBox3.TabIndex = 15;
+            this.tb_AccountNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_AccountNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_AccountNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_AccountNo.Location = new System.Drawing.Point(231, 19);
+            this.tb_AccountNo.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.tb_AccountNo.Name = "tb_AccountNo";
+            this.tb_AccountNo.Size = new System.Drawing.Size(229, 29);
+            this.tb_AccountNo.TabIndex = 15;
             // 
-            // textBox4
+            // tb_AdhaarNo
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(702, 19);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(229, 29);
-            this.textBox4.TabIndex = 16;
+            this.tb_AdhaarNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_AdhaarNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_AdhaarNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_AdhaarNo.Location = new System.Drawing.Point(702, 19);
+            this.tb_AdhaarNo.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.tb_AdhaarNo.Name = "tb_AdhaarNo";
+            this.tb_AdhaarNo.Size = new System.Drawing.Size(229, 29);
+            this.tb_AdhaarNo.TabIndex = 16;
             // 
             // label7
             // 
@@ -498,18 +555,6 @@
             this.label8.Text = "Qualification";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(702, 85);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(229, 33);
-            this.comboBox2.TabIndex = 28;
-            // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -534,16 +579,30 @@
             this.label10.Text = "Salary";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox6
+            // label11
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(702, 155);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(229, 29);
-            this.textBox6.TabIndex = 29;
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(28, 214);
+            this.label11.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(188, 32);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Address";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // rtb_Address
+            // 
+            this.rtb_Address.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_Address.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtb_Address.Location = new System.Drawing.Point(231, 207);
+            this.rtb_Address.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.rtb_Address.Name = "rtb_Address";
+            this.rtb_Address.Size = new System.Drawing.Size(229, 134);
+            this.rtb_Address.TabIndex = 32;
+            this.rtb_Address.Text = "";
             // 
             // tableLayoutPanel5
             // 
@@ -592,43 +651,7 @@
             this.btn_Save.TabIndex = 12;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(28, 214);
-            this.label11.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(188, 32);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Address";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(231, 207);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(229, 134);
-            this.richTextBox1.TabIndex = 32;
-            this.richTextBox1.Text = "";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(231, 153);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(229, 33);
-            this.comboBox3.TabIndex = 29;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // frm_AddEmployee
             // 
@@ -676,32 +699,32 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_Name;
+        private System.Windows.Forms.TextBox tb_MobileNo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_DOB;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton rb_Female;
+        private System.Windows.Forms.RadioButton rb_Male;
+        private System.Windows.Forms.ComboBox cmb_Qualification;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tb_AccountNo;
+        private System.Windows.Forms.TextBox tb_AdhaarNo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox tb_Salary;
+        private System.Windows.Forms.ComboBox cmb_Experience;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.RichTextBox rtb_Address;
+        private System.Windows.Forms.ComboBox cmb_Post;
     }
 }
