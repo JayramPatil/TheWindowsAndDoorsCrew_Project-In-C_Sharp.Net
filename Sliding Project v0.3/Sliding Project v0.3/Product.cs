@@ -11,7 +11,8 @@ namespace Sliding_Project_v0._3
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -27,6 +28,9 @@ namespace Sliding_Project_v0._3
         public double Time_To_Build { get; set; }
         public string Description { get; set; }
         public byte[] Image { get; set; }
+        public string Track { get; set; }
+
+        [Browsable(false)]
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product_Material> Product_Material { get; set; }

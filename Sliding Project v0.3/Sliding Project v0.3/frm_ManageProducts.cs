@@ -12,6 +12,7 @@ namespace Sliding_Project_v0._3
 {
     public partial class frm_ManageProducts : Form
     {
+        int PID = 0;
         public frm_ManageProducts()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace Sliding_Project_v0._3
         }
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            OpenForm(new frm_AddProduct(1));
+            OpenForm(new frm_AddProduct(PID));
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -36,6 +37,19 @@ namespace Sliding_Project_v0._3
         {
             MessageBox.Show("Do You Want To Change This Products Availability ?", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+        }
+
+        private void dgv_ManageProduct_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PID = Convert.ToInt32(dgv_ManageProduct.Rows[e.RowIndex].Cells[0].Value);
+        }
+
+        private void frm_ManageProducts_Load(object sender, EventArgs e)
+        {
+            using (CrewEntities DB = new CrewEntities())
+            {
+                dgv_ManageProduct.DataSource = (from p in DB.Products select p).ToList();
+            }
         }
     }
 }

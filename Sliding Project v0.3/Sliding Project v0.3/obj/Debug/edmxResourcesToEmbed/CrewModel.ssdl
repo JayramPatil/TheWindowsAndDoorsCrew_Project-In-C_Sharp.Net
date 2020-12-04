@@ -214,15 +214,14 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
     <Property Name="Price" Type="money" Nullable="false" />
     <Property Name="Time_To_Build" Type="float" Nullable="false" />
     <Property Name="Description" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="Track" Type="varchar" MaxLength="8" Nullable="false" />
     <Property Name="Image" Type="image" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Product_Material' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Product_Material">
     <Key>
-      <PropertyRef Name="Product_ID" />
-      <PropertyRef Name="Material" />
+      <PropertyRef Name="PM_ID" />
     </Key>
+    <Property Name="PM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Product_ID" Type="int" Nullable="false" />
     <Property Name="Material" Type="varchar" MaxLength="40" Nullable="false" />
   </EntityType>
@@ -481,7 +480,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Product_M__Produ__48CFD27E">
+  <Association Name="FK__Product_M__Produ__25518C17">
     <End Role="Product" Type="Self.Product" Multiplicity="1" />
     <End Role="Product_Material" Type="Self.Product_Material" Multiplicity="*" />
     <ReferentialConstraint>
@@ -550,6 +549,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
     <EntitySet Name="Material_Info" EntityType="Self.Material_Info" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_Material" EntityType="Self.Product_Material" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Stock_Order" EntityType="Self.Stock_Order" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -601,12 +601,6 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
     [Ordered_Items].[Width] AS [Width], 
     [Ordered_Items].[Quantity] AS [Quantity]
     FROM [dbo].[Ordered_Items] AS [Ordered_Items]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="Product_Material" EntityType="Self.Product_Material" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Product_Material].[Product_ID] AS [Product_ID], 
-    [Product_Material].[Material] AS [Material]
-    FROM [dbo].[Product_Material] AS [Product_Material]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="Stock_Ordered_Items" EntityType="Self.Stock_Ordered_Items" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -684,7 +678,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
       <End Role="User" EntitySet="User" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
-    <AssociationSet Name="FK__Product_M__Produ__48CFD27E" Association="Self.FK__Product_M__Produ__48CFD27E">
+    <AssociationSet Name="FK__Product_M__Produ__25518C17" Association="Self.FK__Product_M__Produ__25518C17">
       <End Role="Product" EntitySet="Product" />
       <End Role="Product_Material" EntitySet="Product_Material" />
     </AssociationSet>

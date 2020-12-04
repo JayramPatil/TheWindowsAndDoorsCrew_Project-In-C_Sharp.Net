@@ -27,10 +27,8 @@ namespace Sliding_Project_v0._3
         public System.DateTime Added_Date { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [System.ComponentModel.Browsable(false)]
         public virtual ICollection<Distributor_Material> Distributor_Material { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [System.ComponentModel.Browsable(false)]
         public virtual ICollection<Distributor_Transaction> Distributor_Transaction { get; set; }
     }
 }

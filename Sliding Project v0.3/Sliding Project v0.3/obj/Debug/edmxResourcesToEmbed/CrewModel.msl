@@ -154,6 +154,7 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="CrewDBModel.Product">
         <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="Track" ColumnName="Track" />
           <ScalarProperty Name="Image" ColumnName="Image" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Time_To_Build" ColumnName="Time_To_Build" />
@@ -257,6 +258,7 @@
     <EntitySetMapping Name="Product_Material">
       <EntityTypeMapping TypeName="CrewDBModel.Product_Material">
         <MappingFragment StoreEntitySet="Product_Material">
+          <ScalarProperty Name="PM_ID" ColumnName="PM_ID" />
           <ScalarProperty Name="Material" ColumnName="Material" />
           <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
         </MappingFragment>

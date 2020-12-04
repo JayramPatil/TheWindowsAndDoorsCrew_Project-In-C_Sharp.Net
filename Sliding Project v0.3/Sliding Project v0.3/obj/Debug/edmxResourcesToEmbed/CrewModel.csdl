@@ -370,6 +370,7 @@
     <Property Name="Description" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
     <Property Name="Image" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
     <NavigationProperty Name="Product_Material" Relationship="CrewDBModel.FK__Product_M__Produ__48CFD27E" FromRole="Product" ToRole="Product_Material" />
+    <Property Name="Track" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Stock">
     <Key>
@@ -474,12 +475,12 @@
   </EntityType>
   <EntityType Name="Product_Material">
     <Key>
-      <PropertyRef Name="Product_ID" />
-      <PropertyRef Name="Material" />
+      <PropertyRef Name="PM_ID" />
     </Key>
     <Property Name="Product_ID" Type="Int32" Nullable="false" />
     <Property Name="Material" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Product" Relationship="CrewDBModel.FK__Product_M__Produ__48CFD27E" FromRole="Product_Material" ToRole="Product" />
+    <Property Name="PM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="Stock_Ordered_Items">
     <Key>

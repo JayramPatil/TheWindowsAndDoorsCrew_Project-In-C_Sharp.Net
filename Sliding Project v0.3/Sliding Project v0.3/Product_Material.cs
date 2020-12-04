@@ -16,6 +16,7 @@ namespace Sliding_Project_v0._3
     {
         public int Product_ID { get; set; }
         public string Material { get; set; }
+        public int PM_ID { get; set; }
     
         public virtual Product Product { get; set; }
     }
