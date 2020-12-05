@@ -249,15 +249,11 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
     <Property Name="Paid_Amount" Type="money" Nullable="false" />
     <Property Name="Remaining_Amount" Type="money" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Stock_Ordered_Items">
     <Key>
-      <PropertyRef Name="Order_ID" />
-      <PropertyRef Name="Material_Name" />
-      <PropertyRef Name="Quantity" />
-      <PropertyRef Name="Purchase_Price" />
+      <PropertyRef Name="Ordered_Items_ID" />
     </Key>
+    <Property Name="Ordered_Items_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Order_ID" Type="int" Nullable="false" />
     <Property Name="Material_Name" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="Type" Type="varchar" MaxLength="12" />
@@ -480,7 +476,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Product_M__Produ__25518C17">
+  <Association Name="FK__Product_M__Produ__29221CFB">
     <End Role="Product" Type="Self.Product" Multiplicity="1" />
     <End Role="Product_Material" Type="Self.Product_Material" Multiplicity="*" />
     <ReferentialConstraint>
@@ -492,7 +488,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Stock_Ord__Order__7D439ABD">
+  <Association Name="FK__Stock_Ord__Order__2BFE89A6">
     <End Role="Stock_Order" Type="Self.Stock_Order" Multiplicity="1" />
     <End Role="Stock_Ordered_Items" Type="Self.Stock_Ordered_Items" Multiplicity="*" />
     <ReferentialConstraint>
@@ -552,6 +548,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
     <EntitySet Name="Product_Material" EntityType="Self.Product_Material" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Stock_Order" EntityType="Self.Stock_Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stock_Ordered_Items" EntityType="Self.Stock_Ordered_Items" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Distributor_Transaction" EntityType="Self.Distributor_Transaction" store:Type="Tables" store:Schema="dbo">
@@ -601,18 +598,6 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
     [Ordered_Items].[Width] AS [Width], 
     [Ordered_Items].[Quantity] AS [Quantity]
     FROM [dbo].[Ordered_Items] AS [Ordered_Items]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="Stock_Ordered_Items" EntityType="Self.Stock_Ordered_Items" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Stock_Ordered_Items].[Order_ID] AS [Order_ID], 
-    [Stock_Ordered_Items].[Material_Name] AS [Material_Name], 
-    [Stock_Ordered_Items].[Type] AS [Type], 
-    [Stock_Ordered_Items].[Colour] AS [Colour], 
-    [Stock_Ordered_Items].[Track] AS [Track], 
-    [Stock_Ordered_Items].[Size] AS [Size], 
-    [Stock_Ordered_Items].[Quantity] AS [Quantity], 
-    [Stock_Ordered_Items].[Purchase_Price] AS [Purchase_Price]
-    FROM [dbo].[Stock_Ordered_Items] AS [Stock_Ordered_Items]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK__Customer___Order__44FF419A" Association="Self.FK__Customer___Order__44FF419A">
       <End Role="Orders" EntitySet="Orders" />
@@ -678,11 +663,11 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Stock_Ordered_Items'
       <End Role="User" EntitySet="User" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
-    <AssociationSet Name="FK__Product_M__Produ__25518C17" Association="Self.FK__Product_M__Produ__25518C17">
+    <AssociationSet Name="FK__Product_M__Produ__29221CFB" Association="Self.FK__Product_M__Produ__29221CFB">
       <End Role="Product" EntitySet="Product" />
       <End Role="Product_Material" EntitySet="Product_Material" />
     </AssociationSet>
-    <AssociationSet Name="FK__Stock_Ord__Order__7D439ABD" Association="Self.FK__Stock_Ord__Order__7D439ABD">
+    <AssociationSet Name="FK__Stock_Ord__Order__2BFE89A6" Association="Self.FK__Stock_Ord__Order__2BFE89A6">
       <End Role="Stock_Order" EntitySet="Stock_Order" />
       <End Role="Stock_Ordered_Items" EntitySet="Stock_Ordered_Items" />
     </AssociationSet>

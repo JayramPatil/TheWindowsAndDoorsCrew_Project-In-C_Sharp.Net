@@ -484,10 +484,7 @@
   </EntityType>
   <EntityType Name="Stock_Ordered_Items">
     <Key>
-      <PropertyRef Name="Order_ID" />
-      <PropertyRef Name="Material_Name" />
-      <PropertyRef Name="Quantity" />
-      <PropertyRef Name="Purchase_Price" />
+      <PropertyRef Name="Ordered_Items_ID" />
     </Key>
     <Property Name="Order_ID" Type="Int32" Nullable="false" />
     <Property Name="Material_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
@@ -498,6 +495,7 @@
     <Property Name="Quantity" Type="Int32" Nullable="false" />
     <Property Name="Purchase_Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <NavigationProperty Name="Stock_Order" Relationship="CrewDBModel.FK__Stock_Ord__Order__7D439ABD" FromRole="Stock_Ordered_Items" ToRole="Stock_Order" />
+    <Property Name="Ordered_Items_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
   <Association Name="FK__Distribut__Distr__4CA06362">
     <End Type="CrewDBModel.Distributor" Role="Distributor" Multiplicity="1" />

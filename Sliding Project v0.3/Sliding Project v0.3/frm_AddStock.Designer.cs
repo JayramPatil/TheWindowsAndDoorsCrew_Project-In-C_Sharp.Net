@@ -41,33 +41,33 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_Distributor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmb_Catagory = new System.Windows.Forms.ComboBox();
+            this.cmb_Material = new System.Windows.Forms.ComboBox();
             this.btn_New = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tb_Paid = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tb_Total = new System.Windows.Forms.TextBox();
+            this.dgv_StockItems = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Colour = new System.Windows.Forms.Label();
             this.cmb_Colour = new System.Windows.Forms.ComboBox();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.tb_Quantity = new System.Windows.Forms.TextBox();
             this.lbl_Price = new System.Windows.Forms.Label();
-            this.tb_Width = new System.Windows.Forms.TextBox();
             this.lbl_Quantity = new System.Windows.Forms.Label();
-            this.tb_Height = new System.Windows.Forms.TextBox();
             this.lbl_Height = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmb_Track = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_SubCatagory = new System.Windows.Forms.Label();
-            this.cmb_SubCatagory = new System.Windows.Forms.ComboBox();
+            this.cmb_Type = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_AvailableStock = new System.Windows.Forms.TextBox();
+            this.cmb_Size = new System.Windows.Forms.ComboBox();
+            this.tb_PPrice = new System.Windows.Forms.TextBox();
+            this.tb_Quantity = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
@@ -78,7 +78,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_StockItems)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
@@ -248,9 +248,9 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.07754F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.499994F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cmb_Distributor, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cmb_Catagory, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cmb_Material, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_New, 6, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 13);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -271,17 +271,18 @@
             this.label1.Text = "Distributor";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox1
+            // cmb_Distributor
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(223, 3);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(219, 33);
-            this.comboBox1.TabIndex = 14;
+            this.cmb_Distributor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Distributor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_Distributor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Distributor.FormattingEnabled = true;
+            this.cmb_Distributor.Location = new System.Drawing.Point(223, 3);
+            this.cmb_Distributor.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.cmb_Distributor.Name = "cmb_Distributor";
+            this.cmb_Distributor.Size = new System.Drawing.Size(219, 33);
+            this.cmb_Distributor.TabIndex = 14;
+            this.cmb_Distributor.SelectedIndexChanged += new System.EventHandler(this.cmb_Distributor_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -295,17 +296,18 @@
             this.label2.Text = "Material";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cmb_Catagory
+            // cmb_Material
             // 
-            this.cmb_Catagory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_Catagory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmb_Catagory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Catagory.FormattingEnabled = true;
-            this.cmb_Catagory.Location = new System.Drawing.Point(664, 3);
-            this.cmb_Catagory.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.cmb_Catagory.Name = "cmb_Catagory";
-            this.cmb_Catagory.Size = new System.Drawing.Size(219, 33);
-            this.cmb_Catagory.TabIndex = 13;
+            this.cmb_Material.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Material.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_Material.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Material.FormattingEnabled = true;
+            this.cmb_Material.Location = new System.Drawing.Point(664, 3);
+            this.cmb_Material.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.cmb_Material.Name = "cmb_Material";
+            this.cmb_Material.Size = new System.Drawing.Size(219, 33);
+            this.cmb_Material.TabIndex = 13;
+            this.cmb_Material.SelectedIndexChanged += new System.EventHandler(this.cmb_Material_SelectedIndexChanged);
             // 
             // btn_New
             // 
@@ -329,7 +331,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.groupBox3.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.dgv_StockItems);
             this.groupBox3.Controls.Add(this.tableLayoutPanel4);
             this.groupBox3.Location = new System.Drawing.Point(7, 206);
             this.groupBox3.Name = "groupBox3";
@@ -348,10 +350,10 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.05763F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.65993F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.984063F));
-            this.tableLayoutPanel3.Controls.Add(this.textBox3, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tb_Paid, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.label5, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.label3, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tb_Total, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 400);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -360,16 +362,17 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(977, 39);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
-            // textBox3
+            // tb_Paid
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(640, 5);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(15, 3, 20, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(225, 29);
-            this.textBox3.TabIndex = 31;
+            this.tb_Paid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_Paid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Paid.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Paid.Location = new System.Drawing.Point(640, 5);
+            this.tb_Paid.Margin = new System.Windows.Forms.Padding(15, 3, 20, 3);
+            this.tb_Paid.Name = "tb_Paid";
+            this.tb_Paid.Size = new System.Drawing.Size(225, 29);
+            this.tb_Paid.TabIndex = 31;
+            this.tb_Paid.Text = "0";
             // 
             // label5
             // 
@@ -395,31 +398,36 @@
             this.label3.Text = "Total";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // tb_Total
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(219, 5);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(15, 3, 20, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 29);
-            this.textBox1.TabIndex = 29;
+            this.tb_Total.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_Total.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Total.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Total.Location = new System.Drawing.Point(219, 5);
+            this.tb_Total.Margin = new System.Windows.Forms.Padding(15, 3, 20, 3);
+            this.tb_Total.Name = "tb_Total";
+            this.tb_Total.Size = new System.Drawing.Size(225, 29);
+            this.tb_Total.TabIndex = 29;
             // 
-            // dataGridView1
+            // dgv_StockItems
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_StockItems.AllowUserToAddRows = false;
+            this.dgv_StockItems.AllowUserToDeleteRows = false;
+            this.dgv_StockItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 172);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(971, 219);
-            this.dataGridView1.TabIndex = 3;
+            this.dgv_StockItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_StockItems.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgv_StockItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_StockItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_StockItems.Location = new System.Drawing.Point(6, 172);
+            this.dgv_StockItems.Name = "dgv_StockItems";
+            this.dgv_StockItems.ReadOnly = true;
+            this.dgv_StockItems.RowHeadersVisible = false;
+            this.dgv_StockItems.RowHeadersWidth = 51;
+            this.dgv_StockItems.RowTemplate.Height = 24;
+            this.dgv_StockItems.Size = new System.Drawing.Size(971, 219);
+            this.dgv_StockItems.TabIndex = 3;
             // 
             // tableLayoutPanel4
             // 
@@ -436,18 +444,18 @@
             this.tableLayoutPanel4.Controls.Add(this.lbl_Colour, 4, 0);
             this.tableLayoutPanel4.Controls.Add(this.cmb_Colour, 4, 1);
             this.tableLayoutPanel4.Controls.Add(this.btn_Add, 5, 3);
-            this.tableLayoutPanel4.Controls.Add(this.tb_Quantity, 4, 3);
             this.tableLayoutPanel4.Controls.Add(this.lbl_Price, 4, 2);
-            this.tableLayoutPanel4.Controls.Add(this.tb_Width, 3, 3);
             this.tableLayoutPanel4.Controls.Add(this.lbl_Quantity, 3, 2);
-            this.tableLayoutPanel4.Controls.Add(this.tb_Height, 2, 3);
             this.tableLayoutPanel4.Controls.Add(this.lbl_Height, 2, 2);
-            this.tableLayoutPanel4.Controls.Add(this.comboBox2, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.cmb_Track, 1, 3);
             this.tableLayoutPanel4.Controls.Add(this.label6, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.lbl_SubCatagory, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.cmb_SubCatagory, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.cmb_Type, 2, 1);
             this.tableLayoutPanel4.Controls.Add(this.label4, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox2, 3, 1);
+            this.tableLayoutPanel4.Controls.Add(this.tb_AvailableStock, 3, 1);
+            this.tableLayoutPanel4.Controls.Add(this.cmb_Size, 2, 3);
+            this.tableLayoutPanel4.Controls.Add(this.tb_PPrice, 4, 3);
+            this.tableLayoutPanel4.Controls.Add(this.tb_Quantity, 3, 3);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(6, 21);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
@@ -495,17 +503,7 @@
             this.btn_Add.TabIndex = 10;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = false;
-            // 
-            // tb_Quantity
-            // 
-            this.tb_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_Quantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_Quantity.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Quantity.Location = new System.Drawing.Point(591, 112);
-            this.tb_Quantity.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.tb_Quantity.Name = "tb_Quantity";
-            this.tb_Quantity.Size = new System.Drawing.Size(165, 29);
-            this.tb_Quantity.TabIndex = 29;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // lbl_Price
             // 
@@ -519,17 +517,6 @@
             this.lbl_Price.Text = "Purchase Price";
             this.lbl_Price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tb_Width
-            // 
-            this.tb_Width.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_Width.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_Width.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Width.Location = new System.Drawing.Point(402, 112);
-            this.tb_Width.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.tb_Width.Name = "tb_Width";
-            this.tb_Width.Size = new System.Drawing.Size(165, 29);
-            this.tb_Width.TabIndex = 28;
-            // 
             // lbl_Quantity
             // 
             this.lbl_Quantity.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -541,17 +528,6 @@
             this.lbl_Quantity.TabIndex = 5;
             this.lbl_Quantity.Text = "Quantity";
             this.lbl_Quantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tb_Height
-            // 
-            this.tb_Height.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_Height.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_Height.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Height.Location = new System.Drawing.Point(213, 112);
-            this.tb_Height.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.tb_Height.Name = "tb_Height";
-            this.tb_Height.Size = new System.Drawing.Size(165, 29);
-            this.tb_Height.TabIndex = 27;
             // 
             // lbl_Height
             // 
@@ -565,17 +541,17 @@
             this.lbl_Height.Text = "Size";
             this.lbl_Height.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox2
+            // cmb_Track
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(24, 111);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(165, 33);
-            this.comboBox2.TabIndex = 20;
+            this.cmb_Track.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Track.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_Track.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Track.FormattingEnabled = true;
+            this.cmb_Track.Location = new System.Drawing.Point(24, 111);
+            this.cmb_Track.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.cmb_Track.Name = "cmb_Track";
+            this.cmb_Track.Size = new System.Drawing.Size(165, 33);
+            this.cmb_Track.TabIndex = 20;
             // 
             // label6
             // 
@@ -601,20 +577,17 @@
             this.lbl_SubCatagory.Text = "Material Type";
             this.lbl_SubCatagory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cmb_SubCatagory
+            // cmb_Type
             // 
-            this.cmb_SubCatagory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_SubCatagory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmb_SubCatagory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_SubCatagory.FormattingEnabled = true;
-            this.cmb_SubCatagory.Items.AddRange(new object[] {
-            "Jindal",
-            "Non Jindal"});
-            this.cmb_SubCatagory.Location = new System.Drawing.Point(213, 39);
-            this.cmb_SubCatagory.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.cmb_SubCatagory.Name = "cmb_SubCatagory";
-            this.cmb_SubCatagory.Size = new System.Drawing.Size(165, 33);
-            this.cmb_SubCatagory.TabIndex = 15;
+            this.cmb_Type.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Type.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Type.FormattingEnabled = true;
+            this.cmb_Type.Location = new System.Drawing.Point(213, 39);
+            this.cmb_Type.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.cmb_Type.Name = "cmb_Type";
+            this.cmb_Type.Size = new System.Drawing.Size(165, 33);
+            this.cmb_Type.TabIndex = 15;
             // 
             // label4
             // 
@@ -628,16 +601,51 @@
             this.label4.Text = "Available Stock";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // tb_AvailableStock
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(402, 39);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 29);
-            this.textBox2.TabIndex = 32;
+            this.tb_AvailableStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_AvailableStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_AvailableStock.Enabled = false;
+            this.tb_AvailableStock.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_AvailableStock.Location = new System.Drawing.Point(402, 39);
+            this.tb_AvailableStock.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.tb_AvailableStock.Name = "tb_AvailableStock";
+            this.tb_AvailableStock.Size = new System.Drawing.Size(165, 29);
+            this.tb_AvailableStock.TabIndex = 32;
+            // 
+            // cmb_Size
+            // 
+            this.cmb_Size.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Size.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_Size.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Size.FormattingEnabled = true;
+            this.cmb_Size.Location = new System.Drawing.Point(213, 111);
+            this.cmb_Size.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.cmb_Size.Name = "cmb_Size";
+            this.cmb_Size.Size = new System.Drawing.Size(165, 33);
+            this.cmb_Size.TabIndex = 33;
+            // 
+            // tb_PPrice
+            // 
+            this.tb_PPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_PPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_PPrice.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_PPrice.Location = new System.Drawing.Point(591, 112);
+            this.tb_PPrice.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.tb_PPrice.Name = "tb_PPrice";
+            this.tb_PPrice.Size = new System.Drawing.Size(165, 29);
+            this.tb_PPrice.TabIndex = 28;
+            // 
+            // tb_Quantity
+            // 
+            this.tb_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Quantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Quantity.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Quantity.Location = new System.Drawing.Point(402, 112);
+            this.tb_Quantity.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.tb_Quantity.Name = "tb_Quantity";
+            this.tb_Quantity.Size = new System.Drawing.Size(165, 29);
+            this.tb_Quantity.TabIndex = 29;
             // 
             // tableLayoutPanel5
             // 
@@ -672,6 +680,7 @@
             this.btn_Refresh.TabIndex = 11;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // btn_Save
             // 
@@ -686,6 +695,7 @@
             this.btn_Save.TabIndex = 12;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // frm_AddStock
             // 
@@ -700,6 +710,7 @@
             this.Controls.Add(this.panel_Header);
             this.Name = "frm_AddStock";
             this.Text = "frm_AddStock";
+            this.Load += new System.EventHandler(this.frm_AddStock_Load);
             this.panel_Header.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -709,7 +720,7 @@
             this.groupBox3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_StockItems)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -733,14 +744,13 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmb_Catagory;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_Material;
+        private System.Windows.Forms.ComboBox cmb_Distributor;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TextBox tb_Quantity;
-        private System.Windows.Forms.TextBox tb_Width;
-        private System.Windows.Forms.TextBox tb_Height;
-        private System.Windows.Forms.ComboBox cmb_SubCatagory;
+        private System.Windows.Forms.TextBox tb_PPrice;
+        private System.Windows.Forms.ComboBox cmb_Type;
         private System.Windows.Forms.Label lbl_Height;
         private System.Windows.Forms.Label lbl_SubCatagory;
         private System.Windows.Forms.Label lbl_Colour;
@@ -748,19 +758,20 @@
         private System.Windows.Forms.Label lbl_Price;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.ComboBox cmb_Colour;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dgv_StockItems;
+        private System.Windows.Forms.TextBox tb_Total;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_AvailableStock;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tb_Paid;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Button btn_Save;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmb_Track;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_New;
+        private System.Windows.Forms.ComboBox cmb_Size;
     }
 }

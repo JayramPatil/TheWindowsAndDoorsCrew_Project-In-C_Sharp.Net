@@ -267,6 +267,7 @@
     <EntitySetMapping Name="Stock_Ordered_Items">
       <EntityTypeMapping TypeName="CrewDBModel.Stock_Ordered_Items">
         <MappingFragment StoreEntitySet="Stock_Ordered_Items">
+          <ScalarProperty Name="Ordered_Items_ID" ColumnName="Ordered_Items_ID" />
           <ScalarProperty Name="Purchase_Price" ColumnName="Purchase_Price" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
           <ScalarProperty Name="Size" ColumnName="Size" />

@@ -11,8 +11,7 @@ namespace Sliding_Project_v0._3
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
-
+    
     public partial class Distributor
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -26,11 +25,9 @@ namespace Sliding_Project_v0._3
         public string Name { get; set; }
         public string Mobile_No { get; set; }
         public System.DateTime Added_Date { get; set; }
-
-        [Browsable(false)]
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Distributor_Material> Distributor_Material { get; set; }
-        [Browsable(false)]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Distributor_Transaction> Distributor_Transaction { get; set; }
     }

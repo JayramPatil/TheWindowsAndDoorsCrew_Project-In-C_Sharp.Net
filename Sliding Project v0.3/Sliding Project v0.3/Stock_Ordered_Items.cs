@@ -22,6 +22,7 @@ namespace Sliding_Project_v0._3
         public Nullable<int> Size { get; set; }
         public int Quantity { get; set; }
         public decimal Purchase_Price { get; set; }
+        public int Ordered_Items_ID { get; set; }
     
         public virtual Stock_Order Stock_Order { get; set; }
     }
