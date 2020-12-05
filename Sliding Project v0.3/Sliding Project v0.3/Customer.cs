@@ -11,7 +11,8 @@ namespace Sliding_Project_v0._3
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,7 +25,8 @@ namespace Sliding_Project_v0._3
         public string Name { get; set; }
         public string Mobile_No { get; set; }
         public string Address { get; set; }
-    
+
+        [Browsable(false)]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
     }

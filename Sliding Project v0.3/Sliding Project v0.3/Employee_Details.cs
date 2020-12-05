@@ -11,7 +11,8 @@ namespace Sliding_Project_v0._3
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Employee_Details
     {
         public int Employee_ID { get; set; }
@@ -25,7 +26,8 @@ namespace Sliding_Project_v0._3
         public string Qualification { get; set; }
         public string Experience { get; set; }
         public System.DateTime Joining_Date { get; set; }
-    
+
+        [Browsable(false)]
         public virtual Employee_Salary Employee_Salary { get; set; }
     }
 }

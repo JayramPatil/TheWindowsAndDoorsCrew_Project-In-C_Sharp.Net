@@ -34,7 +34,7 @@
         <EntityTypeShape EntityType="CrewDBModel.Material_Track" Width="1.5" PointX="3" PointY="7.375" />
         <EntityTypeShape EntityType="CrewDBModel.Material_Type" Width="1.5" PointX="3" PointY="9.75" />
         <EntityTypeShape EntityType="CrewDBModel.Product_Material" Width="1.5" PointX="13" PointY="6.375" />
-        <EntityTypeShape EntityType="CrewDBModel.Stock_Ordered_Items" Width="1.5" PointX="8" PointY="10.875" />
+        <EntityTypeShape EntityType="CrewDBModel.Stock_Ordered_Items" Width="1.5" PointX="8" PointY="12" />
         <AssociationConnector Association="CrewDBModel.FK__Distribut__Distr__4CA06362" />
         <AssociationConnector Association="CrewDBModel.FK__Employee___Emplo__787EE5A0" />
         <AssociationConnector Association="CrewDBModel.FK__Employee___Emplo__7B5B524B" />

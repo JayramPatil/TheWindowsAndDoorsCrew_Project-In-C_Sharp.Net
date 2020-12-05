@@ -188,22 +188,66 @@ namespace Sliding_Project_v0._3
         {
            // CLB_Content();
         }
+        private bool CheckFilled()
+        {
+            if(tb_ID.Text != "" && tb_Name.Text != "" && cmb_Catagory.Text != "" && tb_Price.Text != "" && cmb_RequiredTimeToBuild.Text != "" && tb_Description.Text != "" && pb_Image.Image != null)
+            {
+                return true;
+            }
+            return false;
+        }
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            using (CrewEntities DB = new CrewEntities())
+            if(CheckFilled())
             {
-                ImageConverter con = new ImageConverter();
-                byte[] imgArray = (byte[])con.ConvertTo(pb_Image.Image, typeof(byte[]));
-                string RB = "NO";
+                using (CrewEntities DB = new CrewEntities())
+                {
+                    ImageConverter con = new ImageConverter();
+                    byte[] imgArray = (byte[])con.ConvertTo(pb_Image.Image, typeof(byte[]));
+                    int ID = Convert.ToInt32(tb_ID.Text);
 
-                if (rb_Yes.Checked)
-                    RB = rb_Yes.Text;
+                    string RB = "NO";
 
-                DB.Products.Add(new Product { Product_Name = tb_Name.Text, Catagory = cmb_Catagory.Text, Price = Convert.ToInt32(tb_Price.Text), Time_To_Build = Convert.ToInt32(cmb_RequiredTimeToBuild.Text), Image = imgArray, Description = tb_Description.Text, Track = RB});
-                DB.SaveChanges();
+                    if (rb_Yes.Checked)
+                        RB = rb_Yes.Text;
+
+                    if (btn_Add.Text == "Add")
+                    {
+                        
+                        DB.Products.Add(new Product { Product_Name = tb_Name.Text, Catagory = cmb_Catagory.Text, Price = Convert.ToInt32(tb_Price.Text), Time_To_Build = Convert.ToInt32(cmb_RequiredTimeToBuild.Text), Image = imgArray, Description = tb_Description.Text, Track = RB });
+                        DB.SaveChanges();
+
+                        InsertCLBitems(ID);
+                    }
+                    else
+                    {
+                        var prod = DB.Products.Find(ID);
+
+                        if(prod != null)
+                        {
+                            prod.Product_Name = tb_Name.Text;
+                            prod.Catagory = cmb_Catagory.Text;
+                            prod.Price = Convert.ToDecimal(tb_Price.Text);
+                            prod.Time_To_Build = Convert.ToInt32(cmb_RequiredTimeToBuild.Text);
+                            prod.Description = tb_Description.Text;
+                            prod.Track = RB;
+                            prod.Image = imgArray;
+
+                            DB.SaveChanges();
+
+                            DB.Product_Material.RemoveRange(DB.Product_Material.Where(pm => pm.Product_ID == ID));
+
+                            InsertCLBitems(ID);
+                        }
+                    }
+                }
             }
-            InsertCLBitems(Convert.ToInt32(tb_ID.Text));
+            else
+            {
+                MessageBox.Show("Please, First Fill All The Fields !!!");
+            }
+            
         }
 
         private void btn_Upload_Click(object sender, EventArgs e)

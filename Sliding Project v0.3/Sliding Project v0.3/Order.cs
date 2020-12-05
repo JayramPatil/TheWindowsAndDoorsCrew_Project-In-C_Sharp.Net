@@ -11,7 +11,8 @@ namespace Sliding_Project_v0._3
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Order
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -32,12 +33,16 @@ namespace Sliding_Project_v0._3
         public decimal Paid_Amount { get; set; }
         public decimal Remaining_Amount { get; set; }
         public System.DateTime Delivery_Date { get; set; }
-    
+
+        [Browsable(false)]
         public virtual Customer Customer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [Browsable(false)]
         public virtual ICollection<Customer_Transaction> Customer_Transaction { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [Browsable(false)]
         public virtual ICollection<Ordered_Items> Ordered_Items { get; set; }
+        [Browsable(false)]
         public virtual User User { get; set; }
     }
 }

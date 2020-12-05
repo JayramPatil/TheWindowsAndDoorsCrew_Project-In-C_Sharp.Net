@@ -31,7 +31,6 @@ namespace Sliding_Project_v0._3
         public string Track { get; set; }
 
         [Browsable(false)]
-    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product_Material> Product_Material { get; set; }
     }
