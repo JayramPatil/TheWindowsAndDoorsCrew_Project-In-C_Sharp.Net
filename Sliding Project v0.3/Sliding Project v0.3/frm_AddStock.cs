@@ -220,7 +220,19 @@ namespace Sliding_Project_v0._3
                 int? Track = (int.TryParse(cmb_Track.Text, out var t) ? (int?)t : null);
 
                 dt.Rows.Add(cmb_Material.Text, cmb_Type.Text, cmb_Colour.Text, Track, Size, Convert.ToInt32(tb_Quantity.Text), Convert.ToInt32(tb_PPrice.Text));
+
                 dgv_StockItems.DataSource = dt;
+
+                DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+                btn.Name = "Remove";
+                btn.Text = "Remove";
+                btn.UseColumnTextForButtonValue = true;
+                int columnIndex = 0;
+                if (dgv_Remove.Columns["Remove"] == null)
+                {
+                    dgv_Remove.Columns.Insert(columnIndex, btn);
+                }
+                dgv_Remove.Rows.Insert(columnIndex, btn);
             }
             else
             {
@@ -229,7 +241,7 @@ namespace Sliding_Project_v0._3
         }
         private bool CheckFilled()
         {
-            if(tb_ID.Text != "" && cmb_Material.Text != "" && cmb_Distributor.Text != "" && tb_Total.Text != "" && tb_Paid.Text != "")
+            if(tb_ID.Text != "" && cmb_Material.Text != "" && cmb_Distributor.Text != "" && tb_Total.Text != "" && tb_Paid.Text != "" && dgv_StockItems.Rows.Count > 0)
             {
                 return true;
             }
@@ -272,6 +284,10 @@ namespace Sliding_Project_v0._3
                     Refresh();
                 }
             }
+            else
+            {
+                MessageBox.Show("Please, First Fill All The Fields !!!");
+            }
         }
         private void InsertItems()
         {
@@ -285,6 +301,30 @@ namespace Sliding_Project_v0._3
 
                     DB.Stock_Ordered_Items.Add(new Stock_Ordered_Items { Order_ID = Convert.ToInt32(tb_ID.Text), Material_Name = row.Cells[0].Value.ToString(), Type = row.Cells[1].Value.ToString(), Colour = row.Cells[2].Value.ToString(), Track = Track, Size = Size, Quantity = Convert.ToInt32(row.Cells[5].Value), Purchase_Price = Convert.ToInt32(row.Cells[6].Value) });
                     DB.SaveChanges();
+
+                    string Material_Name = row.Cells[0].Value.ToString();
+                    string Type = row.Cells[1].Value.ToString();
+                    string Colour = row.Cells[2].Value.ToString();
+                    int PP = Convert.ToInt32(row.Cells[6].Value);
+
+                    var Stock = (from s1 in DB.Stocks where s1.Material_Name == Material_Name && s1.Type == Type && s1.Colour == Colour && s1.Size == Size && s1.Track == Track select s1).FirstOrDefault();
+
+                    if (Stock != null)
+                    {
+                        Stock.Available_Stock = (Convert.ToInt32(Stock.Available_Stock) + Convert.ToInt32(row.Cells[5].Value));
+
+                        if(Convert.ToInt32(Stock.Purchase_Price) <= Convert.ToInt32(row.Cells[6].Value))
+                        {
+                            Stock.Purchase_Price = PP;
+                        }
+                    }
+                    else
+                    {
+                        int As = Convert.ToInt32(row.Cells[5].Value);
+
+                        DB.Stocks.Add(new Stock { Material_Name = Material_Name, Type = Type, Colour = Colour, Track = Track, Size = Size, Available_Stock = As, Purchase_Price = PP });
+                    }
+                    DB.SaveChanges();
                 }
             }
         }
@@ -293,6 +333,17 @@ namespace Sliding_Project_v0._3
         {
             Refresh();
             dt.Rows.Clear();
+            dgv_Remove.Rows.Clear();
+        }
+        private void dgv_Remove_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataRow dr = dt.Rows[e.RowIndex];
+
+            dr.Delete();
+
+            dgv_Remove.Rows.RemoveAt(e.RowIndex);
+
+            dgv_StockItems.DataSource = dt;
         }
     }
 }
