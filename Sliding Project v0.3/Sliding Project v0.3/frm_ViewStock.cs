@@ -15,6 +15,11 @@ namespace Sliding_Project_v0._3
         public frm_ViewStock()
         {
             InitializeComponent();
+
+            using (CrewEntities DB = new CrewEntities())
+            {
+                dgv_ManageOrders.DataSource = DB.Stock_Order.ToList();
+            }
         }
         public void OpenForm(Form frm)
         {
@@ -29,12 +34,18 @@ namespace Sliding_Project_v0._3
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            OpenForm(new frm_AddStock(1));
+            OpenForm(new frm_AddStock(OrderID));
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Do You Want To Delete This Order ?", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+
+        int OrderID = 0;
+        private void dgv_ManageOrders_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            OrderID = Convert.ToInt32(dgv_ManageOrders.Rows[e.RowIndex].Cells[0].Value);
         }
     }
 }

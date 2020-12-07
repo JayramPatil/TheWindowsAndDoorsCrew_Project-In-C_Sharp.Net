@@ -11,7 +11,8 @@ namespace Sliding_Project_v0._3
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Stock_Order
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -28,8 +29,11 @@ namespace Sliding_Project_v0._3
         public decimal Paid_Amount { get; set; }
         public decimal Remaining_Amount { get; set; }
     
+        [Browsable(false)]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Distributor_Transaction> Distributor_Transaction { get; set; }
+
+        [Browsable(false)]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Stock_Ordered_Items> Stock_Ordered_Items { get; set; }
     }

@@ -12,23 +12,28 @@ namespace Sliding_Project_v0._3
 {
     public partial class frm_AddStock : Form
     {
-        int Total = 0;
+        Decimal Total = 0;
 
         DataTable dt = new DataTable();
         public frm_AddStock()
         {
             InitializeComponent();
             ID();
-            tb_Date.Text = DateTime.Now.ToString("dd-MM-yyyy");
             CreateColums();
+            tb_Date.Text = DateTime.Now.ToString("dd-MM-yyyy");
         }
         public frm_AddStock(int i)
         {
             InitializeComponent();
+            CreateColums();
             lbl_Header.Text = "Update Stock";
             btn_Search.Visible = true;
             //groupBox1.Enabled = false;
             btn_Save.Text = "Update";
+
+            if(i != 0)
+                Search(i);
+
         }
         public void ID()
         {
@@ -212,7 +217,26 @@ namespace Sliding_Project_v0._3
         {
             if(tb_PPrice.Text != "" && tb_Quantity.Text != "")
             {
-                Total += (Convert.ToInt32(tb_PPrice.Text) * Convert.ToInt32(tb_Quantity.Text));
+                if(btn_Save.Text == "Save")
+                    Total += (Convert.ToInt32(tb_PPrice.Text) * Convert.ToInt32(tb_Quantity.Text));
+                else
+                {
+                    Decimal a = Convert.ToDecimal(tb_PPrice.Text);
+                    Decimal b = Convert.ToDecimal(tb_Quantity.Text);
+                    Decimal t1 = Convert.ToDecimal(tb_Total.Text);
+
+                    Total = (t1 + (a*b));
+                }
+                DataGridViewButtonColumn Edit = new DataGridViewButtonColumn();
+                Edit.Name = "Edit";
+                Edit.Text = "Edit";
+                Edit.UseColumnTextForButtonValue = true;
+                int columnIndex = 0;
+                if (dgv_StockItems.Columns["Edit"] == null)
+                {
+                    dgv_StockItems.Columns.Insert(columnIndex, Edit);
+                }
+                //dgv_StockItems.Rows.Insert(columnIndex, Edit);
 
                 tb_Total.Text = Total.ToString();
 
@@ -227,12 +251,14 @@ namespace Sliding_Project_v0._3
                 btn.Name = "Remove";
                 btn.Text = "Remove";
                 btn.UseColumnTextForButtonValue = true;
-                int columnIndex = 0;
+                columnIndex = 0;
                 if (dgv_Remove.Columns["Remove"] == null)
                 {
                     dgv_Remove.Columns.Insert(columnIndex, btn);
                 }
                 dgv_Remove.Rows.Insert(columnIndex, btn);
+
+             
             }
             else
             {
@@ -254,6 +280,7 @@ namespace Sliding_Project_v0._3
             cmb_Material.Text = "";
             tb_Total.Text = "";
             tb_Paid.Text = "0";
+            Total = 0;
 
             ClearGB2();
             if(btn_Save.Text == "Save")
@@ -262,16 +289,57 @@ namespace Sliding_Project_v0._3
                 tb_Date.Text = DateTime.Now.ToString("dd-MM-yyyy");
             }
         }
+        private void Search(int ID)
+        {
+            dgv_Remove.Rows.Clear();
+            dt.Rows.Clear();
+
+            using (CrewEntities DB = new CrewEntities())
+            {
+                var Order = DB.Stock_Order.Find(ID);
+
+                if(Order != null)
+                {
+                    DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+                    btn.Name = "Remove";
+                    btn.Text = "Remove";
+                    btn.UseColumnTextForButtonValue = true;
+                    int columnIndex = 0;
+
+                    tb_Date.Text = Order.Date.ToString("dd-MM-yyyy");
+                    cmb_Distributor.Text = Order.Distributor_Name;
+                    tb_Total.Text = Order.Total.ToString();
+                    tb_Paid.Text = Order.Paid_Amount.ToString();
+
+                    var OI = (from oi in DB.Stock_Ordered_Items where oi.Order_ID == ID select oi).ToList();
+
+                    foreach (var i in OI)
+                    {
+                        dt.Rows.Add(i.Material_Name, i.Type, i.Colour, i.Track, i.Size, i.Quantity, i.Purchase_Price);
+
+                        if (dgv_Remove.Columns["Remove"] == null)
+                        {
+                            dgv_Remove.Columns.Insert(columnIndex, btn);
+                        }
+                        dgv_Remove.Rows.Insert(columnIndex, btn);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Order ID !");
+                }
+            }
+        }
         private void btn_Save_Click(object sender, EventArgs e)
         {
             if (CheckFilled())
             {
                 using (CrewEntities DB = new CrewEntities())
                 {
-                    if(btn_Save.Text == "Save")
-                    {
-                        int Rem = Convert.ToInt32(tb_Total.Text) - Convert.ToInt32(tb_Paid.Text);
+                    int Rem = Convert.ToInt32(tb_Total.Text) - Convert.ToInt32(tb_Paid.Text);
 
+                    if (btn_Save.Text == "Save")
+                    {
                         DB.Stock_Order.Add(new Stock_Order { Date = Convert.ToDateTime(tb_Date.Text), Distributor_Name = cmb_Distributor.Text, Total = Convert.ToDecimal(tb_Total.Text), Paid_Amount = Convert.ToDecimal(tb_Paid.Text), Remaining_Amount = Rem });
                         DB.SaveChanges();
 
@@ -279,7 +347,32 @@ namespace Sliding_Project_v0._3
                     }
                     else
                     {
+                        var Order = DB.Stock_Order.Find(Convert.ToInt32(tb_ID.Text));
 
+                        if(Order != null)
+                        {
+                            Order.Distributor_Name = cmb_Distributor.Text;
+                            Order.Total = Convert.ToInt32(tb_Total.Text);
+                            Order.Paid_Amount = Convert.ToInt32(tb_Paid.Text);
+                            Order.Remaining_Amount = Rem;
+
+                            var stock = (from ss in DB.Stock_Ordered_Items where ss.Order_ID == Order.Order_ID select ss).ToList();
+
+                            foreach (var i in stock)
+                            {
+                                var S = (from s1 in DB.Stocks where s1.Material_Name == i.Material_Name && s1.Type == i.Type && s1.Colour == i.Colour && s1.Size == i.Size && s1.Track == i.Track select s1).FirstOrDefault();
+
+                                if (S != null)
+                                {
+                                    S.Available_Stock -= i.Quantity;
+                                } 
+                            }
+
+                            DB.Stock_Ordered_Items.RemoveRange(DB.Stock_Ordered_Items.Where(dm => dm.Order_ID == Order.Order_ID));
+                            DB.SaveChanges();
+
+                            InsertItems();
+                        }
                     }
                     Refresh();
                 }
@@ -293,7 +386,6 @@ namespace Sliding_Project_v0._3
         {
             using (CrewEntities DB = new CrewEntities())
             {
-
                 foreach (DataGridViewRow row in dgv_StockItems.Rows)
                 {
                     int? Size = (int.TryParse(row.Cells[4].Value.ToString(), out var s) ? (int?)s : null);
@@ -337,13 +429,33 @@ namespace Sliding_Project_v0._3
         }
         private void dgv_Remove_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataRow dr = dt.Rows[e.RowIndex];
+            if (e.RowIndex >= 0)
+            {
+                DataRow dr = dt.Rows[e.RowIndex];
 
-            dr.Delete();
+                tb_Total.Text = (Convert.ToDecimal(tb_Total.Text) - (Convert.ToDecimal(dt.Rows[e.RowIndex][5]) * Convert.ToDecimal(dt.Rows[e.RowIndex][6]))).ToString();
 
-            dgv_Remove.Rows.RemoveAt(e.RowIndex);
+                dr.Delete();
 
-            dgv_StockItems.DataSource = dt;
+                dgv_Remove.Rows.RemoveAt(e.RowIndex);
+
+                dgv_StockItems.DataSource = dt;
+            }
+        }
+
+        private void dgv_StockItems_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+
+            cmb_Material.Text = dt.Rows[i][0].ToString();
+            cmb_Type.Text = dt.Rows[i][1].ToString();
+            cmb_Colour.Text = dt.Rows[i][2].ToString();
+            cmb_Track.Text = dt.Rows[i][3].ToString();
+            cmb_Size.Text = dt.Rows[i][4].ToString();
+            tb_Quantity.Text = dt.Rows[i][5].ToString();
+            tb_PPrice.Text = dt.Rows[i][6].ToString();
+
+            dgv_Remove_CellClick(sender, e);
         }
     }
 }

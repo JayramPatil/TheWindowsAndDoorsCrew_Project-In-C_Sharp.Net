@@ -46,6 +46,9 @@
             this.cmb_Material = new System.Windows.Forms.ComboBox();
             this.btn_New = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgv_Remove = new System.Windows.Forms.DataGridView();
+            this.dgv_StockItems = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tb_Paid = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -70,21 +73,18 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgv_StockItems = new System.Windows.Forms.DataGridView();
-            this.dgv_Remove = new System.Windows.Forms.DataGridView();
             this.panel_Header.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Remove)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_StockItems)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_StockItems)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Remove)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -343,6 +343,67 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Product Details";
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.67967F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.32033F));
+            this.tableLayoutPanel6.Controls.Add(this.dgv_Remove, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.dgv_StockItems, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(6, 172);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(974, 227);
+            this.tableLayoutPanel6.TabIndex = 5;
+            // 
+            // dgv_Remove
+            // 
+            this.dgv_Remove.AllowUserToAddRows = false;
+            this.dgv_Remove.AllowUserToDeleteRows = false;
+            this.dgv_Remove.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Remove.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Remove.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgv_Remove.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Remove.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Remove.Location = new System.Drawing.Point(854, 3);
+            this.dgv_Remove.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.dgv_Remove.Name = "dgv_Remove";
+            this.dgv_Remove.ReadOnly = true;
+            this.dgv_Remove.RowHeadersVisible = false;
+            this.dgv_Remove.RowHeadersWidth = 51;
+            this.dgv_Remove.RowTemplate.Height = 24;
+            this.dgv_Remove.Size = new System.Drawing.Size(117, 221);
+            this.dgv_Remove.TabIndex = 5;
+            this.dgv_Remove.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Remove_CellClick);
+            // 
+            // dgv_StockItems
+            // 
+            this.dgv_StockItems.AllowUserToAddRows = false;
+            this.dgv_StockItems.AllowUserToDeleteRows = false;
+            this.dgv_StockItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_StockItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_StockItems.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgv_StockItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_StockItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_StockItems.Location = new System.Drawing.Point(3, 3);
+            this.dgv_StockItems.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.dgv_StockItems.Name = "dgv_StockItems";
+            this.dgv_StockItems.ReadOnly = true;
+            this.dgv_StockItems.RowHeadersVisible = false;
+            this.dgv_StockItems.RowHeadersWidth = 51;
+            this.dgv_StockItems.RowTemplate.Height = 24;
+            this.dgv_StockItems.Size = new System.Drawing.Size(851, 221);
+            this.dgv_StockItems.TabIndex = 4;
+            this.dgv_StockItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_StockItems_CellClick);
             // 
             // tableLayoutPanel3
             // 
@@ -681,66 +742,6 @@
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.52361F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.47639F));
-            this.tableLayoutPanel6.Controls.Add(this.dgv_Remove, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.dgv_StockItems, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(6, 172);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(974, 227);
-            this.tableLayoutPanel6.TabIndex = 5;
-            // 
-            // dgv_StockItems
-            // 
-            this.dgv_StockItems.AllowUserToAddRows = false;
-            this.dgv_StockItems.AllowUserToDeleteRows = false;
-            this.dgv_StockItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_StockItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_StockItems.BackgroundColor = System.Drawing.Color.Silver;
-            this.dgv_StockItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_StockItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_StockItems.Location = new System.Drawing.Point(3, 3);
-            this.dgv_StockItems.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.dgv_StockItems.Name = "dgv_StockItems";
-            this.dgv_StockItems.ReadOnly = true;
-            this.dgv_StockItems.RowHeadersVisible = false;
-            this.dgv_StockItems.RowHeadersWidth = 51;
-            this.dgv_StockItems.RowTemplate.Height = 24;
-            this.dgv_StockItems.Size = new System.Drawing.Size(829, 221);
-            this.dgv_StockItems.TabIndex = 4;
-            // 
-            // dgv_Remove
-            // 
-            this.dgv_Remove.AllowUserToAddRows = false;
-            this.dgv_Remove.AllowUserToDeleteRows = false;
-            this.dgv_Remove.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Remove.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Remove.BackgroundColor = System.Drawing.Color.Silver;
-            this.dgv_Remove.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Remove.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Remove.Location = new System.Drawing.Point(832, 3);
-            this.dgv_Remove.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.dgv_Remove.Name = "dgv_Remove";
-            this.dgv_Remove.ReadOnly = true;
-            this.dgv_Remove.RowHeadersVisible = false;
-            this.dgv_Remove.RowHeadersWidth = 51;
-            this.dgv_Remove.RowTemplate.Height = 24;
-            this.dgv_Remove.Size = new System.Drawing.Size(139, 221);
-            this.dgv_Remove.TabIndex = 5;
-            this.dgv_Remove.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Remove_CellClick);
-            // 
             // frm_AddStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -762,14 +763,14 @@
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Remove)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_StockItems)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_StockItems)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Remove)).EndInit();
             this.ResumeLayout(false);
 
         }
