@@ -322,5 +322,11 @@ namespace Sliding_Project_v0._3
             OpenForm(new frm_ManageCustomers());
             Hide_Opened_SubMenu();
         }
+
+        private void btn_ViewStock_Click_1(object sender, EventArgs e)
+        {
+            OpenForm(new frm_ViewStockItems());
+            Hide_Opened_SubMenu();
+        }
     }
 }

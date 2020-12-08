@@ -191,7 +191,6 @@
             this.tb_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_ID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tb_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_ID.Enabled = false;
             this.tb_ID.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_ID.Location = new System.Drawing.Point(241, 5);
             this.tb_ID.Name = "tb_ID";

@@ -230,6 +230,12 @@
     <Compile Include="frm_ViewStock.Designer.cs">
       <DependentUpon>frm_ViewStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_ViewStockItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ViewStockItems.Designer.cs">
+      <DependentUpon>frm_ViewStockItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maintainance.cs">
       <DependentUpon>CrewModel.tt</DependentUpon>
     </Compile>
@@ -357,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ViewStock.resx">
       <DependentUpon>frm_ViewStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ViewStockItems.resx">
+      <DependentUpon>frm_ViewStockItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI_Home.resx">
       <DependentUpon>MDI_Home.cs</DependentUpon>

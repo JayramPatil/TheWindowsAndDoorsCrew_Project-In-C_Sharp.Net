@@ -28,7 +28,6 @@ namespace Sliding_Project_v0._3
             CreateColums();
             lbl_Header.Text = "Update Stock";
             btn_Search.Visible = true;
-            //groupBox1.Enabled = false;
             btn_Save.Text = "Update";
 
             if(i != 0)
@@ -306,6 +305,12 @@ namespace Sliding_Project_v0._3
                     btn.UseColumnTextForButtonValue = true;
                     int columnIndex = 0;
 
+                    DataGridViewButtonColumn Edit = new DataGridViewButtonColumn();
+                    Edit.Name = "Edit";
+                    Edit.Text = "Edit";
+                    Edit.UseColumnTextForButtonValue = true;
+                    columnIndex = 0;
+
                     tb_Date.Text = Order.Date.ToString("dd-MM-yyyy");
                     cmb_Distributor.Text = Order.Distributor_Name;
                     tb_Total.Text = Order.Total.ToString();
@@ -315,6 +320,11 @@ namespace Sliding_Project_v0._3
 
                     foreach (var i in OI)
                     {
+                        if (dgv_StockItems.Columns["Edit"] == null)
+                        {
+                            dgv_StockItems.Columns.Insert(columnIndex, Edit);
+                        }
+
                         dt.Rows.Add(i.Material_Name, i.Type, i.Colour, i.Track, i.Size, i.Quantity, i.Purchase_Price);
 
                         if (dgv_Remove.Columns["Remove"] == null)
@@ -322,7 +332,10 @@ namespace Sliding_Project_v0._3
                             dgv_Remove.Columns.Insert(columnIndex, btn);
                         }
                         dgv_Remove.Rows.Insert(columnIndex, btn);
+
+                        dgv_StockItems.DataSource = dt;
                     }
+                    
                 }
                 else
                 {

@@ -59,10 +59,10 @@
             this.cmb_Catagory = new System.Windows.Forms.ComboBox();
             this.cmb_GlassType = new System.Windows.Forms.ComboBox();
             this.cmb_MaterialType = new System.Windows.Forms.ComboBox();
-            this.cmb_SubCatagory = new System.Windows.Forms.ComboBox();
+            this.cmb_Product = new System.Windows.Forms.ComboBox();
             this.lbl_Catagory = new System.Windows.Forms.Label();
             this.lbl_Height = new System.Windows.Forms.Label();
-            this.lbl_SubCatagory = new System.Windows.Forms.Label();
+            this.lbl_Product = new System.Windows.Forms.Label();
             this.lbl_MaterialType = new System.Windows.Forms.Label();
             this.lbl_Colour = new System.Windows.Forms.Label();
             this.lbl_GlassType = new System.Windows.Forms.Label();
@@ -81,6 +81,8 @@
             this.btn_UpdatePaymentDetails = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_OrderID = new System.Windows.Forms.Label();
+            this.Order_ID = new System.Windows.Forms.Label();
             this.panel_Header.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -157,7 +159,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.23182F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.48788F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.38883F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel2.Controls.Add(this.tb_Address, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Address, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Name, 1, 0);
@@ -176,19 +178,19 @@
             this.tb_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Address.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Address.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Address.Location = new System.Drawing.Point(665, 6);
+            this.tb_Address.Location = new System.Drawing.Point(660, 6);
             this.tb_Address.Name = "tb_Address";
-            this.tb_Address.Size = new System.Drawing.Size(153, 29);
+            this.tb_Address.Size = new System.Drawing.Size(152, 29);
             this.tb_Address.TabIndex = 9;
             // 
             // lbl_Address
             // 
             this.lbl_Address.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Address.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Address.Location = new System.Drawing.Point(557, 5);
+            this.lbl_Address.Location = new System.Drawing.Point(553, 5);
             this.lbl_Address.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_Address.Name = "lbl_Address";
-            this.lbl_Address.Size = new System.Drawing.Size(102, 32);
+            this.lbl_Address.Size = new System.Drawing.Size(101, 32);
             this.lbl_Address.TabIndex = 8;
             this.lbl_Address.Text = "ADDRESS";
             this.lbl_Address.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -200,7 +202,7 @@
             this.lbl_Name.Location = new System.Drawing.Point(23, 5);
             this.lbl_Name.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(70, 32);
+            this.lbl_Name.Size = new System.Drawing.Size(69, 32);
             this.lbl_Name.TabIndex = 6;
             this.lbl_Name.Text = "NAME";
             this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -210,19 +212,19 @@
             this.tb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Name.Location = new System.Drawing.Point(99, 6);
+            this.tb_Name.Location = new System.Drawing.Point(98, 6);
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(145, 29);
+            this.tb_Name.Size = new System.Drawing.Size(144, 29);
             this.tb_Name.TabIndex = 7;
             // 
             // lbl_MobileNo
             // 
             this.lbl_MobileNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_MobileNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MobileNo.Location = new System.Drawing.Point(253, 5);
+            this.lbl_MobileNo.Location = new System.Drawing.Point(251, 5);
             this.lbl_MobileNo.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_MobileNo.Name = "lbl_MobileNo";
-            this.lbl_MobileNo.Size = new System.Drawing.Size(129, 32);
+            this.lbl_MobileNo.Size = new System.Drawing.Size(128, 32);
             this.lbl_MobileNo.TabIndex = 4;
             this.lbl_MobileNo.Text = "MOBILE NO";
             this.lbl_MobileNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -232,9 +234,9 @@
             this.tb_MobileNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_MobileNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_MobileNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_MobileNo.Location = new System.Drawing.Point(388, 6);
+            this.tb_MobileNo.Location = new System.Drawing.Point(385, 6);
             this.tb_MobileNo.Name = "tb_MobileNo";
-            this.tb_MobileNo.Size = new System.Drawing.Size(160, 29);
+            this.tb_MobileNo.Size = new System.Drawing.Size(159, 29);
             this.tb_MobileNo.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -430,10 +432,10 @@
             this.tableLayoutPanel3.Controls.Add(this.cmb_Catagory, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.cmb_GlassType, 5, 1);
             this.tableLayoutPanel3.Controls.Add(this.cmb_MaterialType, 3, 1);
-            this.tableLayoutPanel3.Controls.Add(this.cmb_SubCatagory, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cmb_Product, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.lbl_Catagory, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_Height, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_SubCatagory, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_Product, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_MaterialType, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_Colour, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_GlassType, 5, 0);
@@ -498,6 +500,7 @@
             this.cmb_Catagory.Name = "cmb_Catagory";
             this.cmb_Catagory.Size = new System.Drawing.Size(165, 33);
             this.cmb_Catagory.TabIndex = 11;
+            this.cmb_Catagory.SelectedIndexChanged += new System.EventHandler(this.cmb_Catagory_SelectedIndexChanged);
             // 
             // cmb_GlassType
             // 
@@ -523,17 +526,17 @@
             this.cmb_MaterialType.Size = new System.Drawing.Size(165, 33);
             this.cmb_MaterialType.TabIndex = 16;
             // 
-            // cmb_SubCatagory
+            // cmb_Product
             // 
-            this.cmb_SubCatagory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_SubCatagory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmb_SubCatagory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_SubCatagory.FormattingEnabled = true;
-            this.cmb_SubCatagory.Location = new System.Drawing.Point(213, 39);
-            this.cmb_SubCatagory.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.cmb_SubCatagory.Name = "cmb_SubCatagory";
-            this.cmb_SubCatagory.Size = new System.Drawing.Size(165, 33);
-            this.cmb_SubCatagory.TabIndex = 15;
+            this.cmb_Product.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_Product.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Product.FormattingEnabled = true;
+            this.cmb_Product.Location = new System.Drawing.Point(213, 39);
+            this.cmb_Product.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.cmb_Product.Name = "cmb_Product";
+            this.cmb_Product.Size = new System.Drawing.Size(165, 33);
+            this.cmb_Product.TabIndex = 15;
             // 
             // lbl_Catagory
             // 
@@ -557,16 +560,16 @@
             this.lbl_Height.Text = "Track";
             this.lbl_Height.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_SubCatagory
+            // lbl_Product
             // 
-            this.lbl_SubCatagory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_SubCatagory.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SubCatagory.Location = new System.Drawing.Point(204, 2);
-            this.lbl_SubCatagory.Name = "lbl_SubCatagory";
-            this.lbl_SubCatagory.Size = new System.Drawing.Size(183, 32);
-            this.lbl_SubCatagory.TabIndex = 4;
-            this.lbl_SubCatagory.Text = "Sub-Catagory";
-            this.lbl_SubCatagory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Product.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Product.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Product.Location = new System.Drawing.Point(204, 2);
+            this.lbl_Product.Name = "lbl_Product";
+            this.lbl_Product.Size = new System.Drawing.Size(183, 32);
+            this.lbl_Product.TabIndex = 4;
+            this.lbl_Product.Text = "Product";
+            this.lbl_Product.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_MaterialType
             // 
@@ -733,6 +736,8 @@
             this.panel_NewOldCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_NewOldCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.panel_NewOldCustomer.Controls.Add(this.Order_ID);
+            this.panel_NewOldCustomer.Controls.Add(this.lbl_OrderID);
             this.panel_NewOldCustomer.Controls.Add(this.rb_NewCustomer);
             this.panel_NewOldCustomer.Controls.Add(this.rb_OldCustomer);
             this.panel_NewOldCustomer.Location = new System.Drawing.Point(7, 76);
@@ -804,6 +809,22 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(977, 45);
             this.tableLayoutPanel4.TabIndex = 17;
             // 
+            // lbl_OrderID
+            // 
+            this.lbl_OrderID.Location = new System.Drawing.Point(8, 8);
+            this.lbl_OrderID.Name = "lbl_OrderID";
+            this.lbl_OrderID.Size = new System.Drawing.Size(73, 23);
+            this.lbl_OrderID.TabIndex = 15;
+            this.lbl_OrderID.Text = "Order ID :";
+            // 
+            // Order_ID
+            // 
+            this.Order_ID.Location = new System.Drawing.Point(79, 8);
+            this.Order_ID.Name = "Order_ID";
+            this.Order_ID.Size = new System.Drawing.Size(65, 23);
+            this.Order_ID.TabIndex = 16;
+            this.Order_ID.Text = "00";
+            // 
             // frm_AcceptOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -860,7 +881,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label lbl_Catagory;
         private System.Windows.Forms.Label lbl_Height;
-        private System.Windows.Forms.Label lbl_SubCatagory;
+        private System.Windows.Forms.Label lbl_Product;
         private System.Windows.Forms.Label lbl_MaterialType;
         private System.Windows.Forms.Label lbl_Colour;
         private System.Windows.Forms.Label lbl_GlassType;
@@ -874,7 +895,7 @@
         private System.Windows.Forms.ComboBox cmb_GlassType;
         private System.Windows.Forms.ComboBox cmb_Colour;
         private System.Windows.Forms.ComboBox cmb_MaterialType;
-        private System.Windows.Forms.ComboBox cmb_SubCatagory;
+        private System.Windows.Forms.ComboBox cmb_Product;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.ComboBox cmb_Catagory;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -894,6 +915,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.ComboBox cmb_Track;
+        private System.Windows.Forms.Label Order_ID;
+        private System.Windows.Forms.Label lbl_OrderID;
     }
 }
 

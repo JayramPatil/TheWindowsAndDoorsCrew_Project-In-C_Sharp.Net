@@ -15,18 +15,39 @@ namespace Sliding_Project_v0._3
         public frm_AcceptOrder()
         {
             InitializeComponent();
-            ID();
+            Cust_ID();
+            Orders_ID();
+            tb_Date.Text = DateTime.Now.ToString("dd-MM-yyyy");
         }
         public frm_AcceptOrder(int i)
         {
             InitializeComponent();
             lbl_Header.Text = "Update Order";
             panel_NewOldCustomer.Enabled = false;
-            groupBox1.Enabled = false;
+            btn_Search.Visible = true;
+            tb_Date.Enabled = false;
+            tb_Name.Enabled = false;
+            tb_Address.Enabled = false;
+            tb_MobileNo.Enabled = false;
             btn_Refresh.Text = "Reset";
             btn_UpdatePaymentDetails.Visible = true;
+            lbl_ID.Text = "Order ID";
+            Order_ID.Visible = false;
+            lbl_OrderID.Visible = false;
         }
-        public void ID()
+        public void Orders_ID()
+        {
+            using (CrewEntities DB = new CrewEntities())
+            {
+                int? id = DB.Orders.Max(i => (int?)i.Order_ID);
+
+                if (id != null)
+                    Order_ID.Text = (id + 1).ToString();
+                else
+                    Order_ID.Text = "1000";
+            }
+        }
+        public void Cust_ID()
         {
             using (CrewEntities DB = new CrewEntities())
             {
@@ -40,8 +61,17 @@ namespace Sliding_Project_v0._3
         }
         private void frm_AcceptOrder_Load(object sender, EventArgs e)
         {
-            tb_Date.Text = DateTime.Now.ToString("dd-MM-yyyy");
             rb_NewCustomer.Select();
+
+            using(CrewEntities DB = new CrewEntities())
+            {
+                var cat = DB.Catagories.ToList();
+
+                foreach (var c in cat)
+                {
+                    cmb_Catagory.Items.Add(c.Name);
+                }
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -106,28 +136,65 @@ namespace Sliding_Project_v0._3
                 tb_Name.Text = "";
                 tb_Address.Text = "";
                 tb_MobileNo.Text = "";
-                ID();
+                Cust_ID();
             }
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            using(CrewEntities DB = new CrewEntities())
+            if(tb_ID.Text != "")
             {
-                var Cust = DB.Customers.Find(Convert.ToInt32(tb_ID.Text));
-
-                if (Cust != null)
+                using (CrewEntities DB = new CrewEntities())
                 {
-                    tb_Name.Text = Cust.Name;
-                    tb_MobileNo.Text = Cust.Mobile_No;
-                    tb_Address.Text = Cust.Address;
-                }
-                else
-                {
-                    MessageBox.Show("Invalid Customer ID");
-                }
-                    
+                    var Cust = DB.Customers.Find(Convert.ToInt32(tb_ID.Text));
 
+                    if (Cust != null)
+                    {
+                        tb_Name.Text = Cust.Name;
+                        tb_MobileNo.Text = Cust.Mobile_No;
+                        tb_Address.Text = Cust.Address;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Customer ID");
+                    }
+                }
+            }
+            
+        }
+
+        private void cmb_Catagory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmb_Product.Items.Clear();
+            cmb_Product.Text = "";
+
+            if(cmb_Catagory.Text != "Door")
+            {
+                using (CrewEntities DB = new CrewEntities())
+                {
+                    var p = (from a in DB.Products where a.Catagory == "Window" select a.Product_Name).ToList();
+
+                    foreach (var i in p)
+                    {
+                        cmb_Product.Items.Add(i);
+                    }
+                }
+            }
+            else
+            {
+                using (CrewEntities DB = new CrewEntities())
+                {
+                    var p = (from a in DB.Products where a.Catagory == "Door" select a.Product_Name).ToList();
+
+                    foreach (var i in p)
+                    {
+                        cmb_Product.Items.Add(i);
+                    }
+                }
+                cmb_MaterialType.Enabled = false;
+                cmb_Colour.Enabled = false;
+                cmb_GlassType.Enabled = false;
+                cmb_Track.Enabled = false;
             }
         }
     }
