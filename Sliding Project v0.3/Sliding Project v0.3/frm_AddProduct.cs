@@ -328,5 +328,44 @@ namespace Sliding_Project_v0._3
                 clb_Other.SetItemChecked(i, true);
             }
         }
+
+        private void cmb_Catagory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmb_Catagory.Text == "Door")
+            {
+                clb_Glass.Enabled = false;
+                clb_Other.Enabled = false;
+                clb_Window.Enabled = false;
+
+                btn_GlassSelectAll.Enabled = false;
+                btn_WindowsSelectAll.Enabled = false;
+                btn_OtherSelectAll.Enabled = false;
+
+                for (int i = 0; i < clb_Glass.Items.Count; i++)
+                {
+                    clb_Glass.SetItemChecked(i, false);
+                }
+
+                for (int i = 0; i < clb_Other.Items.Count; i++)
+                {
+                    clb_Other.SetItemChecked(i, false);
+                }
+
+                for (int i = 0; i < clb_Window.Items.Count; i++)
+                {
+                    clb_Window.SetItemChecked(i, false);
+                }
+            }
+            else
+            {
+                clb_Glass.Enabled = true;
+                clb_Other.Enabled = true;
+                clb_Window.Enabled = true;
+
+                btn_GlassSelectAll.Enabled = true;
+                btn_WindowsSelectAll.Enabled = true;
+                btn_OtherSelectAll.Enabled = true;
+            }
+        }
     }
 }

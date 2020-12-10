@@ -200,6 +200,7 @@
             this.cmb_Catagory.Name = "cmb_Catagory";
             this.cmb_Catagory.Size = new System.Drawing.Size(215, 33);
             this.cmb_Catagory.TabIndex = 18;
+            this.cmb_Catagory.SelectedIndexChanged += new System.EventHandler(this.cmb_Catagory_SelectedIndexChanged);
             // 
             // tb_ID
             // 

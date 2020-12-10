@@ -167,6 +167,10 @@ namespace Sliding_Project_v0._3
         {
             cmb_Product.Items.Clear();
             cmb_Product.Text = "";
+            cmb_Colour.Text = "";
+            cmb_GlassType.Text = "";
+            cmb_Track.Text = "";
+            cmb_MaterialType.Text = "";
 
             if(cmb_Catagory.Text != "Door")
             {
@@ -179,6 +183,10 @@ namespace Sliding_Project_v0._3
                         cmb_Product.Items.Add(i);
                     }
                 }
+                cmb_MaterialType.Enabled = true;
+                cmb_Colour.Enabled = true;
+                cmb_GlassType.Enabled = true;
+                cmb_Track.Enabled = true;
             }
             else
             {
@@ -195,6 +203,31 @@ namespace Sliding_Project_v0._3
                 cmb_Colour.Enabled = false;
                 cmb_GlassType.Enabled = false;
                 cmb_Track.Enabled = false;
+            }
+        }
+
+        private void cmb_Product_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using(CrewEntities DB = new CrewEntities())
+            {
+                var GlassType = (from g in DB.Product_Material where g.Material.Contains("Glass") select g).ToList();
+
+                var Track = (from T in DB.Products select T.Track).ToList();
+
+                if (GlassType != null)
+                {
+                    cmb_GlassType.Enabled = true;
+
+                    foreach (var i in GlassType)
+                    {
+                        cmb_GlassType.Items.Add(i.Material);
+                    }
+                }
+                else
+                {
+                    cmb_GlassType.Enabled = false;
+                }
+
             }
         }
     }

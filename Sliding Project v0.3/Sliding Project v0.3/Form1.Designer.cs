@@ -77,12 +77,12 @@
             this.rb_NewCustomer = new System.Windows.Forms.RadioButton();
             this.rb_OldCustomer = new System.Windows.Forms.RadioButton();
             this.panel_NewOldCustomer = new System.Windows.Forms.Panel();
+            this.Order_ID = new System.Windows.Forms.Label();
+            this.lbl_OrderID = new System.Windows.Forms.Label();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_UpdatePaymentDetails = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_OrderID = new System.Windows.Forms.Label();
-            this.Order_ID = new System.Windows.Forms.Label();
             this.panel_Header.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -159,7 +159,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.23182F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.48788F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.38883F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156F));
             this.tableLayoutPanel2.Controls.Add(this.tb_Address, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Address, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Name, 1, 0);
@@ -178,7 +178,7 @@
             this.tb_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Address.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Address.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Address.Location = new System.Drawing.Point(660, 6);
+            this.tb_Address.Location = new System.Drawing.Point(657, 6);
             this.tb_Address.Name = "tb_Address";
             this.tb_Address.Size = new System.Drawing.Size(152, 29);
             this.tb_Address.TabIndex = 9;
@@ -187,10 +187,10 @@
             // 
             this.lbl_Address.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Address.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Address.Location = new System.Drawing.Point(553, 5);
+            this.lbl_Address.Location = new System.Drawing.Point(551, 5);
             this.lbl_Address.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_Address.Name = "lbl_Address";
-            this.lbl_Address.Size = new System.Drawing.Size(101, 32);
+            this.lbl_Address.Size = new System.Drawing.Size(100, 32);
             this.lbl_Address.TabIndex = 8;
             this.lbl_Address.Text = "ADDRESS";
             this.lbl_Address.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,7 +224,7 @@
             this.lbl_MobileNo.Location = new System.Drawing.Point(251, 5);
             this.lbl_MobileNo.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_MobileNo.Name = "lbl_MobileNo";
-            this.lbl_MobileNo.Size = new System.Drawing.Size(128, 32);
+            this.lbl_MobileNo.Size = new System.Drawing.Size(127, 32);
             this.lbl_MobileNo.TabIndex = 4;
             this.lbl_MobileNo.Text = "MOBILE NO";
             this.lbl_MobileNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -234,9 +234,9 @@
             this.tb_MobileNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_MobileNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_MobileNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_MobileNo.Location = new System.Drawing.Point(385, 6);
+            this.tb_MobileNo.Location = new System.Drawing.Point(384, 6);
             this.tb_MobileNo.Name = "tb_MobileNo";
-            this.tb_MobileNo.Size = new System.Drawing.Size(159, 29);
+            this.tb_MobileNo.Size = new System.Drawing.Size(158, 29);
             this.tb_MobileNo.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -537,6 +537,7 @@
             this.cmb_Product.Name = "cmb_Product";
             this.cmb_Product.Size = new System.Drawing.Size(165, 33);
             this.cmb_Product.TabIndex = 15;
+            this.cmb_Product.SelectedIndexChanged += new System.EventHandler(this.cmb_Product_SelectedIndexChanged);
             // 
             // lbl_Catagory
             // 
@@ -745,6 +746,22 @@
             this.panel_NewOldCustomer.Size = new System.Drawing.Size(983, 28);
             this.panel_NewOldCustomer.TabIndex = 15;
             // 
+            // Order_ID
+            // 
+            this.Order_ID.Location = new System.Drawing.Point(79, 8);
+            this.Order_ID.Name = "Order_ID";
+            this.Order_ID.Size = new System.Drawing.Size(65, 23);
+            this.Order_ID.TabIndex = 16;
+            this.Order_ID.Text = "00";
+            // 
+            // lbl_OrderID
+            // 
+            this.lbl_OrderID.Location = new System.Drawing.Point(8, 8);
+            this.lbl_OrderID.Name = "lbl_OrderID";
+            this.lbl_OrderID.Size = new System.Drawing.Size(73, 23);
+            this.lbl_OrderID.TabIndex = 15;
+            this.lbl_OrderID.Text = "Order ID :";
+            // 
             // btn_Next
             // 
             this.btn_Next.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -808,22 +825,6 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(977, 45);
             this.tableLayoutPanel4.TabIndex = 17;
-            // 
-            // lbl_OrderID
-            // 
-            this.lbl_OrderID.Location = new System.Drawing.Point(8, 8);
-            this.lbl_OrderID.Name = "lbl_OrderID";
-            this.lbl_OrderID.Size = new System.Drawing.Size(73, 23);
-            this.lbl_OrderID.TabIndex = 15;
-            this.lbl_OrderID.Text = "Order ID :";
-            // 
-            // Order_ID
-            // 
-            this.Order_ID.Location = new System.Drawing.Point(79, 8);
-            this.Order_ID.Name = "Order_ID";
-            this.Order_ID.Size = new System.Drawing.Size(65, 23);
-            this.Order_ID.TabIndex = 16;
-            this.Order_ID.Text = "00";
             // 
             // frm_AcceptOrder
             // 
