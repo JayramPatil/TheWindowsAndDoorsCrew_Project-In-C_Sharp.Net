@@ -12,10 +12,17 @@ namespace Sliding_Project_v0._3
 {
     public partial class MDI_Home : Form
     {
+        public static int User_ID = 10;
         public MDI_Home()
         {
             InitializeComponent();
             Hide_SubMenu();
+        }
+
+        public class MyType
+        {
+            //public string MyProperty { get; set; } = new string();
+            public static int MyStatic { get; set; } = 0;
         }
         private void Hide_SubMenu()
         {
@@ -29,9 +36,6 @@ namespace Sliding_Project_v0._3
                     }
                 }
             }
-            /*panel_LoginInfo.Visible = true;
-            panel_SpareParts.Visible = false;
-            panel_Services.Visible = false;*/
         }
         private void Hide_Opened_SubMenu()
         {

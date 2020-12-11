@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Sliding_Project_v0._3.MDI_Home;
 
 namespace Sliding_Project_v0._3
 {
@@ -18,6 +19,8 @@ namespace Sliding_Project_v0._3
             Cust_ID();
             Orders_ID();
             tb_Date.Text = DateTime.Now.ToString("dd-MM-yyyy");
+            //tb_Height.Text = ((MDI_Home)MdiParent).User_ID.ToString();
+            tb_Height.Text = MyType.MyStatic;
         }
         public frm_AcceptOrder(int i)
         {
@@ -208,11 +211,21 @@ namespace Sliding_Project_v0._3
 
         private void cmb_Product_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cmb_GlassType.Items.Clear();
+            cmb_Track.Enabled = false;
+
             using(CrewEntities DB = new CrewEntities())
             {
-                var GlassType = (from g in DB.Product_Material where g.Material.Contains("Glass") select g).ToList();
+                var PID = (from p in DB.Products where p.Product_Name == cmb_Product.Text select p.Product_ID).FirstOrDefault();
 
-                var Track = (from T in DB.Products select T.Track).ToList();
+                var GlassType = (from g in DB.Product_Material where g.Product_ID == PID && g.Material.Contains("Glass") select g).ToList();
+
+                var Track = (from T in DB.Products where T.Product_ID == PID select T.Track).FirstOrDefault();
+
+                if (Track == "YES")
+                    cmb_Track.Enabled = true;
+                else
+                    cmb_Track.Enabled = false;
 
                 if (GlassType != null)
                 {
