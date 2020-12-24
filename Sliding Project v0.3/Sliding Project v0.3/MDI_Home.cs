@@ -12,17 +12,18 @@ namespace Sliding_Project_v0._3
 {
     public partial class MDI_Home : Form
     {
-        public static int User_ID = 10;
+        public static int User_ID = 0;
         public MDI_Home()
         {
             InitializeComponent();
             Hide_SubMenu();
+            User_ID = 0;//i;
         }
-
-        public class MyType
+        public MDI_Home(int i)
         {
-            //public string MyProperty { get; set; } = new string();
-            public static int MyStatic { get; set; } = 0;
+            InitializeComponent();
+            Hide_SubMenu();
+            User_ID = 1;//i;
         }
         private void Hide_SubMenu()
         {

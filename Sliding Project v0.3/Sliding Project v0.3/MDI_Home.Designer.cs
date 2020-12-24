@@ -66,6 +66,7 @@
             this.btn_Pay = new System.Windows.Forms.Button();
             this.btn_EditPrices = new System.Windows.Forms.Button();
             this.panel_SubStock = new System.Windows.Forms.Panel();
+            this.btn_ViewStock = new System.Windows.Forms.Button();
             this.btn_ManageStock = new System.Windows.Forms.Button();
             this.btn_AddStock = new System.Windows.Forms.Button();
             this.btn_Stock = new System.Windows.Forms.Button();
@@ -77,7 +78,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_ViewStock = new System.Windows.Forms.Button();
             this.panel_MenuStrip.SuspendLayout();
             this.panel_SubReport.SuspendLayout();
             this.panel_SubCustomer.SuspendLayout();
@@ -638,6 +638,22 @@
             this.panel_SubStock.Size = new System.Drawing.Size(239, 128);
             this.panel_SubStock.TabIndex = 4;
             // 
+            // btn_ViewStock
+            // 
+            this.btn_ViewStock.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_ViewStock.FlatAppearance.BorderSize = 0;
+            this.btn_ViewStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ViewStock.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ViewStock.Location = new System.Drawing.Point(0, 80);
+            this.btn_ViewStock.Name = "btn_ViewStock";
+            this.btn_ViewStock.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
+            this.btn_ViewStock.Size = new System.Drawing.Size(239, 40);
+            this.btn_ViewStock.TabIndex = 4;
+            this.btn_ViewStock.Text = "View Stock";
+            this.btn_ViewStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ViewStock.UseVisualStyleBackColor = true;
+            this.btn_ViewStock.Click += new System.EventHandler(this.btn_ViewStock_Click_1);
+            // 
             // btn_ManageStock
             // 
             this.btn_ManageStock.Dock = System.Windows.Forms.DockStyle.Top;
@@ -787,22 +803,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_ViewStock
-            // 
-            this.btn_ViewStock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_ViewStock.FlatAppearance.BorderSize = 0;
-            this.btn_ViewStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ViewStock.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ViewStock.Location = new System.Drawing.Point(0, 80);
-            this.btn_ViewStock.Name = "btn_ViewStock";
-            this.btn_ViewStock.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btn_ViewStock.Size = new System.Drawing.Size(239, 40);
-            this.btn_ViewStock.TabIndex = 4;
-            this.btn_ViewStock.Text = "View Stock";
-            this.btn_ViewStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ViewStock.UseVisualStyleBackColor = true;
-            this.btn_ViewStock.Click += new System.EventHandler(this.btn_ViewStock_Click_1);
             // 
             // MDI_Home
             // 

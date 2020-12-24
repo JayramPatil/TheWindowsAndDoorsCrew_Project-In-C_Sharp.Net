@@ -49,9 +49,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_ViewProduct = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_Total = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_OrderedItems = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.cmb_Track = new System.Windows.Forms.ComboBox();
             this.tb_Price = new System.Windows.Forms.TextBox();
@@ -89,7 +89,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_OrderedItems)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.panel_NewOldCustomer.SuspendLayout();
@@ -159,7 +159,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.23182F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.48788F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.38883F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
             this.tableLayoutPanel2.Controls.Add(this.tb_Address, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Address, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Name, 1, 0);
@@ -178,19 +178,19 @@
             this.tb_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Address.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Address.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Address.Location = new System.Drawing.Point(650, 6);
+            this.tb_Address.Location = new System.Drawing.Point(639, 6);
             this.tb_Address.Name = "tb_Address";
-            this.tb_Address.Size = new System.Drawing.Size(150, 29);
+            this.tb_Address.Size = new System.Drawing.Size(147, 29);
             this.tb_Address.TabIndex = 9;
             // 
             // lbl_Address
             // 
             this.lbl_Address.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Address.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Address.Location = new System.Drawing.Point(545, 5);
+            this.lbl_Address.Location = new System.Drawing.Point(536, 5);
             this.lbl_Address.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_Address.Name = "lbl_Address";
-            this.lbl_Address.Size = new System.Drawing.Size(99, 32);
+            this.lbl_Address.Size = new System.Drawing.Size(97, 32);
             this.lbl_Address.TabIndex = 8;
             this.lbl_Address.Text = "ADDRESS";
             this.lbl_Address.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -202,7 +202,7 @@
             this.lbl_Name.Location = new System.Drawing.Point(22, 5);
             this.lbl_Name.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(68, 32);
+            this.lbl_Name.Size = new System.Drawing.Size(67, 32);
             this.lbl_Name.TabIndex = 6;
             this.lbl_Name.Text = "NAME";
             this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -212,19 +212,19 @@
             this.tb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Name.Location = new System.Drawing.Point(96, 6);
+            this.tb_Name.Location = new System.Drawing.Point(95, 6);
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(142, 29);
+            this.tb_Name.Size = new System.Drawing.Size(140, 29);
             this.tb_Name.TabIndex = 7;
             // 
             // lbl_MobileNo
             // 
             this.lbl_MobileNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_MobileNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MobileNo.Location = new System.Drawing.Point(247, 5);
+            this.lbl_MobileNo.Location = new System.Drawing.Point(244, 5);
             this.lbl_MobileNo.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.lbl_MobileNo.Name = "lbl_MobileNo";
-            this.lbl_MobileNo.Size = new System.Drawing.Size(126, 32);
+            this.lbl_MobileNo.Size = new System.Drawing.Size(123, 32);
             this.lbl_MobileNo.TabIndex = 4;
             this.lbl_MobileNo.Text = "MOBILE NO";
             this.lbl_MobileNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -234,9 +234,9 @@
             this.tb_MobileNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_MobileNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_MobileNo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_MobileNo.Location = new System.Drawing.Point(379, 6);
+            this.tb_MobileNo.Location = new System.Drawing.Point(373, 6);
             this.tb_MobileNo.Name = "tb_MobileNo";
-            this.tb_MobileNo.Size = new System.Drawing.Size(157, 29);
+            this.tb_MobileNo.Size = new System.Drawing.Size(154, 29);
             this.tb_MobileNo.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -331,7 +331,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.panel2);
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgv_OrderedItems);
             this.groupBox2.Controls.Add(this.tableLayoutPanel3);
             this.groupBox2.Location = new System.Drawing.Point(7, 228);
             this.groupBox2.Name = "groupBox2";
@@ -355,7 +355,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.btn_ViewProduct);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.tb_Total);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(783, 184);
             this.panel2.Name = "panel2";
@@ -377,16 +377,16 @@
             this.btn_ViewProduct.UseVisualStyleBackColor = false;
             this.btn_ViewProduct.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox1
+            // tb_Total
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 138);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 29);
-            this.textBox1.TabIndex = 32;
+            this.tb_Total.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_Total.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Total.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Total.Location = new System.Drawing.Point(3, 138);
+            this.tb_Total.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.tb_Total.Name = "tb_Total";
+            this.tb_Total.Size = new System.Drawing.Size(188, 29);
+            this.tb_Total.TabIndex = 32;
             // 
             // label1
             // 
@@ -399,20 +399,26 @@
             this.label1.Text = "Total";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // dgv_OrderedItems
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_OrderedItems.AllowUserToAddRows = false;
+            this.dgv_OrderedItems.AllowUserToDeleteRows = false;
+            this.dgv_OrderedItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 184);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(769, 222);
-            this.dataGridView1.TabIndex = 1;
+            this.dgv_OrderedItems.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgv_OrderedItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_OrderedItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_OrderedItems.Location = new System.Drawing.Point(8, 184);
+            this.dgv_OrderedItems.Name = "dgv_OrderedItems";
+            this.dgv_OrderedItems.ReadOnly = true;
+            this.dgv_OrderedItems.RowHeadersVisible = false;
+            this.dgv_OrderedItems.RowHeadersWidth = 51;
+            this.dgv_OrderedItems.RowTemplate.Height = 24;
+            this.dgv_OrderedItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgv_OrderedItems.Size = new System.Drawing.Size(769, 222);
+            this.dgv_OrderedItems.TabIndex = 1;
+            this.dgv_OrderedItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_OrderedItems_CellClick);
             // 
             // tableLayoutPanel3
             // 
@@ -458,6 +464,7 @@
             // cmb_Track
             // 
             this.cmb_Track.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Track.Enabled = false;
             this.cmb_Track.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_Track.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Track.FormattingEnabled = true;
@@ -505,6 +512,7 @@
             // cmb_GlassType
             // 
             this.cmb_GlassType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_GlassType.Enabled = false;
             this.cmb_GlassType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_GlassType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_GlassType.FormattingEnabled = true;
@@ -517,9 +525,13 @@
             // cmb_MaterialType
             // 
             this.cmb_MaterialType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_MaterialType.Enabled = false;
             this.cmb_MaterialType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_MaterialType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_MaterialType.FormattingEnabled = true;
+            this.cmb_MaterialType.Items.AddRange(new object[] {
+            "Jindal",
+            "Non Jindal"});
             this.cmb_MaterialType.Location = new System.Drawing.Point(402, 39);
             this.cmb_MaterialType.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
             this.cmb_MaterialType.Name = "cmb_MaterialType";
@@ -529,6 +541,7 @@
             // cmb_Product
             // 
             this.cmb_Product.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Product.Enabled = false;
             this.cmb_Product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_Product.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Product.FormattingEnabled = true;
@@ -651,10 +664,12 @@
             this.btn_Add.TabIndex = 10;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // cmb_Colour
             // 
             this.cmb_Colour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Colour.Enabled = false;
             this.cmb_Colour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_Colour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Colour.FormattingEnabled = true;
@@ -849,7 +864,7 @@
             this.groupBox2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_OrderedItems)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -899,13 +914,13 @@
         private System.Windows.Forms.ComboBox cmb_Product;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.ComboBox cmb_Catagory;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_OrderedItems;
         private System.Windows.Forms.RadioButton rb_NewCustomer;
         private System.Windows.Forms.RadioButton rb_OldCustomer;
         private System.Windows.Forms.Panel panel_NewOldCustomer;
         private System.Windows.Forms.Button btn_ViewProduct;
         private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_Total;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
