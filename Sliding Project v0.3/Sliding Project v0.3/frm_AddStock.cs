@@ -26,6 +26,7 @@ namespace Sliding_Project_v0._3
         {
             InitializeComponent();
             CreateColums();
+            tb_ID.Text = i.ToString();
             lbl_Header.Text = "Update Stock";
             btn_Search.Visible = true;
             btn_Save.Text = "Update";
@@ -313,8 +314,21 @@ namespace Sliding_Project_v0._3
 
                     tb_Date.Text = Order.Date.ToString("dd-MM-yyyy");
                     cmb_Distributor.Text = Order.Distributor_Name;
-                    tb_Total.Text = Order.Total.ToString();
-                    tb_Paid.Text = Order.Paid_Amount.ToString();
+
+                    cmb_Material.Text = "";
+                    cmb_Material.Items.Clear();
+
+                    var Dist_ID = (from i in DB.Distributors where i.Name == cmb_Distributor.Text select i.Distributor_ID).FirstOrDefault();
+
+                    var dis = (from d in DB.Distributor_Material where d.Distributor_ID == Dist_ID select d.Material_Name).ToList();
+
+                    foreach (var d in dis)
+                    {
+                        cmb_Material.Items.Add(d);
+                    }
+
+                    tb_Total.Text = Order.Total.ToString().Substring(0, Order.Total.ToString().IndexOf("."));
+                    tb_Paid.Text = Order.Paid_Amount.ToString().Substring(0, Order.Paid_Amount.ToString().IndexOf("."));
 
                     var OI = (from oi in DB.Stock_Ordered_Items where oi.Order_ID == ID select oi).ToList();
 
@@ -345,55 +359,59 @@ namespace Sliding_Project_v0._3
         }
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            if (CheckFilled())
+            using (CrewEntities DB = new CrewEntities())
             {
-                using (CrewEntities DB = new CrewEntities())
-                {
-                    int Rem = Convert.ToInt32(tb_Total.Text) - Convert.ToInt32(tb_Paid.Text);
+                int Rem = Convert.ToInt32(Convert.ToDecimal(tb_Total.Text)) - Convert.ToInt32(Convert.ToDecimal(tb_Paid.Text));
 
-                    if (btn_Save.Text == "Save")
+                if (btn_Save.Text == "Save" && CheckFilled())
+                {
+                    DB.Stock_Order.Add(new Stock_Order { Date = Convert.ToDateTime(tb_Date.Text), Distributor_Name = cmb_Distributor.Text, Total = Convert.ToDecimal(tb_Total.Text), Paid_Amount = Convert.ToDecimal(tb_Paid.Text), Remaining_Amount = Rem });
+                    DB.SaveChanges();
+
+                    InsertItems();
+                }
+                else if(!CheckFilled())
+                {
+                    MessageBox.Show("Please, First Fill All The Fields !!!");
+                }
+                else
+                {
+                    var Order = DB.Stock_Order.Find(Convert.ToInt32(tb_ID.Text));
+
+                    if(Order != null)
                     {
-                        DB.Stock_Order.Add(new Stock_Order { Date = Convert.ToDateTime(tb_Date.Text), Distributor_Name = cmb_Distributor.Text, Total = Convert.ToDecimal(tb_Total.Text), Paid_Amount = Convert.ToDecimal(tb_Paid.Text), Remaining_Amount = Rem });
+                        Order.Distributor_Name = cmb_Distributor.Text;
+                        Order.Total = Convert.ToInt32(tb_Total.Text);
+                        Order.Paid_Amount = Convert.ToInt32(tb_Paid.Text);
+                        Order.Remaining_Amount = Rem;
+
+                        var stock = (from ss in DB.Stock_Ordered_Items where ss.Order_ID == Order.Order_ID select ss).ToList();
+
+                        foreach (var i in stock)
+                        {
+                            var S = (from s1 in DB.Stocks where s1.Material_Name == i.Material_Name && s1.Type == i.Type && s1.Colour == i.Colour && s1.Size == i.Size && s1.Track == i.Track select s1).FirstOrDefault();
+
+                            if (S != null)
+                            {
+                                S.Available_Stock -= i.Quantity;
+                            } 
+                        }
+
+                        DB.Stock_Ordered_Items.RemoveRange(DB.Stock_Ordered_Items.Where(dm => dm.Order_ID == Order.Order_ID));
                         DB.SaveChanges();
 
                         InsertItems();
                     }
-                    else
-                    {
-                        var Order = DB.Stock_Order.Find(Convert.ToInt32(tb_ID.Text));
-
-                        if(Order != null)
-                        {
-                            Order.Distributor_Name = cmb_Distributor.Text;
-                            Order.Total = Convert.ToInt32(tb_Total.Text);
-                            Order.Paid_Amount = Convert.ToInt32(tb_Paid.Text);
-                            Order.Remaining_Amount = Rem;
-
-                            var stock = (from ss in DB.Stock_Ordered_Items where ss.Order_ID == Order.Order_ID select ss).ToList();
-
-                            foreach (var i in stock)
-                            {
-                                var S = (from s1 in DB.Stocks where s1.Material_Name == i.Material_Name && s1.Type == i.Type && s1.Colour == i.Colour && s1.Size == i.Size && s1.Track == i.Track select s1).FirstOrDefault();
-
-                                if (S != null)
-                                {
-                                    S.Available_Stock -= i.Quantity;
-                                } 
-                            }
-
-                            DB.Stock_Ordered_Items.RemoveRange(DB.Stock_Ordered_Items.Where(dm => dm.Order_ID == Order.Order_ID));
-                            DB.SaveChanges();
-
-                            InsertItems();
-                        }
-                    }
-                    Refresh();
                 }
+                Refresh();
+                dt.Rows.Clear();
+                dgv_Remove.Rows.Clear();
             }
-            else
-            {
-                MessageBox.Show("Please, First Fill All The Fields !!!");
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please, First Fill All The Fields !!!");
+            //}
         }
         private void InsertItems()
         {
@@ -401,31 +419,31 @@ namespace Sliding_Project_v0._3
             {
                 foreach (DataGridViewRow row in dgv_StockItems.Rows)
                 {
-                    int? Size = (int.TryParse(row.Cells[4].Value.ToString(), out var s) ? (int?)s : null);
-                    int? Track = (int.TryParse(row.Cells[3].Value.ToString(), out var t) ? (int?)t : null);
+                    int? Size = (int.TryParse(row.Cells[5].Value.ToString(), out var s) ? (int?)s : null);
+                    int? Track = (int.TryParse(row.Cells[4].Value.ToString(), out var t) ? (int?)t : null);
 
-                    DB.Stock_Ordered_Items.Add(new Stock_Ordered_Items { Order_ID = Convert.ToInt32(tb_ID.Text), Material_Name = row.Cells[0].Value.ToString(), Type = row.Cells[1].Value.ToString(), Colour = row.Cells[2].Value.ToString(), Track = Track, Size = Size, Quantity = Convert.ToInt32(row.Cells[5].Value), Purchase_Price = Convert.ToInt32(row.Cells[6].Value) });
+                    DB.Stock_Ordered_Items.Add(new Stock_Ordered_Items { Order_ID = Convert.ToInt32(tb_ID.Text), Material_Name = row.Cells[1].Value.ToString(), Type = row.Cells[2].Value.ToString(), Colour = row.Cells[3].Value.ToString(), Track = Track, Size = Size, Quantity = Convert.ToInt32(row.Cells[6].Value), Purchase_Price = Convert.ToInt32(row.Cells[7].Value) });
                     DB.SaveChanges();
 
-                    string Material_Name = row.Cells[0].Value.ToString();
-                    string Type = row.Cells[1].Value.ToString();
-                    string Colour = row.Cells[2].Value.ToString();
-                    int PP = Convert.ToInt32(row.Cells[6].Value);
+                    string Material_Name = row.Cells[1].Value.ToString();
+                    string Type = row.Cells[2].Value.ToString();
+                    string Colour = row.Cells[3].Value.ToString();
+                    int PP = Convert.ToInt32(row.Cells[7].Value);
 
                     var Stock = (from s1 in DB.Stocks where s1.Material_Name == Material_Name && s1.Type == Type && s1.Colour == Colour && s1.Size == Size && s1.Track == Track select s1).FirstOrDefault();
 
                     if (Stock != null)
                     {
-                        Stock.Available_Stock = (Convert.ToInt32(Stock.Available_Stock) + Convert.ToInt32(row.Cells[5].Value));
+                        Stock.Available_Stock = (Convert.ToInt32(Stock.Available_Stock) + Convert.ToInt32(row.Cells[6].Value));
 
-                        if(Convert.ToInt32(Stock.Purchase_Price) <= Convert.ToInt32(row.Cells[6].Value))
+                        if(Convert.ToInt32(Stock.Purchase_Price) <= Convert.ToInt32(row.Cells[7].Value))
                         {
                             Stock.Purchase_Price = PP;
                         }
                     }
                     else
                     {
-                        int As = Convert.ToInt32(row.Cells[5].Value);
+                        int As = Convert.ToInt32(row.Cells[6].Value);
 
                         DB.Stocks.Add(new Stock { Material_Name = Material_Name, Type = Type, Colour = Colour, Track = Track, Size = Size, Available_Stock = As, Purchase_Price = PP });
                     }
@@ -448,6 +466,8 @@ namespace Sliding_Project_v0._3
 
                 tb_Total.Text = (Convert.ToDecimal(tb_Total.Text) - (Convert.ToDecimal(dt.Rows[e.RowIndex][5]) * Convert.ToDecimal(dt.Rows[e.RowIndex][6]))).ToString();
 
+                Total = Convert.ToDecimal(tb_Total.Text);
+
                 dr.Delete();
 
                 dgv_Remove.Rows.RemoveAt(e.RowIndex);
@@ -459,16 +479,19 @@ namespace Sliding_Project_v0._3
         private void dgv_StockItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = e.RowIndex;
+            if(e.RowIndex != -1)
+            {
+                cmb_Material.Text = dt.Rows[i][0].ToString();
+                cmb_Type.Text = dt.Rows[i][1].ToString();
+                cmb_Colour.Text = dt.Rows[i][2].ToString();
+                cmb_Track.Text = dt.Rows[i][3].ToString();
+                cmb_Size.Text = dt.Rows[i][4].ToString();
+                tb_Quantity.Text = dt.Rows[i][5].ToString();
+                tb_PPrice.Text = dt.Rows[i][6].ToString();
 
-            cmb_Material.Text = dt.Rows[i][0].ToString();
-            cmb_Type.Text = dt.Rows[i][1].ToString();
-            cmb_Colour.Text = dt.Rows[i][2].ToString();
-            cmb_Track.Text = dt.Rows[i][3].ToString();
-            cmb_Size.Text = dt.Rows[i][4].ToString();
-            tb_Quantity.Text = dt.Rows[i][5].ToString();
-            tb_PPrice.Text = dt.Rows[i][6].ToString();
+                dgv_Remove_CellClick(sender, e);
+            }
 
-            dgv_Remove_CellClick(sender, e);
         }
     }
 }

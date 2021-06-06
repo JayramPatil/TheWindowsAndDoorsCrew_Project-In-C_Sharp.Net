@@ -22,7 +22,7 @@ namespace Sliding_Project_v0._3
             Cust_ID();
             Orders_ID();
             tb_Date.Text = DateTime.Now.ToString("dd-MM-yyyy");
-            tb_Address.Text = User_ID.ToString();
+            //tb_Address.Text = User_ID.ToString();
             CreateColums();
 
         }
@@ -88,7 +88,10 @@ namespace Sliding_Project_v0._3
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
-
+            using (CrewEntities DB = new CrewEntities())
+            {
+                
+            }
             Form formBackground = new Form();
             try
             {
@@ -173,6 +176,9 @@ namespace Sliding_Project_v0._3
         private void cmb_Catagory_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmb_Product.Items.Clear();
+            cmb_Colour.Items.Clear();
+            cmb_GlassType.Items.Clear();
+            cmb_Track.Items.Clear();
             cmb_Product.Text = "";
             cmb_Colour.Text = "";
             cmb_GlassType.Text = "";
@@ -212,7 +218,9 @@ namespace Sliding_Project_v0._3
 
         private void cmb_Product_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cmb_Colour.Items.Clear();
             cmb_GlassType.Items.Clear();
+            cmb_Track.Items.Clear();
             cmb_Track.Enabled = false;
 
             cmb_MaterialType.Enabled = true;
@@ -234,9 +242,18 @@ namespace Sliding_Project_v0._3
                 }
 
                 if (Track == "YES")
+                {
                     cmb_Track.Enabled = true;
+                    cmb_Track.Items.Add("1");
+                    cmb_Track.Items.Add("2");
+                    cmb_Track.Items.Add("3");
+                    cmb_Track.Items.Add("4");
+                }
                 else
+                {
                     cmb_Track.Enabled = false;
+                    cmb_Track.Text = "";
+                }
 
                 if (GlassType != null)
                 {
@@ -367,6 +384,36 @@ namespace Sliding_Project_v0._3
 
                 dgv_OrderedItems.DataSource = dt;
             }      
+        }
+        public void Refresh()
+        {
+            if(lbl_Header.Text == "Accept Order")
+            {
+                tb_Name.Clear();
+                tb_MobileNo.Clear();
+                tb_Address.Clear();
+            }
+
+            cmb_Catagory.Text = "";
+            cmb_Product.Items.Clear();
+            cmb_MaterialType.Items.Clear();
+            cmb_Colour.Items.Clear();
+            cmb_GlassType.Items.Clear();
+            cmb_Track.Items.Clear();
+
+            tb_Height.Clear();
+            tb_Width.Clear();
+            tb_Quantity.Clear();
+            tb_Price.Clear();
+
+            dt.Rows.Clear();
+            //dgv_Remove.Rows.Clear();
+
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            Refresh();
         }
     }
 }
