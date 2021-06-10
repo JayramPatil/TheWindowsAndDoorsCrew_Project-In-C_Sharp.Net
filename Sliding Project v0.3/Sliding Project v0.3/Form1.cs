@@ -41,6 +41,7 @@ namespace Sliding_Project_v0._3
             lbl_ID.Text = "Order ID";
             Order_ID.Visible = false;
             lbl_OrderID.Visible = false;
+            CreateColums();
         }
         public void Orders_ID()
         {
@@ -81,11 +82,6 @@ namespace Sliding_Project_v0._3
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Next_Click(object sender, EventArgs e)
         {
             using (CrewEntities DB = new CrewEntities())
@@ -95,7 +91,7 @@ namespace Sliding_Project_v0._3
             Form formBackground = new Form();
             try
             {
-                using (frm_FinalAmount obj = new frm_FinalAmount())
+                using (frm_FinalAmount obj = new frm_FinalAmount(tb_Total.Text, DateTime.Now.AddDays(8).ToString("dd-MM-yyyy")))
                 {
                     formBackground.StartPosition = FormStartPosition.Manual;
                     formBackground.FormBorderStyle = FormBorderStyle.None;
@@ -395,11 +391,22 @@ namespace Sliding_Project_v0._3
             }
 
             cmb_Catagory.Text = "";
+            cmb_Product.Text = "";
+            cmb_MaterialType.Text = "";
+            cmb_Colour.Text = "";
+            cmb_GlassType.Text = "";
+            cmb_Track.Text = "";
+
             cmb_Product.Items.Clear();
-            cmb_MaterialType.Items.Clear();
             cmb_Colour.Items.Clear();
             cmb_GlassType.Items.Clear();
             cmb_Track.Items.Clear();
+
+            cmb_Product.Enabled = false;
+            cmb_MaterialType.Enabled = false;
+            cmb_Colour.Enabled = false;
+            cmb_GlassType.Enabled = false;
+            cmb_Track.Enabled = false;
 
             tb_Height.Clear();
             tb_Width.Clear();
@@ -414,6 +421,11 @@ namespace Sliding_Project_v0._3
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
             Refresh();
+        }
+
+        private void btn_ViewProduct_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This Feature Will Be Available Soon ...", "Thank You For Your Patience");
         }
     }
 }

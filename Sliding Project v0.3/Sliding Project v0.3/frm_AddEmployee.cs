@@ -12,6 +12,7 @@ namespace Sliding_Project_v0._3
 {
     public partial class frm_AddEmployee : Form
     {
+        MDI_Home md = new MDI_Home();
         public frm_AddEmployee()
         {
             InitializeComponent();
@@ -132,6 +133,8 @@ namespace Sliding_Project_v0._3
                         
                         DB.Employee_Salary.Add(new Employee_Salary { Employee_ID = i, Post = cmb_Post.Text, Salary = sal, Pending_Salary = 0, Last_Paid = dt});
                         DB.SaveChanges();
+
+                        MessageBox.Show("Employee Added Successfully");
                     }
                 }
                 else
@@ -167,6 +170,12 @@ namespace Sliding_Project_v0._3
                             Emp.Address = rtb_Address.Text;
                         }
                         DB.SaveChanges();
+
+                        MessageBox.Show("Employee Details Updated Successfully");
+
+                        this.Close();
+                        md.OpenForm(new frm_ManageEmployees());
+                      
                     }
                 }
             }

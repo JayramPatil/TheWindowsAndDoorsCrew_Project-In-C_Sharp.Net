@@ -375,7 +375,7 @@
             this.btn_ViewProduct.TabIndex = 11;
             this.btn_ViewProduct.Text = "Product Catalog";
             this.btn_ViewProduct.UseVisualStyleBackColor = false;
-            this.btn_ViewProduct.Click += new System.EventHandler(this.button4_Click);
+            this.btn_ViewProduct.Click += new System.EventHandler(this.btn_ViewProduct_Click);
             // 
             // tb_Total
             // 
