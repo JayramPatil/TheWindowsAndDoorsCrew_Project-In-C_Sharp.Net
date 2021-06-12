@@ -9,11 +9,11 @@
         <EntityTypeShape EntityType="CrewDBModel.Customer_Transaction" Width="1.5" PointX="3.5" PointY="2.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CrewDBModel.Order" Width="1.5" PointX="6" PointY="2.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CrewDBModel.User" Width="1.5" PointX="0.875" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CrewDBModel.Ordered_Items" Width="1.5" PointX="8.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CrewDBModel.Ordered_Items" PointX="8.25" PointY="3" Width="1.5" IsExpanded="true" />
         <AssociationConnector Association="CrewDBModel.FK__Orders__Customer__2B3F6F97" ManuallyRouted="false" />
         <AssociationConnector Association="CrewDBModel.FK__Customer___Order__2F10007B" ManuallyRouted="false" />
         <AssociationConnector Association="CrewDBModel.FK__Customer___User___300424B4" ManuallyRouted="false" />
-        <AssociationConnector Association="CrewDBModel.FK__Ordered_I__Order__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector ManuallyRouted="false" Association="CrewDBModel.FK__Ordered_I__Order__31EC6D26" />
         <AssociationConnector Association="CrewDBModel.FK__Orders__User_ID__2C3393D0" ManuallyRouted="false" />
         <EntityTypeShape EntityType="CrewDBModel.Catagory" Width="1.5" PointX="10.75" PointY="12.75" />
         <EntityTypeShape EntityType="CrewDBModel.Distributor" Width="1.5" PointX="10.75" PointY="9.875" />
@@ -34,7 +34,7 @@
         <EntityTypeShape EntityType="CrewDBModel.Material_Track" Width="1.5" PointX="3" PointY="7.375" />
         <EntityTypeShape EntityType="CrewDBModel.Material_Type" Width="1.5" PointX="3" PointY="9.75" />
         <EntityTypeShape EntityType="CrewDBModel.Product_Material" Width="1.5" PointX="13" PointY="6.375" />
-        <EntityTypeShape EntityType="CrewDBModel.Stock_Ordered_Items" Width="1.5" PointX="8" PointY="12" />
+        <EntityTypeShape EntityType="CrewDBModel.Stock_Ordered_Items" Width="1.5" PointX="8.125" PointY="11.375" />
         <AssociationConnector Association="CrewDBModel.FK__Distribut__Distr__4CA06362" />
         <AssociationConnector Association="CrewDBModel.FK__Employee___Emplo__787EE5A0" />
         <AssociationConnector Association="CrewDBModel.FK__Employee___Emplo__7B5B524B" />

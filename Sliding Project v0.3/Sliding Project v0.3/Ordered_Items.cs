@@ -16,14 +16,15 @@ namespace Sliding_Project_v0._3
     {
         public int Order_ID { get; set; }
         public string Catagory { get; set; }
-        public string Sub_Catagory { get; set; }
         public string Material_Type { get; set; }
         public string Colour { get; set; }
         public string Glass_Type { get; set; }
-        public int Track { get; set; }
+        public Nullable<int> Track { get; set; }
         public double Height { get; set; }
         public double Width { get; set; }
         public int Quantity { get; set; }
+        public string Product_Name { get; set; }
+        public int ID { get; set; }
     
         public virtual Order Order { get; set; }
     }

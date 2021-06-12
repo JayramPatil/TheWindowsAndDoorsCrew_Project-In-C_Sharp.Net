@@ -167,31 +167,21 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Material_Type' does 
           <Property Name="Type" Type="varchar" MaxLength="12" Nullable="false" />
           <Property Name="Group_ID" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Ordered_Items">
           <Key>
-            <PropertyRef Name="Order_ID" />
-            <PropertyRef Name="Catagory" />
-            <PropertyRef Name="Sub_Catagory" />
-            <PropertyRef Name="Material_Type" />
-            <PropertyRef Name="Colour" />
-            <PropertyRef Name="Glass_Type" />
-            <PropertyRef Name="Track" />
-            <PropertyRef Name="Height" />
-            <PropertyRef Name="Width" />
-            <PropertyRef Name="Quantity" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="Order_ID" Type="int" Nullable="false" />
           <Property Name="Catagory" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Sub_Catagory" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Material_Type" Type="varchar" MaxLength="12" Nullable="false" />
-          <Property Name="Colour" Type="varchar" MaxLength="12" Nullable="false" />
-          <Property Name="Glass_Type" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Track" Type="int" Nullable="false" />
+          <Property Name="Product_Name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Material_Type" Type="varchar" MaxLength="12" />
+          <Property Name="Colour" Type="varchar" MaxLength="12" />
+          <Property Name="Glass_Type" Type="varchar" MaxLength="20" />
+          <Property Name="Track" Type="int" />
           <Property Name="Height" Type="float" Nullable="false" />
           <Property Name="Width" Type="float" Nullable="false" />
           <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
@@ -200,14 +190,14 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
           <Property Name="Order_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Customer_ID" Type="int" Nullable="false" />
           <Property Name="User_ID" Type="int" Nullable="false" />
-          <Property Name="Order_Date" Type="date" Nullable="false" />
-          <Property Name="Installation_Charge" Type="money" Nullable="false" />
+          <Property Name="Order_Date" Type="datetime" Nullable="false" />
+          <Property Name="Installation_Charge" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="GST" Type="float" Nullable="false" />
           <Property Name="Discount" Type="float" Nullable="false" />
-          <Property Name="Total" Type="money" Nullable="false" />
-          <Property Name="Paid_Amount" Type="money" Nullable="false" />
-          <Property Name="Remaining_Amount" Type="money" Nullable="false" />
-          <Property Name="Delivery_Date" Type="date" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Paid_Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Remaining_Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Delivery_Date" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -289,7 +279,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
           <Property Name="Security_Key" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Treat_As" Type="varchar" MaxLength="12" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Customer___Order__44FF419A">
+        <Association Name="FK__Customer___Order__3F115E1A">
           <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
           <End Role="Customer_Transaction" Type="Self.Customer_Transaction" Multiplicity="*" />
           <ReferentialConstraint>
@@ -445,7 +435,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ordered_I__Order__3E52440B">
+        <Association Name="FK__Ordered_I__Order__40058253">
           <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
           <End Role="Ordered_Items" Type="Self.Ordered_Items" Multiplicity="*" />
           <ReferentialConstraint>
@@ -457,7 +447,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__Customer__3F466844">
+        <Association Name="FK__Orders__Customer__3D2915A8">
           <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
@@ -469,7 +459,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__User_ID__403A8C7D">
+        <Association Name="FK__Orders__User_ID__3E1D39E1">
           <End Role="User" Type="Self.User" Multiplicity="1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
@@ -548,6 +538,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
           <EntitySet Name="Maintainance" EntityType="Self.Maintainance" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Material_Group" EntityType="Self.Material_Group" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Material_Info" EntityType="Self.Material_Info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ordered_Items" EntityType="Self.Ordered_Items" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product_Material" EntityType="Self.Product_Material" Schema="dbo" store:Type="Tables" />
@@ -590,21 +581,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
     [Material_Type].[Group_ID] AS [Group_ID]
     FROM [dbo].[Material_Type] AS [Material_Type]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Ordered_Items" EntityType="Self.Ordered_Items" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Ordered_Items].[Order_ID] AS [Order_ID], 
-    [Ordered_Items].[Catagory] AS [Catagory], 
-    [Ordered_Items].[Sub_Catagory] AS [Sub_Catagory], 
-    [Ordered_Items].[Material_Type] AS [Material_Type], 
-    [Ordered_Items].[Colour] AS [Colour], 
-    [Ordered_Items].[Glass_Type] AS [Glass_Type], 
-    [Ordered_Items].[Track] AS [Track], 
-    [Ordered_Items].[Height] AS [Height], 
-    [Ordered_Items].[Width] AS [Width], 
-    [Ordered_Items].[Quantity] AS [Quantity]
-    FROM [dbo].[Ordered_Items] AS [Ordered_Items]</DefiningQuery>
-          </EntitySet>
-          <AssociationSet Name="FK__Customer___Order__44FF419A" Association="Self.FK__Customer___Order__44FF419A">
+          <AssociationSet Name="FK__Customer___Order__3F115E1A" Association="Self.FK__Customer___Order__3F115E1A">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="Customer_Transaction" EntitySet="Customer_Transaction" />
           </AssociationSet>
@@ -656,15 +633,15 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
             <End Role="Material_Group" EntitySet="Material_Group" />
             <End Role="Material_Track" EntitySet="Material_Track" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ordered_I__Order__3E52440B" Association="Self.FK__Ordered_I__Order__3E52440B">
+          <AssociationSet Name="FK__Ordered_I__Order__40058253" Association="Self.FK__Ordered_I__Order__40058253">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="Ordered_Items" EntitySet="Ordered_Items" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__Customer__3F466844" Association="Self.FK__Orders__Customer__3F466844">
+          <AssociationSet Name="FK__Orders__Customer__3D2915A8" Association="Self.FK__Orders__Customer__3D2915A8">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__User_ID__403A8C7D" Association="Self.FK__Orders__User_ID__403A8C7D">
+          <AssociationSet Name="FK__Orders__User_ID__3E1D39E1" Association="Self.FK__Orders__User_ID__3E1D39E1">
             <End Role="User" EntitySet="User" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
@@ -710,14 +687,14 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
           <Property Name="Order_ID" Type="Int32" Nullable="false" />
           <Property Name="Customer_ID" Type="Int32" Nullable="false" />
           <Property Name="User_ID" Type="Int32" Nullable="false" />
-          <Property Name="Order_Date" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Installation_Charge" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="Order_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Installation_Charge" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="GST" Type="Double" Nullable="false" />
           <Property Name="Discount" Type="Double" Nullable="false" />
-          <Property Name="Total" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="Paid_Amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="Remaining_Amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="Delivery_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Total" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Paid_Amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Remaining_Amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Delivery_Date" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Customer" Relationship="Self.FK__Orders__Customer__2B3F6F97" FromRole="Orders" ToRole="Customer" />
           <NavigationProperty Name="Customer_Transaction" Relationship="Self.FK__Customer___Order__2F10007B" FromRole="Orders" ToRole="Customer_Transaction" />
           <NavigationProperty Name="Ordered_Items" Relationship="Self.FK__Ordered_I__Order__31EC6D26" FromRole="Orders" ToRole="Ordered_Items" />
@@ -739,28 +716,20 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
         </EntityType>
         <EntityType Name="Ordered_Items">
           <Key>
-            <PropertyRef Name="Order_ID" />
-            <PropertyRef Name="Catagory" />
-            <PropertyRef Name="Sub_Catagory" />
-            <PropertyRef Name="Material_Type" />
-            <PropertyRef Name="Colour" />
-            <PropertyRef Name="Glass_Type" />
-            <PropertyRef Name="Track" />
-            <PropertyRef Name="Height" />
-            <PropertyRef Name="Width" />
-            <PropertyRef Name="Quantity" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="Order_ID" Type="Int32" Nullable="false" />
           <Property Name="Catagory" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Sub_Catagory" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Material_Type" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Colour" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Glass_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Track" Type="Int32" Nullable="false" />
+          <Property Name="Material_Type" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Colour" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Glass_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Track" Type="Int32" />
           <Property Name="Height" Type="Double" Nullable="false" />
           <Property Name="Width" Type="Double" Nullable="false" />
           <Property Name="Quantity" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Order" Relationship="Self.FK__Ordered_I__Order__31EC6D26" FromRole="Ordered_Items" ToRole="Orders" />
+          <Property Name="Product_Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <Association Name="FK__Orders__Customer__2B3F6F97">
           <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
@@ -1404,9 +1373,10 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Ordered_Items' does 
           <EntitySetMapping Name="Ordered_Items">
             <EntityTypeMapping TypeName="CrewDBModel.Ordered_Items">
               <MappingFragment StoreEntitySet="Ordered_Items">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
                 <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
                 <ScalarProperty Name="Catagory" ColumnName="Catagory" />
-                <ScalarProperty Name="Sub_Catagory" ColumnName="Sub_Catagory" />
                 <ScalarProperty Name="Material_Type" ColumnName="Material_Type" />
                 <ScalarProperty Name="Colour" ColumnName="Colour" />
                 <ScalarProperty Name="Glass_Type" ColumnName="Glass_Type" />

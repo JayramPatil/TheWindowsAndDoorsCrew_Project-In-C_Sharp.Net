@@ -54,9 +54,10 @@
     <EntitySetMapping Name="Ordered_Items">
       <EntityTypeMapping TypeName="CrewDBModel.Ordered_Items">
         <MappingFragment StoreEntitySet="Ordered_Items">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
           <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
           <ScalarProperty Name="Catagory" ColumnName="Catagory" />
-          <ScalarProperty Name="Sub_Catagory" ColumnName="Sub_Catagory" />
           <ScalarProperty Name="Material_Type" ColumnName="Material_Type" />
           <ScalarProperty Name="Colour" ColumnName="Colour" />
           <ScalarProperty Name="Glass_Type" ColumnName="Glass_Type" />

@@ -17,7 +17,7 @@ namespace Sliding_Project_v0._3
         {
             InitializeComponent();
             Hide_SubMenu();
-            User_ID = 0;//i;
+            User_ID = 1;//i;
         }
         public MDI_Home(int i)
         {

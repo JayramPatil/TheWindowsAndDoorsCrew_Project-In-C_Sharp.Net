@@ -80,7 +80,6 @@
             this.Order_ID = new System.Windows.Forms.Label();
             this.lbl_OrderID = new System.Windows.Forms.Label();
             this.btn_Next = new System.Windows.Forms.Button();
-            this.btn_UpdatePaymentDetails = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel_Header.SuspendLayout();
@@ -792,21 +791,6 @@
             this.btn_Next.UseVisualStyleBackColor = false;
             this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
-            // btn_UpdatePaymentDetails
-            // 
-            this.btn_UpdatePaymentDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_UpdatePaymentDetails.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_UpdatePaymentDetails.FlatAppearance.BorderSize = 0;
-            this.btn_UpdatePaymentDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_UpdatePaymentDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UpdatePaymentDetails.Location = new System.Drawing.Point(393, 4);
-            this.btn_UpdatePaymentDetails.Name = "btn_UpdatePaymentDetails";
-            this.btn_UpdatePaymentDetails.Size = new System.Drawing.Size(189, 36);
-            this.btn_UpdatePaymentDetails.TabIndex = 16;
-            this.btn_UpdatePaymentDetails.Text = "Update Payment Details";
-            this.btn_UpdatePaymentDetails.UseVisualStyleBackColor = false;
-            this.btn_UpdatePaymentDetails.Visible = false;
-            // 
             // btn_Refresh
             // 
             this.btn_Refresh.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -833,7 +817,6 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.Controls.Add(this.btn_Refresh, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btn_UpdatePaymentDetails, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.btn_Next, 3, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(7, 646);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -926,7 +909,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_Next;
-        private System.Windows.Forms.Button btn_UpdatePaymentDetails;
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panel1;

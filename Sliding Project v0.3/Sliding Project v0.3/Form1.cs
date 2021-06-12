@@ -37,7 +37,6 @@ namespace Sliding_Project_v0._3
             tb_Address.Enabled = false;
             tb_MobileNo.Enabled = false;
             btn_Refresh.Text = "Reset";
-            btn_UpdatePaymentDetails.Visible = true;
             lbl_ID.Text = "Order ID";
             Order_ID.Visible = false;
             lbl_OrderID.Visible = false;
@@ -84,39 +83,91 @@ namespace Sliding_Project_v0._3
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
-            using (CrewEntities DB = new CrewEntities())
+            if (tb_ID.Text != "" && tb_Name.Text != "" && tb_MobileNo.Text != "" && tb_Address.Text != "")
             {
-                
-            }
-            Form formBackground = new Form();
-            try
-            {
-                using (frm_FinalAmount obj = new frm_FinalAmount(tb_Total.Text, DateTime.Now.AddDays(8).ToString("dd-MM-yyyy")))
+                using (CrewEntities DB = new CrewEntities())
                 {
-                    formBackground.StartPosition = FormStartPosition.Manual;
-                    formBackground.FormBorderStyle = FormBorderStyle.None;
-                    formBackground.Opacity = .50d;
-                    formBackground.BackColor = Color.Black;
-                    formBackground.WindowState = FormWindowState.Maximized;
-                    formBackground.TopMost = true;
-                    formBackground.Location = this.Location;
-                    formBackground.ShowInTaskbar = false;
-                    formBackground.Show();
+                    if (lbl_Header.Text == "Accept Order" && rb_OldCustomer.Checked != true)
+                    {
+                        DB.Customers.Add(new Customer { Name = tb_Name.Text, Mobile_No = tb_MobileNo.Text, Address = tb_Address.Text });
+                        DB.SaveChanges();
 
-                    obj.Owner = formBackground;
-                    obj.ShowDialog();
+                        string str = tb_ID.Text;
+                        rb_OldCustomer.Checked = true;
+                        tb_ID.Text = str;
+                    }
+                }
 
-                    formBackground.Dispose();
+                if (lbl_Header.Text == "Accept Order")
+                {
+                    Form formBackground = new Form();
+                    /*try
+                    {*/
+                        using (frm_FinalAmount obj = new frm_FinalAmount(tb_Total.Text, tb_Date.Text, Order_ID.Text, dt, 0, tb_ID.Text))
+                        {
+                            formBackground.StartPosition = FormStartPosition.Manual;
+                            formBackground.FormBorderStyle = FormBorderStyle.None;
+                            formBackground.Opacity = .50d;
+                            formBackground.BackColor = Color.Black;
+                            formBackground.WindowState = FormWindowState.Maximized;
+                            //formBackground.TopMost = true;
+                            formBackground.Location = this.Location;
+                            formBackground.ShowInTaskbar = false;
+                            formBackground.Show();
+
+                            obj.Owner = formBackground;
+                            obj.ShowDialog();
+
+                            formBackground.Dispose();
+                        }
+                    /*}
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        formBackground.Dispose();
+                    }*/
+                }
+                else
+                {
+                    Form formBackground = new Form();
+                    try
+                    {
+                        using (frm_FinalAmount obj = new frm_FinalAmount(tb_Total.Text, tb_Date.Text, Order_ID.Text, dt, 1, tb_ID.Text))
+                        {
+                            formBackground.StartPosition = FormStartPosition.Manual;
+                            formBackground.FormBorderStyle = FormBorderStyle.None;
+                            formBackground.Opacity = .50d;
+                            formBackground.BackColor = Color.Black;
+                            formBackground.WindowState = FormWindowState.Maximized;
+                            formBackground.TopMost = true;
+                            formBackground.Location = this.Location;
+                            formBackground.ShowInTaskbar = false;
+                            formBackground.Show();
+
+                            obj.Owner = formBackground;
+                            obj.ShowDialog();
+
+                            formBackground.Dispose();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        formBackground.Dispose();
+                    }
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Please, First Fill All The Feilds !!!");
             }
-            finally
-            {
-                formBackground.Dispose();
-            }
+
         }
 
         private void rb_OldCustomer_CheckedChanged(object sender, EventArgs e)
@@ -381,7 +432,7 @@ namespace Sliding_Project_v0._3
                 dgv_OrderedItems.DataSource = dt;
             }      
         }
-        public void Refresh()
+        public override void Refresh()
         {
             if(lbl_Header.Text == "Accept Order")
             {

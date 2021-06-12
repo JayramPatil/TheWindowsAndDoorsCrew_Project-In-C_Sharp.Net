@@ -35,6 +35,7 @@
             this.tb_Advance = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmb_Discount = new System.Windows.Forms.ComboBox();
             this.cmb_Installation = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tb_DDate = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmb_Discount = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -141,6 +141,27 @@
             this.groupBox2.TabIndex = 67;
             this.groupBox2.TabStop = false;
             // 
+            // cmb_Discount
+            // 
+            this.cmb_Discount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Discount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Discount.FormattingEnabled = true;
+            this.cmb_Discount.Items.AddRange(new object[] {
+            "0%",
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"});
+            this.cmb_Discount.Location = new System.Drawing.Point(268, 109);
+            this.cmb_Discount.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.cmb_Discount.Name = "cmb_Discount";
+            this.cmb_Discount.Size = new System.Drawing.Size(192, 33);
+            this.cmb_Discount.TabIndex = 67;
+            this.cmb_Discount.SelectedIndexChanged += new System.EventHandler(this.cmb_Discount_SelectedIndexChanged);
+            // 
             // cmb_Installation
             // 
             this.cmb_Installation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -232,6 +253,7 @@
             this.btn_Confirm.TabIndex = 61;
             this.btn_Confirm.Text = "CONFIRM";
             this.btn_Confirm.UseVisualStyleBackColor = false;
+            this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
             // 
             // groupBox1
             // 
@@ -291,27 +313,6 @@
             this.label3.TabIndex = 40;
             this.label3.Text = "GST";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cmb_Discount
-            // 
-            this.cmb_Discount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_Discount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmb_Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Discount.FormattingEnabled = true;
-            this.cmb_Discount.Items.AddRange(new object[] {
-            "0%",
-            "5%",
-            "10%",
-            "15%",
-            "20%",
-            "25%",
-            "30%"});
-            this.cmb_Discount.Location = new System.Drawing.Point(268, 109);
-            this.cmb_Discount.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
-            this.cmb_Discount.Name = "cmb_Discount";
-            this.cmb_Discount.Size = new System.Drawing.Size(192, 33);
-            this.cmb_Discount.TabIndex = 67;
-            this.cmb_Discount.SelectedIndexChanged += new System.EventHandler(this.cmb_Discount_SelectedIndexChanged);
             // 
             // frm_FinalAmount
             // 
