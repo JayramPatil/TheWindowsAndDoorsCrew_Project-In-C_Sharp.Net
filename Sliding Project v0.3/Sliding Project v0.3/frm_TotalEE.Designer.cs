@@ -32,7 +32,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lbl_Header = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -40,12 +39,13 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tb_Expenditure = new System.Windows.Forms.TextBox();
+            this.tb_Earning = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tb_Profit = new System.Windows.Forms.TextBox();
+            this.cmb_display = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -104,11 +104,11 @@
             this.tableLayoutPanel2.Controls.Add(this.panel11, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel9, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox4, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox3, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tb_Expenditure, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tb_Earning, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBox6, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.tb_Profit, 2, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(19, 232);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
@@ -117,23 +117,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(971, 274);
             this.tableLayoutPanel2.TabIndex = 38;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "This Month",
-            "This Year",
-            "All"});
-            this.comboBox2.Location = new System.Drawing.Point(521, 137);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(191, 33);
-            this.comboBox2.TabIndex = 43;
             // 
             // panel4
             // 
@@ -207,27 +190,27 @@
             this.label2.Text = "Total EXPENDITURE";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // tb_Expenditure
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(535, 122);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(191, 29);
-            this.textBox4.TabIndex = 40;
+            this.tb_Expenditure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Expenditure.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Expenditure.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Expenditure.Location = new System.Drawing.Point(535, 122);
+            this.tb_Expenditure.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
+            this.tb_Expenditure.Name = "tb_Expenditure";
+            this.tb_Expenditure.Size = new System.Drawing.Size(191, 29);
+            this.tb_Expenditure.TabIndex = 40;
             // 
-            // textBox3
+            // tb_Earning
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(535, 31);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 29);
-            this.textBox3.TabIndex = 41;
+            this.tb_Earning.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Earning.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Earning.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Earning.Location = new System.Drawing.Point(535, 31);
+            this.tb_Earning.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
+            this.tb_Earning.Name = "tb_Earning";
+            this.tb_Earning.Size = new System.Drawing.Size(191, 29);
+            this.tb_Earning.TabIndex = 41;
             // 
             // label1
             // 
@@ -241,18 +224,6 @@
             this.label1.Text = "Total EARNING";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(265, 131);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 50, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(238, 38);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Display";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -265,16 +236,45 @@
             this.label4.Text = "Total PROFIT";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox6
+            // tb_Profit
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(535, 213);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(191, 29);
-            this.textBox6.TabIndex = 40;
+            this.tb_Profit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Profit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Profit.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Profit.Location = new System.Drawing.Point(535, 213);
+            this.tb_Profit.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
+            this.tb_Profit.Name = "tb_Profit";
+            this.tb_Profit.Size = new System.Drawing.Size(191, 29);
+            this.tb_Profit.TabIndex = 40;
+            // 
+            // cmb_display
+            // 
+            this.cmb_display.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmb_display.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_display.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_display.FormattingEnabled = true;
+            this.cmb_display.Items.AddRange(new object[] {
+            "This Month",
+            "This Year",
+            "All"});
+            this.cmb_display.Location = new System.Drawing.Point(521, 137);
+            this.cmb_display.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
+            this.cmb_display.Name = "cmb_display";
+            this.cmb_display.Size = new System.Drawing.Size(191, 33);
+            this.cmb_display.TabIndex = 43;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(265, 131);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 50, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(238, 38);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Display";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -293,7 +293,7 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1002, 703);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmb_display);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
@@ -312,7 +312,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbl_Header;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmb_display;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
@@ -320,12 +320,12 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tb_Expenditure;
+        private System.Windows.Forms.TextBox tb_Earning;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tb_Profit;
         private System.Windows.Forms.Panel panel2;
     }
 }

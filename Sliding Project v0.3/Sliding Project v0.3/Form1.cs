@@ -101,8 +101,8 @@ namespace Sliding_Project_v0._3
                 if (lbl_Header.Text == "Accept Order")
                 {
                     Form formBackground = new Form();
-                    /*try
-                    {*/
+                    try
+                    {
                         using (frm_FinalAmount obj = new frm_FinalAmount(tb_Total.Text, tb_Date.Text, Order_ID.Text, dt, 0, tb_ID.Text))
                         {
                             formBackground.StartPosition = FormStartPosition.Manual;
@@ -110,17 +110,20 @@ namespace Sliding_Project_v0._3
                             formBackground.Opacity = .50d;
                             formBackground.BackColor = Color.Black;
                             formBackground.WindowState = FormWindowState.Maximized;
-                            //formBackground.TopMost = true;
+                            formBackground.TopMost = true;
                             formBackground.Location = this.Location;
                             formBackground.ShowInTaskbar = false;
                             formBackground.Show();
-
+                            frm_FinalAmount.dt = dt;
                             obj.Owner = formBackground;
                             obj.ShowDialog();
 
+                            if (frm_FinalAmount.test == 1)
+                                Refresh();
+
                             formBackground.Dispose();
                         }
-                    /*}
+                    }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
@@ -128,7 +131,8 @@ namespace Sliding_Project_v0._3
                     finally
                     {
                         formBackground.Dispose();
-                    }*/
+                    }
+
                 }
                 else
                 {
@@ -146,7 +150,8 @@ namespace Sliding_Project_v0._3
                             formBackground.Location = this.Location;
                             formBackground.ShowInTaskbar = false;
                             formBackground.Show();
-
+                            frm_FinalAmount.dt = dt;
+                            
                             obj.Owner = formBackground;
                             obj.ShowDialog();
 
@@ -465,6 +470,8 @@ namespace Sliding_Project_v0._3
             tb_Price.Clear();
 
             dt.Rows.Clear();
+            tb_Total.Clear();
+            Total = 0;
             //dgv_Remove.Rows.Clear();
 
         }

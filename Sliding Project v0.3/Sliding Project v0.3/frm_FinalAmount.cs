@@ -13,7 +13,8 @@ namespace Sliding_Project_v0._3
     public partial class frm_FinalAmount : Form
     {
         static int flag = 1;
-        DataTable dt;
+        public static DataTable dt;
+        public static int test = 0;
         string OrderDate;
         string OrderID;
         int custID;
@@ -31,6 +32,7 @@ namespace Sliding_Project_v0._3
             dt = Data;
             amount = (Convert.ToInt32(Total) + Convert.ToInt32(Total) * 12 / 100).ToString();
             cmb_Installation.SelectedIndex = 0;
+            cmb_Discount.SelectedIndex = 0;
 
             if(i == 1)
             {
@@ -102,7 +104,13 @@ namespace Sliding_Project_v0._3
                     DB.Orders.Add(new Order { Customer_ID = custID, User_ID = 2, Order_Date = date, Installation_Charge = Installation, GST = gst, Discount =  discount, Total = total, Paid_Amount = paid, Remaining_Amount = remaining, Delivery_Date = dDate});
                     DB.SaveChanges();
 
-                    //InsertItems();
+                    InsertItems();
+
+                    MessageBox.Show("Order Placed Successfully. Thank You : )");
+
+                    test = 1;
+
+                    this.Close();
                 }
                 else
                 {
@@ -136,49 +144,57 @@ namespace Sliding_Project_v0._3
                         DB.SaveChanges();
 
                         InsertItems();
+
+                        test = 0;
+
+                        this.Close();
                     }
                 }
-                this.Close();
+                
+
+
             }
         }
 
         private void InsertItems()
         {
-            //using (CrewEntities DB = new CrewEntities())
-            //{
-            //    foreach (DataGridViewRow row in dt.Rows)
-            //    {
-            //        int? Size = (int.TryParse(row.Cells[5].Value.ToString(), out var s) ? (int?)s : null);
-            //        int? Track = (int.TryParse(row.Cells[4].Value.ToString(), out var t) ? (int?)t : null);
+            using (CrewEntities DB = new CrewEntities())
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    //int? Size = (int.TryParse(row.Cells[5].Value.ToString(), out var s) ? (int?)s : null);
+                    int? Track = (int.TryParse(row[5].ToString(), out var t) ? (int?)t : null);
 
-            //        DB.Stock_Ordered_Items.Add(new Stock_Ordered_Items { Order_ID = Convert.ToInt32(OrderID), Material_Name = row.Cells[1].Value.ToString(), Type = row.Cells[2].Value.ToString(), Colour = row.Cells[3].Value.ToString(), Track = Track, Size = Size, Quantity = Convert.ToInt32(row.Cells[6].Value), Purchase_Price = Convert.ToInt32(row.Cells[7].Value) });
-            //        DB.SaveChanges();
+                    DB.Ordered_Items.Add(new Ordered_Items { Order_ID = Convert.ToInt32(OrderID),Catagory = row[0].ToString(),Product_Name = row[1].ToString(), Material_Type = row[2].ToString(), Glass_Type = row[4].ToString(), Colour = row[3].ToString(), Track = Track, Height = Convert.ToInt32(row[6]), Width = Convert.ToInt32(row[7]), Quantity = Convert.ToInt32(row[8])});
+                    DB.SaveChanges();
 
-            //        string Material_Name = row.Cells[1].Value.ToString();
-            //        string Type = row.Cells[2].Value.ToString();
-            //        string Colour = row.Cells[3].Value.ToString();
-            //        int PP = Convert.ToInt32(row.Cells[7].Value);
+                    //string Material_Name = row.Cells[1].Value.ToString();
+                    //string Type = row.Cells[2].Value.ToString();
+                    //string Colour = row.Cells[3].Value.ToString();
+                    //int PP = Convert.ToInt32(row.Cells[7].Value);
 
-            //        var Stock = (from s1 in DB.Stocks where s1.Material_Name == Material_Name && s1.Type == Type && s1.Colour == Colour && s1.Size == Size && s1.Track == Track select s1).FirstOrDefault();
+                    //var Stock = (from s1 in DB.Stocks where s1.Material_Name == Material_Name && s1.Type == Type && s1.Colour == Colour && s1.Size == Size && s1.Track == Track select s1).FirstOrDefault();
 
-            //        if (Stock != null)
-            //        {
-            //            Stock.Available_Stock = (Convert.ToInt32(Stock.Available_Stock) + Convert.ToInt32(row.Cells[6].Value));
+                    //if (Stock != null)
+                    //{
+                    //    Stock.Available_Stock = (Convert.ToInt32(Stock.Available_Stock) + Convert.ToInt32(row.Cells[6].Value));
 
-            //            if (Convert.ToInt32(Stock.Purchase_Price) <= Convert.ToInt32(row.Cells[7].Value))
-            //            {
-            //                Stock.Purchase_Price = PP;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            int As = Convert.ToInt32(row.Cells[6].Value);
+                    //    if (Convert.ToInt32(Stock.Purchase_Price) <= Convert.ToInt32(row.Cells[7].Value))
+                    //    {
+                    //        Stock.Purchase_Price = PP;
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    int As = Convert.ToInt32(row.Cells[6].Value);
 
-            //            DB.Stocks.Add(new Stock { Material_Name = Material_Name, Type = Type, Colour = Colour, Track = Track, Size = Size, Available_Stock = As, Purchase_Price = PP });
-            //        }
-            //        DB.SaveChanges();
-            //    }
-            //}
+                    //    DB.Stocks.Add(new Stock { Material_Name = Material_Name, Type = Type, Colour = Colour, Track = Track, Size = Size, Available_Stock = As, Purchase_Price = PP });
+                    //}
+                    //DB.SaveChanges();
+                }
+                DB.Customer_Transaction.Add(new Customer_Transaction { Order_ID = Convert.ToInt32(OrderID), User_ID = 2, Date = DateTime.Now, Paid= Convert.ToDecimal(tb_Advance.Text) });
+                DB.SaveChanges();
+            }
         }
     }
 }

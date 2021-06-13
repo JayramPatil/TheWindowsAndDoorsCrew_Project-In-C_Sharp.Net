@@ -15,6 +15,15 @@ namespace Sliding_Project_v0._3
         public frm_TotalEE()
         {
             InitializeComponent();
+
+            using(CrewEntities DB = new CrewEntities())
+            {
+                tb_Earning.Text = (Convert.ToInt32(DB.Orders.Sum(d => d.Total))).ToString();
+
+                tb_Expenditure.Text = (Convert.ToInt32(DB.Stock_Order.Sum(d => d.Total))).ToString();
+
+                tb_Profit.Text = (Convert.ToInt32(tb_Earning.Text) - Convert.ToInt32(tb_Expenditure.Text)).ToString();
+            }
         }
     }
 }
