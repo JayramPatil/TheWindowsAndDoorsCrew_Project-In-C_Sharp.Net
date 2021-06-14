@@ -18,7 +18,7 @@ namespace Sliding_Project_v0._3
             InitializeComponent();
             using (CrewEntities DB = new CrewEntities())
             {
-                dgv_ManageUsers.DataSource = (from u in DB.Users select u).ToList();
+                dgv_ManageUsers.DataSource = (from u in DB.Users select new { u.User_ID, u.Username, u.Password, u.Created_Date, u.Treat_As }).ToList();
             }
         }
         public void OpenForm(Form frm)

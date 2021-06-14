@@ -48,7 +48,7 @@ namespace Sliding_Project_v0._3
         {
             using (CrewEntities DB = new CrewEntities())
             {
-                dgv_ManageProduct.DataSource = (from p in DB.Products select p).ToList();
+                dgv_ManageProduct.DataSource = (from p in DB.Products select new { p.Product_ID, p.Product_Name, p.Catagory, p.Price, p.Time_To_Build, p.Description, p.Track }).ToList();
             }
         }
     }
