@@ -12,9 +12,14 @@ namespace Sliding_Project_v0._3
 {
     public partial class frm_ManageOrders : Form
     {
+        int ord = 0;
         public frm_ManageOrders()
         {
             InitializeComponent();
+            using (CrewEntities DB = new CrewEntities())
+            {
+                dgv_ManageOrders.DataSource = DB.Orders.Select(d => new { d.Order_ID, d.Order_Date, d.Delivery_Date, d.Total, d.Paid_Amount, d.Remaining_Amount}).ToList();
+            }
         }
         public void OpenForm(Form frm)
         {
@@ -24,7 +29,7 @@ namespace Sliding_Project_v0._3
         }
         private void btn_UpdateOreder_Click(object sender, EventArgs e)
         {
-            OpenForm(new frm_AcceptOrder(2));
+            OpenForm(new frm_AcceptOrder(ord));
         }
 
         private void btn_CancelOrder_Click(object sender, EventArgs e)
@@ -35,6 +40,11 @@ namespace Sliding_Project_v0._3
         private void btn_AcceptMoney_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgv_ManageOrders_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ord = Convert.ToInt32(dgv_ManageOrders.Rows[e.RowIndex].Cells[0].Value);
         }
     }
 }

@@ -198,6 +198,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Material_Type' does 
           <Property Name="Paid_Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Remaining_Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Delivery_Date" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -699,6 +700,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Material_Type' does 
           <NavigationProperty Name="Customer_Transaction" Relationship="Self.FK__Customer___Order__2F10007B" FromRole="Orders" ToRole="Customer_Transaction" />
           <NavigationProperty Name="Ordered_Items" Relationship="Self.FK__Ordered_I__Order__31EC6D26" FromRole="Orders" ToRole="Ordered_Items" />
           <NavigationProperty Name="User" Relationship="Self.FK__Orders__User_ID__2C3393D0" FromRole="Orders" ToRole="User" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -1344,6 +1346,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Material_Type' does 
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="CrewDBModel.Order">
               <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
                 <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
                 <ScalarProperty Name="User_ID" ColumnName="User_ID" />

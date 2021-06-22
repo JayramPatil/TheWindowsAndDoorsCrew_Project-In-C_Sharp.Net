@@ -19,6 +19,7 @@ namespace Sliding_Project_v0._3
         public frm_AcceptOrder()
         {
             InitializeComponent();
+            rb_NewCustomer.Select();
             Cust_ID();
             Orders_ID();
             tb_Date.Text = DateTime.Now.ToString("dd-MM-yyyy");
@@ -29,18 +30,83 @@ namespace Sliding_Project_v0._3
         public frm_AcceptOrder(int i)
         {
             InitializeComponent();
+
             lbl_Header.Text = "Update Order";
             panel_NewOldCustomer.Enabled = false;
             btn_Search.Visible = true;
+            rb_OldCustomer.Checked = true;
             tb_Date.Enabled = false;
             tb_Name.Enabled = false;
             tb_Address.Enabled = false;
             tb_MobileNo.Enabled = false;
             btn_Refresh.Text = "Reset";
             lbl_ID.Text = "Order ID";
-            Order_ID.Visible = false;
-            lbl_OrderID.Visible = false;
+            Order_ID.Text = i.ToString();
             CreateColums();
+
+            if (i != 0)
+                Search(i);
+        }
+        public void Search(int ID)
+        {
+            dt.Rows.Clear();
+
+            using (CrewEntities DB = new CrewEntities())
+            {
+                var Order = DB.Stock_Order.Find(ID);
+
+                //if (Order != null)
+                //{
+                //    DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+                //    btn.Name = "Remove";
+                //    btn.Text = "Remove";
+                //    btn.UseColumnTextForButtonValue = true;
+                //    int columnIndex = 0;
+
+                //    DataGridViewButtonColumn Edit = new DataGridViewButtonColumn();
+                //    Edit.Name = "Edit";
+                //    Edit.Text = "Edit";
+                //    Edit.UseColumnTextForButtonValue = true;
+                //    columnIndex = 0;
+
+                //    tb_Date.Text = Order.Date.ToString("dd-MM-yyyy");
+                //    cmb_Distributor.Text = Order.Distributor_Name;
+
+                //    cmb_Material.Text = "";
+                //    cmb_Material.Items.Clear();
+
+                //    var Dist_ID = (from i in DB.Distributors where i.Name == cmb_Distributor.Text select i.Distributor_ID).FirstOrDefault();
+
+                //    var dis = (from d in DB.Distributor_Material where d.Distributor_ID == Dist_ID select d.Material_Name).ToList();
+
+                //    foreach (var d in dis)
+                //    {
+                //        cmb_Material.Items.Add(d);
+                //    }
+
+                //    tb_Total.Text = Order.Total.ToString().Substring(0, Order.Total.ToString().IndexOf("."));
+                //    tb_Paid.Text = Order.Paid_Amount.ToString().Substring(0, Order.Paid_Amount.ToString().IndexOf("."));
+
+                //    var OI = (from oi in DB.Stock_Ordered_Items where oi.Order_ID == ID select oi).ToList();
+
+                //    foreach (var i in OI)
+                //    {
+                //        if (dgv_StockItems.Columns["Edit"] == null)
+                //        {
+                //            dgv_StockItems.Columns.Insert(columnIndex, Edit);
+                //        }
+
+                //        dt.Rows.Add(i.Material_Name, i.Type, i.Colour, i.Track, i.Size, i.Quantity, i.Purchase_Price);
+
+                //        dgv_StockItems.DataSource = dt;
+                //    }
+
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Invalid Order ID !");
+                //}
+            }
         }
         public void Orders_ID()
         {
@@ -68,7 +134,6 @@ namespace Sliding_Project_v0._3
         }
         private void frm_AcceptOrder_Load(object sender, EventArgs e)
         {
-            rb_NewCustomer.Select();
 
             using (CrewEntities DB = new CrewEntities())
             {

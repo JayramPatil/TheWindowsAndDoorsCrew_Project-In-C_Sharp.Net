@@ -41,6 +41,7 @@
     <NavigationProperty Name="Customer_Transaction" Relationship="Self.FK__Customer___Order__2F10007B" FromRole="Orders" ToRole="Customer_Transaction" />
     <NavigationProperty Name="Ordered_Items" Relationship="Self.FK__Ordered_I__Order__31EC6D26" FromRole="Orders" ToRole="Ordered_Items" />
     <NavigationProperty Name="User" Relationship="Self.FK__Orders__User_ID__2C3393D0" FromRole="Orders" ToRole="User" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="User">
     <Key>

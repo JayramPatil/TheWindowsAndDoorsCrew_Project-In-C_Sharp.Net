@@ -46,14 +46,14 @@
             this.btn_AcceptMoney = new System.Windows.Forms.Button();
             this.btn_MarkAsCompleted = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgv_ManageOrders = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ManageOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -191,10 +191,10 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.dgv_ManageOrders);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.tableLayoutPanel2);
             this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(7, 158);
             this.groupBox2.Name = "groupBox2";
@@ -314,21 +314,6 @@
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 60);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(968, 419);
-            this.dataGridView1.TabIndex = 33;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -339,6 +324,24 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Sort By";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dgv_ManageOrders
+            // 
+            this.dgv_ManageOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_ManageOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ManageOrders.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgv_ManageOrders.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_ManageOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ManageOrders.Location = new System.Drawing.Point(7, 62);
+            this.dgv_ManageOrders.Name = "dgv_ManageOrders";
+            this.dgv_ManageOrders.RowHeadersVisible = false;
+            this.dgv_ManageOrders.RowHeadersWidth = 51;
+            this.dgv_ManageOrders.RowTemplate.Height = 24;
+            this.dgv_ManageOrders.Size = new System.Drawing.Size(968, 419);
+            this.dgv_ManageOrders.TabIndex = 36;
+            this.dgv_ManageOrders.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ManageOrders_CellClick);
             // 
             // frm_ManageOrders
             // 
@@ -357,7 +360,7 @@
             this.tableLayoutPanel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ManageOrders)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,7 +385,7 @@
         private System.Windows.Forms.Button btn_AcceptMoney;
         private System.Windows.Forms.Button btn_MarkAsCompleted;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgv_ManageOrders;
     }
 }

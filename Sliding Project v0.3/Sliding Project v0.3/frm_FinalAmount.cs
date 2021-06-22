@@ -101,7 +101,7 @@ namespace Sliding_Project_v0._3
                     decimal remaining = Convert.ToInt32(tb_Remaining.Text);
                     decimal paid = Convert.ToInt32(tb_Advance.Text);
 
-                    DB.Orders.Add(new Order { Customer_ID = custID, User_ID = 2, Order_Date = date, Installation_Charge = Installation, GST = gst, Discount =  discount, Total = total, Paid_Amount = paid, Remaining_Amount = remaining, Delivery_Date = dDate});
+                    DB.Orders.Add(new Order { Customer_ID = custID, User_ID = 2, Order_Date = date, Installation_Charge = Installation, GST = gst, Discount =  discount, Total = total, Paid_Amount = paid, Remaining_Amount = remaining, Delivery_Date = dDate, Status = "Incomplete"});
                     DB.SaveChanges();
 
                     InsertItems();

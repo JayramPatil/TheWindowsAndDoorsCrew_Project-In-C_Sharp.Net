@@ -15,6 +15,11 @@ namespace Sliding_Project_v0._3
         public frm_ViewOrders()
         {
             InitializeComponent();
+
+            using (CrewEntities DB = new CrewEntities())
+            {
+                dgv_Orders.DataSource = DB.Orders.ToList();
+            }
         }
     }
 }

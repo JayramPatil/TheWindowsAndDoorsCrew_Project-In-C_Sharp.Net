@@ -43,7 +43,7 @@ namespace Sliding_Project_v0._3
         {
             using(CrewEntities DB = new CrewEntities())
             {
-                dgv_ManageCustomer.DataSource = (from c in DB.Customers select c).ToList();
+                dgv_ManageCustomer.DataSource = (from c in DB.Customers select new { c.Customer_ID, c.Name, c.Mobile_No, c.Address }).ToList();
             }          
         }
 

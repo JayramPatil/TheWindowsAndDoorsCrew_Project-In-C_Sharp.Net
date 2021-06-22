@@ -25,6 +25,7 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="CrewDBModel.Order">
         <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
           <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
           <ScalarProperty Name="User_ID" ColumnName="User_ID" />

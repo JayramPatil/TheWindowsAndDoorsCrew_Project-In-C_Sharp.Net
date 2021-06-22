@@ -32,6 +32,7 @@ namespace Sliding_Project_v0._3
         public decimal Paid_Amount { get; set; }
         public decimal Remaining_Amount { get; set; }
         public System.DateTime Delivery_Date { get; set; }
+        public string Status { get; set; }
     
         public virtual Customer Customer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

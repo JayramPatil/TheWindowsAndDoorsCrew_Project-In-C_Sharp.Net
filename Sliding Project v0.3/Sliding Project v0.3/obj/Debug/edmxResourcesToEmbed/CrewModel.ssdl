@@ -193,6 +193,7 @@ warning 6002: The table/view 'TheWindowsAndDoorsCrew_DB.dbo.Material_Type' does 
     <Property Name="Paid_Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="Remaining_Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="Delivery_Date" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Product">
     <Key>

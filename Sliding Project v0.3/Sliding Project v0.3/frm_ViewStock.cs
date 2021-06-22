@@ -18,7 +18,7 @@ namespace Sliding_Project_v0._3
 
             using (CrewEntities DB = new CrewEntities())
             {
-                dgv_ManageOrders.DataSource = DB.Stock_Order.ToList();
+                dgv_ManageOrders.DataSource = (from s in DB.Stock_Order select new { s.Order_ID, s.Distributor_Name, s.Date, s.Paid_Amount, s.Remaining_Amount, s.Total}).ToList();
             }
         }
         public void OpenForm(Form frm)
